@@ -1,3 +1,5 @@
+@use "global" as *;   // 追加
+
 *,
 *::before,
 *::after {
@@ -36,6 +38,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+  color: $green;  // 追加
+  background-color: $white;   // 追加
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

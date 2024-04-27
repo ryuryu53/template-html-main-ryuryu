@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.text {
+  font-size: rem(16);
+  font-weight: $normal;
+}
+
+.text--white-pc {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.text--black-pc {
+  @include mq(md) {
+    color: $black;
+  }
+}
+
+.text--black-sp {
+  color: $black;
+  @include mq(md) {
+    color: $green;
+  }
+}
+
+.text--bold {
+  font-weight: $bold;
+}
+
+.text--small-sp {
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
