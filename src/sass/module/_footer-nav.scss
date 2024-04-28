@@ -1,0 +1,206 @@
+@use "global" as *;
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav__left-content {
+  width: 50%;
+  @include mq(md) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-nav__right-content {
+  width: 46.7%;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    width: 48.5%;
+  }
+}
+
+.footer-nav__left-items:first-child {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.footer-nav__left-items:nth-child(2) {
+  @include mq(md) {
+    width: 47%;
+  }
+}
+
+.footer-nav__right-items {
+  @include mq(md) {
+    width: 48.4%;
+  }
+}
+
+.footer-nav__left-item,
+.footer-nav__right-item {
+  font-size: rem(16);
+  color: $white;
+}
+
+.footer-nav__left-link-1,
+.footer-nav__left-link-2,
+.footer-nav__left-link-3,
+.footer-nav__left-link-4,
+.footer-nav__right-link-1,
+.footer-nav__right-link-2,
+.footer-nav__right-link-3,
+.footer-nav__right-link-4,
+.footer-nav__right-link-5,
+.footer-nav__right-link-6 {
+  display: block;
+  font-weight: $bold;
+  text-indent: rem(-18);
+}
+
+.footer-nav__left-link-1 {
+  padding: rem(16) 0 rem(15) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.footer-nav__left-link-2 {
+  padding: rem(17) 0 rem(17) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.footer-nav__left-link-3 {
+  padding: rem(17) 0 rem(15) rem(22);
+}
+
+.footer-nav__left-link-4 {
+  padding: rem(17) 0 rem(15) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.footer-nav__right-link-1 {
+  padding: rem(16) 0 rem(17) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.footer-nav__right-link-2 {
+  padding: rem(17) 0 rem(15) rem(22);
+}
+
+.footer-nav__right-link-3 {
+  padding: rem(17) 0 rem(17) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.footer-nav__right-link-4 {
+  line-height: 1.1;
+  padding: rem(18) 0 rem(18) rem(22);
+}
+
+.footer-nav__right-link-5 {
+  padding: rem(19) 0 rem(17) rem(22);
+  @include mq(md) {
+    padding-top: rem(18);
+  }
+}
+
+.footer-nav__right-link-6 {
+  padding: rem(17) 0 rem(15) rem(22);
+}
+
+// .footer-nav__left-link,
+// .footer-nav__right-link {
+//   display: block;
+//   font-weight: $bold;
+//   padding: rem(16) 0 rem(15) rem(22);
+//   text-indent: rem(-18);
+// }
+
+.footer-nav__left-link-1::before,
+.footer-nav__left-link-2::before,
+.footer-nav__left-link-3::before,
+.footer-nav__left-link-4::before,
+.footer-nav__right-link-1::before,
+.footer-nav__right-link-2::before,
+.footer-nav__right-link-3::before,
+.footer-nav__right-link-4::before,
+.footer-nav__right-link-5::before,
+.footer-nav__right-link-6::before {
+  content: "";
+  position: relative;
+  top: rem(2);
+  left: rem(-4);
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/starfish.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer-nav__left-link-1 + .footer-nav__left-detail-items {
+  @include mq(md) {
+    position: relative;
+    left: rem(-2);
+  }
+}
+
+.footer-nav__left-detail-item,
+.footer-nav__right-detail-item {
+  font-weight: $normal;
+}
+
+.footer-nav__left-detail-link,
+.footer-nav__right-detail-link {
+  display: block;
+}
+
+.footer-nav__left-link-1 + .footer-nav__left-detail-items .footer-nav__left-detail-link {
+  padding-left: rem(24);
+}
+
+.footer-nav__left-link-3 + .footer-nav__left-detail-items .footer-nav__left-detail-link,
+.footer-nav__right-detail-link {
+  padding-left: rem(22);
+}
+
+.footer-nav__left-detail-link:first-child {
+  padding-left: rem(24);
+}
+
+.footer-nav__left-detail-item:first-child .footer-nav__left-detail-link,
+.footer-nav__right-detail-item:first-child .footer-nav__right-detail-link {
+  padding-top: rem(3);
+}
+
+.footer-nav__left-detail-item:not(:first-child) .footer-nav__left-detail-link {
+  padding-top: rem(9);
+}
+
+.footer-nav__right-detail-item:not(:first-child) .footer-nav__right-detail-link {
+  padding-top: rem(9);
+}
+
+.footer-nav__left-detail-item:not(:last-child) .footer-nav__left-detail-link,
+.footer-nav__right-detail-item:not(:last-child) .footer-nav__right-detail-link {
+  padding-bottom: rem(9);
+}
+
+.footer-nav__left-detail-item:last-child .footer-nav__left-detail-link,
+.footer-nav__right-detail-item:last-child .footer-nav__right-detail-link {
+  padding-bottom: rem(17);
+}
