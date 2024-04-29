@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  padding-bottom: rem(1);
+}
+
+.pc-nav__item {
+  height: inherit;
+}
+
+.pc-nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  padding: 0 rem(20);
+}
+
+.pc-nav__item:first-child .pc-nav__link {
+  padding-left: 0;
+}
+
+.pc-nav__item:last-child .pc-nav__link {
+  padding-right: 0;
+}
+
+.pc-nav__engtext {
+  position: relative;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  font-weight: $normal;
+  line-height: 1;
+  color: $white;
+}
+
+.pc-nav__item:not(:nth-child(n+7)) .pc-nav__engtext {
+  right: rem(1);
+}
+
+.pc-nav__jatext {
+  position: relative;
+  right: rem(1);
+  font-size: rem(10);
+  font-weight: $normal;
+  color: $white;
+  margin-top: rem(4);
+}
+
+.pc-nav__engtext::after,
+.pc-nav__jatext::after {
+  content: '';
+  // 絶対配置で線の位置を決める
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  // 線の形状
+  width: 100%;
+  height: rem(2);
+  background:currentColor;
+  // アニメーションの指定
+  transition: transform 0.3s;
+  transform: scale(0, 1); // X方向0、Y方向1
+  transform-origin: center top; // 上部中央基点
+}
+
+.pc-nav__engtext:hover::after,
+.pc-nav__jatext:hover::after {
+  transform: scale(1, 1); // X方向にスケール拡大
+}
