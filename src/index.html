@@ -24,10 +24,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script defer src="./assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="./assets/js/jquery.inview.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </head>
 
   <body>
@@ -182,6 +185,52 @@
     </header>
 
     <main>
+      <!-- メインビュー -->
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="swiper mv__slider js-mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_1.webp" type="image/webp" width="1440" height="768">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_1.webp" type="image/webp" width="375" height="667">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_1.jpg" width="375" height="667">
+                  <img src="./assets/images/common/mv-pc_1.jpg" alt="海水面のすぐ下で泳いでいる海亀" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_2.webp" type="image/webp" width="1440" height="768">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_2.webp" type="image/webp" width="375" height="667">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_2.jpg" width="375" height="667">
+                  <img src="./assets/images/common/mv-pc_2.jpg" alt="海亀と2人のダイバーが海中で向き合っている様子" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_3.webp" type="image/webp" width="1440" height="768">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_3.webp" type="image/webp" width="375" height="667">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_3.jpg" width="375" height="667">
+                  <img src="./assets/images/common/mv-pc_3.jpg" alt="晴れた日の海岸近くの海とそこに浮かぶ白い船" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_4.webp" type="image/webp" width="1440" height="768">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_4.webp" type="image/webp" width="375" height="667">
+                  <source media="(max-width: 767px)" srcset="./assets/images/common/mv_4.jpg" width="375" height="667">
+                  <img src="./assets/images/common/mv-pc_4.jpg" alt="人影もまばらな砂浜の前に広がるエメラルドグリーンの海" width="1440" height="768">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="mv__header">
+            <h2 class="mv__title">diving</h2>
+            <p class="mv__subtitle">into&nbsp;the&nbsp;ocean</p>
+          </div>
+        </div>
+      </section>
+
       <div class="inner">
         <div class="section-header">
           <p class="section-header__jatitle">変更のテスト</p>
@@ -286,7 +335,9 @@
             </ul>
           </div>
         </nav>
-        <small class="footer__copyright">Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.</small>
+        <div class="footer__copyright">
+          <small>Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.</small>
+        </div>
       </div>
     </footer>
   </body>

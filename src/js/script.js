@@ -21,4 +21,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('.js-sp-nav').fadeOut(300);
   });
 
+  // mvスワイパー
+  const mv_swiper = new Swiper('.js-mv-swiper', {
+    loop: true,
+    effect: 'fade',
+    speed: 3000, // スライド（フェイド）が変わるスピード
+    allowTouchMove: false, // 3秒(delay: 3000)たつ前にマウスでカチャカチャなぞることによって次のスライドへ移るのをさせないようにする（これがないとクリックで自分でスライドできてしまう）
+    autoplay: {
+      delay: 3000 // 3秒後にスライドが変わっていく
+    },
+  });
+
 });

@@ -29,16 +29,17 @@
 
 .header__logo {
   position: relative;
-  left: rem(-4);
+  z-index: 100;
   display: flex;
   align-items: center;
   height: inherit;
-  padding-top: rem(7);
+  @include mq(md) {
+    left: rem(-4);
+    padding-top: rem(7);
+  }
 }
 
 .header__logo-link {
-  position: relative;
-  z-index: 100;
   display: block;
   aspect-ratio: 102 / 38;
   width: rem(102);

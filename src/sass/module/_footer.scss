@@ -50,15 +50,20 @@
   position: relative;
   right: rem(1);
   display: block;
+  text-align: center;
+  margin-top: rem(15);
+  @include mq(md) {
+    right: 0;
+    margin-top: rem(54);
+  }
+}
+
+.footer__copyright small {
   font-family: $second-font-family;
   font-size: rem(12);
   font-weight: $normal;
   color: $white;
-  text-align: center;
-  margin-top: rem(22);
   @include mq(md) {
-    right: 0;
     font-size: rem(14);
-    margin-top: rem(59);
   }
 }
