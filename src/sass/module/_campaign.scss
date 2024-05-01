@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.campaign {
+  overflow: hidden;
+}
+
+.campaign__inner {
+  position: relative;
+}
+
+.campaign__inner.inner {
+  padding-left: rem(9);
+  @include mq(md) {
+    padding-left: rem(19);
+  }
+}
+
+.campaign__title.section-header {
+  padding-left: rem(6);
+  @include mq(md) {
+    padding-left: rem(7);
+  }
+}
+
+.campaign__swiper {
+  margin-top: rem(28);
+  margin-right: calc(50% - 50vw);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.campaign__btn-next,
+.campaign__btn-prev {
+  position: absolute;
+  top: 23px;  // rem(23)だと幅1015px以下で円の頭が切れてくる
+  width: rem(80);
+  height: rem(80);
+  transition: opacity 0.3s;
+  // position: relative;
+  // border: rem(1) solid $greenaccent;
+  // background-color: $white;
+}
+
+.campaign__btn-next {
+  right: 2.2%;
+}
+
+.campaign__btn-prev {
+  left: 76.55%;   // スワイパー側でleftに数値があり、rightはauto。rightで指定する場合、leftをautoにする必要あり
+}
+
+.campaign__btn-next:hover,
+.campaign__btn-prev:hover {
+  opacity: 0.7;
+}
+
+.campaign__btn-next::after,
+.campaign__btn-prev::after {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: rem(80);
+  height: rem(80);
+}
+
+.campaign__btn-next::after {
+  background-image: url(../images/common/right-btn.svg);
+}
+
+.campaign__btn-prev::after {
+  background-image: url(../images/common/left-btn.svg);
+}
+
+.campaign__btn {
+  text-align: center;
+  margin-top: rem(30);
+  padding-bottom: rem(5);
+  @include mq(md) {
+    margin-top: rem(70);
+    padding-left: rem(2);
+  }
+}

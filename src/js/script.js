@@ -32,4 +32,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
+  // campaignスワイパー
+  const campaign_swiper = new Swiper('.js-campaign-swiper', {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 1000,
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
+        spaceBetween: 40
+      }
+    },
+    autoplay: {
+      speed: 1000,
+      disableOnInteraction: false   // falseを設定すると、自動再生はユーザーの操作（スワイプ）後に無効にならず、操作後に毎回再起動される
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
 });

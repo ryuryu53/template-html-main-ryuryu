@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.campaign-card {
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: $black, $alpha: 25%);
+}
+
+.campaign-card__img {
+  aspect-ratio: 280 / 188;
+  width: rem(280);
+  overflow: hidden;
+  @include mq(md) {
+    width: rem(333);
+    aspect-ratio: 333 / 223;
+  }
+}
+
+.campaign-card__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-card__body {
+  padding: rem(16);
+  @include mq(md) {
+    padding: rem(24) rem(16) rem(32);
+  }
+}
+
+.campaign-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: $normal;
+  color: $greenaccent;
+  padding: rem(5) rem(11);
+  border: rem(1) solid currentColor;
+  @include mq(md) {
+    padding: rem(7) rem(15);
+  }
+}
+
+.campaign-card__title {
+  border-bottom: rem(1) solid $greenaccent;
+  margin-top: rem(4);
+  padding-bottom: rem(8);
+}
+
+.campaign-card__text {
+  text-align: center;
+  margin-top: rem(9);
+  @include mq(md) {
+    margin-top: rem(15);
+    padding-right: rem(15);
+  }
+}
+
+.campaign-card__price {
+  font-family: $third-font-family;
+  font-weight: $bold;
+  text-align: center;
+  margin-top: rem(1);
+  @include mq(md) {
+    line-height: 1.37;
+    margin-top: rem(1);
+  }
+}
+
+.campaign-card__price-before {
+  position: relative;
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__price-before::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: rem(76);
+  height: rem(3);
+  background-color: $red;
+  @include mq(md) {
+    top: 48%;
+    width: rem(91);
+  }
+}
+
+.campaign-card__price-after {
+  position: relative;
+  left: rem(1);
+  font-size: rem(32);
+  color: $greenaccent;
+  margin-left: rem(17);
+  @include mq(md) {
+    font-size: rem(40);
+    margin-left: rem(24);
+  }
+}
+
+.campaign-card:nth-child(3) .campaign-card__price,
+.campaign-card:nth-child(7) .campaign-card__price {
+  @include mq(md) {
+    padding-right: rem(24);
+  }
+}
+
+.campaign-card:nth-child(3) .campaign-card__price-before,
+.campaign-card:nth-child(7) .campaign-card__price-before {
+  @include mq(md) {
+    padding-right: rem(2);
+  }
+}

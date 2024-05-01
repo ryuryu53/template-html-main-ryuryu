@@ -5,6 +5,10 @@
   font-weight: $normal;
 }
 
+.text--medium {
+  font-weight: $medium;
+}
+
 .text--white-pc {
   @include mq(md) {
     color: $white;

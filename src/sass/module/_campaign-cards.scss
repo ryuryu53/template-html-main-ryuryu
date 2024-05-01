@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.campaign-cards {
+  padding-bottom: rem(10);  // シャドウが見えるようにするため
+  padding-left: rem(6);   // 同上
+}
+
+.campaign-cards__item {   // swiper-slideにwidth100%あり
+  max-width: rem(280);
+  @include mq(md) {
+    max-width: rem(333);
+  }
+}

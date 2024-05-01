@@ -43,6 +43,7 @@
   display: block;
   aspect-ratio: 102 / 38;
   width: rem(102);
+  overflow: hidden;
   @include mq(md) {
     aspect-ratio: 133 / 50;
     width: rem(141);

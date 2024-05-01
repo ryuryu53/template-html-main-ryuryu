@@ -20,8 +20,8 @@
 .button::before {
   content: "";
   position: absolute;
-  top: rem(4);
-  left: rem(4);
+  top: rem(3);
+  left: rem(3);
   z-index: -1;
   width: rem(202);
   height: calc(rem(1) * 2 + rem(15) * 2 + rem(14) * (22 / 14));
@@ -59,7 +59,7 @@
 .button__text::after {
   content: "";
   position: absolute;
-  top: 25%;
+  top: 30%;
   right: rem(-46);
   width: rem(40);
   height: rem(7);
