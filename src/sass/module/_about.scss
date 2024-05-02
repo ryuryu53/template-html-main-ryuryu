@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.about {
+  position: relative;
+}
+
+.about::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: calc(50% - min(48%, 39.83rem));
+    bottom: rem(-90);
+    width: rem(194);
+    height: rem(181);
+    background-image: url(../images/common/about-coral.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.about__inner {
+  position: relative;
+}
+
+.about__title-jp {
+  padding-right: rem(1);
+}
+
+.about__img-box {
+  position: relative;
+  right: rem(1);
+  margin-top: rem(28);
+  padding-top: rem(26);
+  @include mq(md) {
+    margin-top: rem(40);
+    padding-top: rem(80);
+  }
+}
+
+.about__img-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 128 /194;
+  width: 37.1%;
+  overflow: hidden;
+  @include mq(md) {
+    left: rem(1);
+    aspect-ratio: 400 / 606;
+    width: 37.04%;
+  }
+}
+
+.about__img-right {
+  aspect-ratio: 281 / 186;
+  width: 81.45%;
+  overflow: hidden;
+  margin-left: auto;
+  @include mq(md) {
+    position: relative;
+    left: rem(1);
+    z-index: -5;
+    aspect-ratio: 880 / 581;
+    width: 81.48%;
+  }
+}
+
+.about__img-left img,
+.about__img-right img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__text-body {
+  margin-top: rem(40);
+  @include mq(md) {
+    position: absolute;
+    top: rem(306);
+    right: 5.84%;
+    display: flex;
+    max-width: rem(840);
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.about__subtitle {
+  font-family: $second-font-family;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: 1;
+  color: $greenaccent;
+  @include mq(md) {
+    width: 52.38%;
+    font-size: rem(80);
+    line-height: 1.25;
+    color: $white;
+  }
+}
+
+.about__text-block {
+  margin-top: rem(16);
+  @include mq(md) {
+    width: 47.62%;
+    margin-top: 0;
+  }
+}
+
+.about__text {
+  position: relative;
+  right: rem(1);
+  @include mq(md) {
+    right: 0;
+  }
+}
+
+.about__btn {
+  text-align: center;
+  margin-top: rem(50);
+  padding-right: rem(17);
+  @include mq(md) {
+    margin-top: rem(40);
+    padding-right: rem(4);
+  }
+}
