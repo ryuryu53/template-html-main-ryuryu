@@ -67,3 +67,10 @@
   border-bottom: rem(1) solid currentColor;
   transform: skew(48deg);
 }
+
+.button__text--arrow-up-sp::after {
+  top: 28%;
+  @include mq(md) {
+    top: 30%;
+  }
+}

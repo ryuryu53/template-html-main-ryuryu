@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.price {
+  position: relative;
+  background-color: $green2;
+}
+
+.price::before {
+  @include mq(md) {
+    content: "";
+    background-image: url(../images/common/price-goldfish.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom: rem(60);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(437);
+    height: rem(201);
+  }
+}
+
+.price__title {
+  @include mq(md) {
+    padding-right: rem(6);
+  }
+}
+
+.price__contents {
+  margin-top: rem(28);
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: rem(40);
+    padding-right: rem(2);
+  }
+}
+
+.price__table {
+  margin-top: rem(40);
+  @include mq(md) {
+    width: 45.68%;
+    margin-top: 0;
+  }
+}
+
+.price__img {
+  aspect-ratio: 345 / 227;
+  width: 100%;
+  overflow: hidden;
+  @include mq(md) {
+    aspect-ratio: 492 / 746;
+    width: 45.68%;
+  }
+}
+
+.price__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.price__btn {
+  text-align: center;
+  margin-top: rem(41);
+  padding-right: rem(4);
+  @include mq(md) {
+    margin-top: rem(79);
+  }
+}

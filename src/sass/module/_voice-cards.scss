@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.voice-cards {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(40);
+  }
+}
+
+.voice-cards__item + .voice-cards__item {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

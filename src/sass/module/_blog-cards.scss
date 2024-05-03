@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));   // 333要調整
+  gap: rem(40) rem(30);
+  @include mq(md) {
+    gap: rem(50) rem(40);
+  }
+}

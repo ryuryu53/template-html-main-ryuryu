@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.blog-card {
+  padding: rem(16) rem(16) rem(24);
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
+  background-color: $white;
+}
+
+.blog-card__img {
+  aspect-ratio: 301 / 201;
+  overflow: hidden;
+}
+.blog-card__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-card__body {
+  margin-top: rem(17);
+}
+
+.blog-card__date {
+  font-family: $second-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  color: $green;
+}
+
+.blog-card__title {
+  font-size: rem(16);
+  font-weight: $medium;
+  color: $green;
+  border-bottom: 1px solid $greenaccent;
+  padding-bottom: rem(4);
+}
+
+.blog-card__text {
+  margin-top: rem(15);
+}
