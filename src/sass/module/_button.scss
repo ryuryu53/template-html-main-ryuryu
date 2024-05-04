@@ -45,6 +45,7 @@
 
 .button:hover {
   color: $greenaccent;
+  opacity: 1;
 }
 
 .button:hover::after {
@@ -70,6 +71,7 @@
 
 .button__text--arrow-up-sp::after {
   top: 28%;
+  width: rem(41);
   @include mq(md) {
     top: 30%;
   }

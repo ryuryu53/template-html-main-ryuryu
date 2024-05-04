@@ -32,6 +32,8 @@
 
 .section-header__engtitle--large {
   font-size: rem(80);
+  letter-spacing: 0.003em;
+  margin-left: rem(-9);
   @include mq(md) {
     font-size: rem(80);
   }
@@ -44,6 +46,15 @@
   margin-top: rem(8);
   @include mq(md) {
     margin-top: rem(8);
+  }
+}
+
+.section-header__jatitle--up {
+  margin-top: rem(-6);
+  padding-right: rem(1);
+  @include mq(md) {
+    margin-top: rem(-6);
+    padding-right: rem(11);
   }
 }
 

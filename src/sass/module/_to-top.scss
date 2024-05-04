@@ -1,0 +1,82 @@
+@use "global" as *;
+
+// .to-top {
+//   position: fixed;
+//   right: rem(15);
+//   bottom: rem(16);
+//   z-index: 30;
+//   background-color: $white;
+//   border-radius: 50%;
+//   @include mq(md) {
+//     right: rem(20);
+//     bottom: rem(20);
+//     box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);
+//   }
+// }
+
+// .to-top__link::after {
+//   content: "";
+//   display: block;
+//   width: rem(48);
+//   height: rem(48);
+//   background-image: url(../images/common/to-top-btn.svg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: contain;
+
+//   @include mq(md) {
+//     width: rem(80);
+//     height: rem(80);
+//   }
+// }
+
+// 自作の方がピクパ画像と一致する
+.to-top {
+  position: fixed;
+  right: rem(15);
+  bottom: rem(16);
+  z-index: 30;
+  border-radius: 50%;
+  overflow: hidden;
+  border: rem(1) solid $greenaccent;
+  transition: opacity 0.3s;
+  @include mq(md) {
+    right: rem(20);
+    bottom: rem(20);
+    box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);
+  }
+}
+
+.to-top:hover {
+  opacity: 0.7;
+}
+
+.to-top__link {
+  position: relative;
+  display: block;
+  width: rem(46);
+  height: rem(46);
+  background-color: $white;
+  @include mq(md) {
+    width: rem(78);
+    height: rem(78);
+  }
+}
+
+.to-top__link::after {
+  position: absolute;
+  top: 25%;
+  left: 39%;
+  content: "";
+  width: rem(6);
+  height: rem(28);
+  border-top: rem(1) solid $greenaccent;
+  border-right: rem(1) solid $greenaccent;
+  transform: skewY(135deg);
+  @include mq(md) {
+    top: 29%;
+    left: 45%;
+    height: rem(41);
+    width: rem(7);
+  }
+}

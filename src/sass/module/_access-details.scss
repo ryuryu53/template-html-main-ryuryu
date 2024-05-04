@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.access-details {
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.access-details__items {
+  padding-right: rem(2);
+  @include mq(md) {
+    padding-right: 0;
+  }
+}
+
+.access-details__item {
+  margin-top: rem(4);
+}
+
+.access-details__item:first-child {
+  padding-right: rem(7);
+  @include mq(md) {
+    margin-top: 0;
+    padding-right: 0;
+  }
+}

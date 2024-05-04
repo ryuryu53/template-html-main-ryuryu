@@ -44,7 +44,7 @@
   font-size: rem(12);
   font-weight: $normal;
   color: $greenaccent;
-  border: rem(1) solid $greenaccent;
+  border: rem(1) solid currentColor;
   padding: rem(5) rem(11) rem(5);
   @include mq(md) {
     top: 0;
