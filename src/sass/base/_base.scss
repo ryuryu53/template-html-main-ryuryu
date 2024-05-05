@@ -1,9 +1,11 @@
 /* リキッドレイアウト対応 */
 @use "global" as *;
 
-@if $startFrom == sp {
+@if $startFrom ==sp {
+
   //スマホファースト
   html {
+
     //~375px
     @media (max-width: 375px) {
       font-size: vw(375, 16);
@@ -21,7 +23,10 @@
       font-size: 16px;
     }
   }
-} @else {
+}
+
+@else {
+
   //PCファースト
   html {
     font-size: 16px;

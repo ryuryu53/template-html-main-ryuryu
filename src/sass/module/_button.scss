@@ -72,6 +72,7 @@
 .button__text--arrow-up-sp::after {
   top: 28%;
   width: rem(41);
+
   @include mq(md) {
     top: 30%;
   }

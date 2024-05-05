@@ -44,6 +44,7 @@
 
 .blog__title {
   padding-right: rem(2);
+
   @include mq(md) {
     padding-right: rem(1);
   }
@@ -51,6 +52,7 @@
 
 .blog__items {
   margin-top: rem(28);
+
   @include mq(md) {
     margin-top: rem(80);
   }
@@ -60,6 +62,7 @@
   text-align: center;
   margin-top: rem(40);
   padding-right: rem(4);
+
   @include mq(md) {
     margin-top: rem(80);
     padding-right: rem(6);

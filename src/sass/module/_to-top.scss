@@ -40,6 +40,7 @@
   overflow: hidden;
   border: rem(1) solid $greenaccent;
   transition: opacity 0.3s;
+
   @include mq(md) {
     right: rem(20);
     bottom: rem(20);
@@ -57,6 +58,7 @@
   width: rem(46);
   height: rem(46);
   background-color: $white;
+
   @include mq(md) {
     width: rem(78);
     height: rem(78);
@@ -73,6 +75,7 @@
   border-top: rem(1) solid $greenaccent;
   border-right: rem(1) solid $greenaccent;
   transform: skewY(135deg);
+
   @include mq(md) {
     top: 29%;
     left: 45%;

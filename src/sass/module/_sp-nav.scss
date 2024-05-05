@@ -126,11 +126,11 @@
   display: block;
 }
 
-.sp-nav__left-link-1 + .sp-nav__left-detail-items .sp-nav__left-detail-link {
+.sp-nav__left-link-1+.sp-nav__left-detail-items .sp-nav__left-detail-link {
   padding-left: rem(22);
 }
 
-.sp-nav__left-link-3 + .sp-nav__left-detail-items .sp-nav__left-detail-link,
+.sp-nav__left-link-3+.sp-nav__left-detail-items .sp-nav__left-detail-link,
 .sp-nav__right-detail-link {
   padding-left: rem(22);
 }

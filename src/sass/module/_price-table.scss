@@ -1,7 +1,8 @@
 @use "global" as *;
 
-.price-table__content + .price-table__content {
+.price-table__content+.price-table__content {
   margin-top: rem(41);
+
   @include mq(md) {
     margin-top: rem(40);
   }
@@ -10,6 +11,7 @@
 .price-table__title {
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: rem(4);
+
   @include mq(md) {
     padding-left: rem(1);
   }
@@ -17,6 +19,7 @@
 
 .price-table__items {
   margin-top: rem(9);
+
   @include mq(md) {
     margin-top: rem(7);
     padding-left: rem(1);
@@ -28,8 +31,9 @@
   justify-content: space-between;
 }
 
-.price-table__item + .price-table__item {
+.price-table__item+.price-table__item {
   margin-top: rem(11);
+
   @include mq(md) {
     margin-top: rem(8);
   }

@@ -4,6 +4,7 @@
   position: relative;
   // セクション全体にシャドウがついている。このクラスでbox-shadowを指定しても効果なし
   filter: drop-shadow(0 rem(4) rem(4) rgba(0, 0, 0, 0.25));
+
   @include mq(md) {
     filter: none;
   }
@@ -20,10 +21,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   @include mq(md) {
     top: rem(-40);
     right: calc(50% - min(48%, rem(674)));
-    width: rem(309);  // カンプは301×138でその通り指定してもレンダリングサイズが309×146となりピクパチェックで一致しない → 309×146で指定した
+    width: rem(309); // カンプは301×138でその通り指定してもレンダリングサイズが309×146となりピクパチェックで一致しない → 309×146で指定した
     height: rem(146);
     background-image: url(../images/common/contact-goldfish-pc.svg);
   }
@@ -31,6 +33,7 @@
 
 .contact__inner.inner {
   padding: 0 rem(40);
+
   @include mq(md) {
     padding: 0 rem(25);
   }
@@ -54,6 +57,7 @@
 
 .contact__inquiry {
   margin-top: rem(40);
+
   @include mq(md) {
     display: flex;
     flex-direction: column;
@@ -68,6 +72,7 @@
 .contact__logo {
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: rem(6);
+
   @include mq(md) {
     padding-bottom: rem(8);
   }
@@ -79,6 +84,7 @@
   width: rem(174);
   overflow: hidden;
   margin: auto;
+
   @include mq(md) {
     aspect-ratio: 200 / 75;
     width: rem(200);
@@ -87,6 +93,7 @@
 
 .contact__access {
   margin-top: rem(15);
+
   @include mq(md) {
     display: flex;
     gap: rem(22);
@@ -100,10 +107,11 @@
   // height: rem(160);
   overflow: hidden;
   margin-top: rem(16);
+
   @include mq(md) {
     aspect-ratio: 273 / 148;
     width: rem(273);
-    height: rem(148);   // これがないと地図の大きさは変わらないが、下の領域が少し下へズレる
+    height: rem(148); // これがないと地図の大きさは変わらないが、下の領域が少し下へズレる
     margin-top: 0;
   }
 }
@@ -127,6 +135,7 @@
   text-align: center;
   margin-top: rem(7);
   padding-left: rem(1);
+
   @include mq(md) {
     margin-top: rem(4);
     padding-left: 0;
@@ -138,6 +147,7 @@
   text-align: center;
   margin-top: rem(38);
   padding-right: rem(3);
+
   @include mq(md) {
     padding-right: rem(14);
   }

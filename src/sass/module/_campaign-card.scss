@@ -8,6 +8,7 @@
   aspect-ratio: 280 / 188;
   width: rem(280);
   overflow: hidden;
+
   @include mq(md) {
     width: rem(333);
     aspect-ratio: 333 / 223;
@@ -21,6 +22,7 @@
 
 .campaign-card__body {
   padding: rem(16);
+
   @include mq(md) {
     padding: rem(24) rem(16) rem(32);
   }
@@ -33,6 +35,7 @@
   color: $greenaccent;
   padding: rem(5) rem(11);
   border: rem(1) solid currentColor;
+
   @include mq(md) {
     padding: rem(7) rem(15);
   }
@@ -47,6 +50,7 @@
 .campaign-card__text {
   text-align: center;
   margin-top: rem(9);
+
   @include mq(md) {
     margin-top: rem(15);
     padding-right: rem(15);
@@ -58,6 +62,7 @@
   font-weight: $bold;
   text-align: center;
   margin-top: rem(1);
+
   @include mq(md) {
     line-height: 1.37;
     margin-top: rem(1);
@@ -67,6 +72,7 @@
 .campaign-card__price-before {
   position: relative;
   font-size: rem(20);
+
   @include mq(md) {
     font-size: rem(24);
   }
@@ -80,6 +86,7 @@
   width: rem(76);
   height: rem(3);
   background-color: $red;
+
   @include mq(md) {
     top: 48%;
     width: rem(91);
@@ -92,6 +99,7 @@
   font-size: rem(32);
   color: $greenaccent;
   margin-left: rem(17);
+
   @include mq(md) {
     font-size: rem(40);
     margin-left: rem(24);

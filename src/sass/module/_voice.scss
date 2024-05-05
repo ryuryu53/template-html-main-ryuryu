@@ -22,16 +22,16 @@
 .voice::after {
   @include mq(md) {
     content: "";
-      background-image: url(../images/common/voice-seahorse.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      position: absolute;
-      right: calc(50% - min(48%, rem(540)));
-      bottom: rem(-71);
-      width: rem(71);
-      height: rem(162);
-    }
+    background-image: url(../images/common/voice-seahorse.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    right: calc(50% - min(48%, rem(540)));
+    bottom: rem(-71);
+    width: rem(71);
+    height: rem(162);
+  }
 }
 
 .voice__title-en {
@@ -44,6 +44,7 @@
 
 .voice__items {
   margin-top: rem(44);
+
   @include mq(md) {
     margin-top: rem(30);
   }
@@ -53,6 +54,7 @@
   text-align: center;
   margin-top: rem(40);
   padding-right: rem(4);
+
   @include mq(md) {
     margin-top: rem(80);
   }

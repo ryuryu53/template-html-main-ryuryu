@@ -8,6 +8,7 @@
   width: 100%;
   height: rem(80);
   background-color: rgba($color: $green, $alpha: 68%);
+
   @include mq(md) {
     height: rem(90);
   }
@@ -20,6 +21,7 @@
   width: 100%;
   height: inherit;
   padding: 0 rem(15);
+
   @include mq(md) {
     max-width: rem(1440);
     margin: auto;
@@ -33,6 +35,7 @@
   display: flex;
   align-items: center;
   height: inherit;
+
   @include mq(md) {
     left: rem(-4);
     padding-top: rem(7);
@@ -44,6 +47,7 @@
   aspect-ratio: 102 / 38;
   width: rem(102);
   overflow: hidden;
+
   @include mq(md) {
     aspect-ratio: 133 / 50;
     width: rem(141);
@@ -59,6 +63,7 @@
 .header__pc-nav {
   display: none;
   height: inherit;
+
   @include mq(md) {
     display: block;
   }

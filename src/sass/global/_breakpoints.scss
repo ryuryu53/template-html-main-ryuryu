@@ -9,7 +9,7 @@ $mediaquerys: (
   xl: "screen",
 );
 
-@if $startFrom == sp {
+@if $startFrom ==sp {
   //スマホファースト
   $breakpoints: (
     sm: 600,
@@ -18,27 +18,29 @@ $mediaquerys: (
     xl: 1440,
   );
 
-  //メディアクエリー
-  $mediaquerys: (
-    sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
-    md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
-    lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
-    xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
-  );
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
 
-} @else {
+}
+
+@else {
   $breakpoints: (
     xl: 1440,
     lg: 1023,
     md: 767,
     sm: 600,
   );
-  $mediaquerys: (
-    sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
-    md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
-    lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
-    xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
-  );
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
 
 
 }
@@ -51,10 +53,12 @@ $mediaquerys: (
 }
 
 
-@if $startFrom == sp {
+@if $startFrom ==sp {
+
   //pcで表示
   .u-desktop {
     display: none;
+
     @include mq("md") {
       display: block;
     }
@@ -66,10 +70,14 @@ $mediaquerys: (
       display: none;
     }
   }
-} @else {
+}
+
+@else {
+
   //pcで表示
   .u-desktop {
     display: block;
+
     @include mq("md") {
       display: none;
     }
@@ -78,6 +86,7 @@ $mediaquerys: (
   //モバイルのみ表示
   .u-mobile {
     display: none;
+
     @include mq("md") {
       display: block;
     }

@@ -5,6 +5,7 @@
   // ↓ SP版：1番目と2番目でbox-shadowが違う。1番目だとカードの上に影が出ない！2番目で統一
   // box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
+
   @include mq(md) {
     padding: rem(24);
     box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
@@ -19,6 +20,7 @@
 
 .voice-card__meta {
   width: 47.6%;
+
   @include mq(md) {
     width: 58.47%;
   }
@@ -46,6 +48,7 @@
   color: $greenaccent;
   border: rem(1) solid currentColor;
   padding: rem(5) rem(11) rem(5);
+
   @include mq(md) {
     top: 0;
     padding: rem(7) rem(15);
@@ -59,6 +62,7 @@
   border-bottom: rem(1) solid $greenaccent;
   margin-top: rem(4);
   padding-bottom: rem(5);
+
   @include mq(md) {
     position: relative;
     top: rem(1);
@@ -73,6 +77,7 @@
   aspect-ratio: 151 / 117;
   width: 48.24%;
   overflow: hidden;
+
   @include mq(md) {
     aspect-ratio: 180 / 140;
     width: 38.14%;
@@ -86,6 +91,7 @@
 
 .voice-card__text {
   margin-top: rem(15);
+
   @include mq(md) {
     margin-top: rem(40);
   }

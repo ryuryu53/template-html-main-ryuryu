@@ -28,6 +28,7 @@
   z-index: 10;
   text-align: center;
   transform: translate(-50%, -52%);
+
   @include mq(md) {
     transform: translate(-49.7%, -50.8%);
   }
@@ -42,6 +43,7 @@
   letter-spacing: 0.53em;
   text-indent: 0.5em;
   text-transform: uppercase;
+
   @include mq(md) {
     font-size: rem(80);
     text-indent: 0.48em;
@@ -54,6 +56,7 @@
   font-weight: $normal;
   color: $white;
   text-indent: -0.15em;
+
   @include mq(md) {
     text-indent: -0.25em;
   }

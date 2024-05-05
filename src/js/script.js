@@ -59,7 +59,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     speed = 700;
 
   //.js-colorboxの付いた全ての要素に対して下記の処理を行う
-  box.each(function(){
+  box.each(function () {
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
       image = $(this).find('img');
@@ -68,12 +68,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     image.css('opacity', '0');
     color.css('width', '0%');
     //inviewを使って背景色が画面に現れたら処理をする
-    color.on('inview', function(){
-      if(counter == 0){
-        $(this).delay(200).animate({'width': '100%'}, speed, function () {
+    color.on('inview', function () {
+      if (counter == 0) {
+        $(this).delay(200).animate({ 'width': '100%' }, speed, function () {
           image.css('opacity', '1');
-          $(this).css({'left': '0', 'right': 'auto'});
-          $(this).animate({'width': '0%'}, speed);
+          $(this).css({ 'left': '0', 'right': 'auto' });
+          $(this).animate({ 'width': '0%' }, speed);
         });
         counter = 1;
       }
@@ -114,10 +114,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if (documentHeight - (wHeight + scrollAmount) <= footerHeight) {
       // ページトップへ戻るボタンがフッターの直前に来たら、positionプロパティの値をfixedからabsoluteに変更する
       if (browserWidth < 768) {
-      $('.js-to-top').css({
-        position: 'absolute',
-        bottom: footerHeight + 16
-      });
+        $('.js-to-top').css({
+          position: 'absolute',
+          bottom: footerHeight + 16
+        });
       } else {
         $('.js-to-top').css({
           position: 'absolute',
@@ -126,10 +126,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       }
     } else {
       if (browserWidth < 768) {
-      $('.js-to-top').css({
-        position: 'fixed',
-        bottom: '16px'
-      });
+        $('.js-to-top').css({
+          position: 'fixed',
+          bottom: '16px'
+        });
       } else {
         $('.js-to-top').css({
           position: 'fixed',

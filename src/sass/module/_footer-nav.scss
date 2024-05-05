@@ -7,6 +7,7 @@
 
 .footer-nav__left-content {
   width: 50%;
+
   @include mq(md) {
     width: 50%;
     display: flex;
@@ -16,6 +17,7 @@
 
 .footer-nav__right-content {
   width: 46.7%;
+
   @include mq(md) {
     display: flex;
     justify-content: space-between;
@@ -64,6 +66,7 @@
 
 .footer-nav__left-link-1 {
   padding: rem(16) 0 rem(15) rem(22);
+
   @include mq(md) {
     padding-top: rem(17);
   }
@@ -71,6 +74,7 @@
 
 .footer-nav__left-link-2 {
   padding: rem(17) 0 rem(17) rem(22);
+
   @include mq(md) {
     padding-top: rem(17);
   }
@@ -82,6 +86,7 @@
 
 .footer-nav__left-link-4 {
   padding: rem(17) 0 rem(15) rem(22);
+
   @include mq(md) {
     padding-top: rem(17);
   }
@@ -89,6 +94,7 @@
 
 .footer-nav__right-link-1 {
   padding: rem(16) 0 rem(17) rem(22);
+
   @include mq(md) {
     padding-top: rem(17);
   }
@@ -100,6 +106,7 @@
 
 .footer-nav__right-link-3 {
   padding: rem(17) 0 rem(17) rem(22);
+
   @include mq(md) {
     padding-top: rem(17);
   }
@@ -112,6 +119,7 @@
 
 .footer-nav__right-link-5 {
   padding: rem(18) 0 rem(17) rem(22);
+
   @include mq(md) {
     padding-top: rem(19);
   }
@@ -144,7 +152,7 @@
   background-size: contain;
 }
 
-.footer-nav__left-link-1 + .footer-nav__left-detail-items {
+.footer-nav__left-link-1+.footer-nav__left-detail-items {
   @include mq(md) {
     position: relative;
     left: rem(-2);
@@ -161,11 +169,11 @@
   display: block;
 }
 
-.footer-nav__left-link-1 + .footer-nav__left-detail-items .footer-nav__left-detail-link {
+.footer-nav__left-link-1+.footer-nav__left-detail-items .footer-nav__left-detail-link {
   padding-left: rem(24);
 }
 
-.footer-nav__left-link-3 + .footer-nav__left-detail-items .footer-nav__left-detail-link,
+.footer-nav__left-link-3+.footer-nav__left-detail-items .footer-nav__left-detail-link,
 .footer-nav__right-detail-link {
   padding-left: rem(22);
 }

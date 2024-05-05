@@ -28,6 +28,7 @@
 
 .price__contents {
   margin-top: rem(28);
+
   @include mq(md) {
     display: flex;
     flex-direction: row-reverse;
@@ -39,6 +40,7 @@
 
 .price__table {
   margin-top: rem(40);
+
   @include mq(md) {
     width: 45.68%;
     margin-top: 0;
@@ -49,6 +51,7 @@
   aspect-ratio: 345 / 227;
   width: 100%;
   overflow: hidden;
+
   @include mq(md) {
     aspect-ratio: 492 / 746;
     width: 45.68%;
@@ -64,6 +67,7 @@
   text-align: center;
   margin-top: rem(41);
   padding-right: rem(4);
+
   @include mq(md) {
     margin-top: rem(79);
   }

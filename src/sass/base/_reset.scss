@@ -1,4 +1,4 @@
-@use "global" as *;   // 追加
+@use "global" as *; // 追加
 
 *,
 *::before,
@@ -35,12 +35,12 @@ html {
 
 /* Set core body defaults */
 body {
-  position: relative;   // 追加（ページトップへ戻るボタンの固定に必要）
+  position: relative; // 追加（ページトップへ戻るボタンの固定に必要）
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
-  color: $green;  // 追加
-  background-color: $white;   // 追加
+  color: $green; // 追加
+  background-color: $white; // 追加
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -62,7 +62,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -124,5 +124,5 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;   // 追加
+  opacity: 0.7; // 追加
 }

@@ -12,6 +12,7 @@
 
 .information__content {
   margin-top: rem(28);
+
   @include mq(md) {
     display: flex;
     gap: rem(45);
@@ -24,6 +25,7 @@
   aspect-ratio: 345 / 227;
   width: 100%;
   overflow: hidden;
+
   @include mq(md) {
     position: relative;
     right: rem(3);
@@ -39,6 +41,7 @@
 
 .information__text-body {
   margin-top: rem(22);
+
   @include mq(md) {
     max-width: rem(492);
     width: 100%;
@@ -52,6 +55,7 @@
   font-weight: $bold;
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: 0;
+
   @include mq(md) {
     font-size: rem(24);
     padding-bottom: rem(2);
