@@ -31,6 +31,7 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: rem(90);  // 追加
 }
 
 /* Set core body defaults */
