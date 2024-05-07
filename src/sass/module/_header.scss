@@ -23,8 +23,8 @@
   padding: 0 rem(15);
 
   @include mq(md) {
-    max-width: rem(1440);
-    margin: auto;
+    // max-width: rem(1440);  FB：左右にくっつける（max-widthの設定不要）
+    // margin: auto;
     padding: 0 rem(40);
   }
 }

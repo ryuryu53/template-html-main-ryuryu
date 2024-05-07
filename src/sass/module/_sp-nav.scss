@@ -13,12 +13,14 @@
 
 .sp-nav__container {
   display: flex;
-  align-items: center;
+  // align-items: center; FB：スマホを横にしたときメニューの上部が見切れてしまう
   width: 100%;
   max-width: rem(600);
   height: inherit;
   margin: auto;
   padding: 0 rem(15);
+  padding-top: rem(85); // FB：追加
+  overflow-y: auto; // FB：追加
 }
 
 .sp-nav__left-content {

@@ -12,14 +12,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // 画面幅のサイズが変わったら
-  $(window).on('resize', function () {
+  // $(window).on('resize', function () {
 
-    // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
-    $('.js-hamburger').removeClass('is-active');
+  //   // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
+  //   $('.js-hamburger').removeClass('is-active');
 
-    // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
-    $('.js-sp-nav').fadeOut(300);
-  });
+  //   // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
+  //   $('.js-sp-nav').fadeOut(300);
+  // });
 
   // mvスワイパー
   const mv_swiper = new Swiper('.js-mv-swiper', {
