@@ -4,6 +4,11 @@
   box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: $black, $alpha: 25%);
 }
 
+.campaign-card__link {
+  display: block; // FB：追加
+  height: 100%; // FB：追加
+}
+
 .campaign-card__img {
   aspect-ratio: 280 / 188;
   width: rem(280);

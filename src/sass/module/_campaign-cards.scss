@@ -8,6 +8,7 @@
 .campaign-cards__item {
   // swiper-slideにwidth100%あり
   max-width: rem(280);
+  height: auto; // FB：テキストが増えてもカードの高さを揃えるため
 
   @include mq(md) {
     max-width: rem(333);
