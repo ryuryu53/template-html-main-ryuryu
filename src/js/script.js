@@ -12,14 +12,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // 画面幅のサイズが変わったら
-  // $(window).on('resize', function () {
+  $(window).on('resize', function () {
+    // FB：追加 ∵iOSでは縦スクロールすると画面幅が変わったと認識してresizeイベントが作動してしまう
+    if (window.matchMedia("(min-width: 768px)").matches) {
 
-  //   // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
-  //   $('.js-hamburger').removeClass('is-active');
+      // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
+      $('.js-hamburger').removeClass('is-active');
 
-  //   // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
-  //   $('.js-sp-nav').fadeOut(300);
-  // });
+      // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
+      $('.js-sp-nav').fadeOut(300);
+    }
+  });
 
   // mvスワイパー
   const mv_swiper = new Swiper('.js-mv-swiper', {
