@@ -1,14 +1,23 @@
 @use "global" as *;
 
 .voice-card {
-  padding: rem(10) rem(16) rem(24);
+  // padding: rem(10) rem(16) rem(24);  FB：コメントアウト
   // ↓ SP版：1番目と2番目でbox-shadowが違う。1番目だとカードの上に影が出ない！2番目で統一
   // box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
 
   @include mq(md) {
-    padding: rem(24);
+    // padding: rem(24);  FB：コメントアウト
     box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
+  }
+}
+
+// aタグはカード全体がその領域になっているようにする。カードの縁も含む
+.voice-card__link { // FB：追加
+  display: block;
+  padding: rem(10) rem(16) rem(24);
+  @include mq(md) {
+    padding: rem(24);
   }
 }
 

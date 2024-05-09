@@ -1,15 +1,15 @@
 @use "global" as *;
 
 .blog-card {
-  // padding: rem(16) rem(16) rem(24);  FBでコメントアウト
+  // padding: rem(16) rem(16) rem(24);  FB：コメントアウト
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
   background-color: $white;
 }
 
 // aタグはカード全体がその領域になっているようにする。カードの縁も含む
-.blog-card__link {
-  display: block; // FB：追加
-  padding: rem(16) rem(16) rem(24); // FB：追加
+.blog-card__link { // FB：追加
+  display: block;
+  padding: rem(16) rem(16) rem(24);
 }
 
 .blog-card__img {
