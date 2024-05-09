@@ -3,8 +3,15 @@
 .voice-cards {
   @include mq(md) {
     display: flex;
+    flex-wrap: wrap;  // FB：追加 ⇒ 3個以上になったらカラム落ちさせて横2個のレイアウトを維持
     justify-content: space-between;
     gap: rem(40);
+  }
+}
+
+.voice-cards__item {
+  @include mq(md) {
+    width: 48.14%;  // FB：追加 ⇒ テキストが増えると崩れるのでカードの幅を指定（flexアイテムに幅指定するのを忘れない！）
   }
 }
 
