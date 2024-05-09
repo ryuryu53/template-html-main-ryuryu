@@ -39,6 +39,10 @@
   }
 }
 
+.price-table__item dt {
+  padding-right: rem(15); // FB：追加 ⇒ メニューと価格の間に余白を入れる(文字数増えたときのために)
+}
+
 .price-table__item dd {
   @include mq(md) {
     position: relative;
