@@ -2,7 +2,7 @@
 
 .blog-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr)); // 333要調整
+  grid-template-columns: repeat(auto-fill, minmax(rem(333), 1fr)); // FB：カードの個数が減ってもデザイン通りを維持する ⇒ auto-fit → auto-fill に修正
   gap: rem(40) rem(30);
 
   @include mq(md) {
