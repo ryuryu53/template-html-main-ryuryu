@@ -5,7 +5,9 @@
 }
 
 .campaign-card__link {
-  display: block; // FB：追加
+  // display: block; // FB：追加 → 動画レビュー：コメントアウト
+  display: flex;  // 動画レビュー：追加
+  flex-direction: column; // 動画レビュー：追加
   height: 100%; // FB：追加
 }
 
@@ -26,6 +28,9 @@
 }
 
 .campaign-card__body {
+  flex-grow: 1; // 動画レビュー：追加
+  display: flex;  // 動画レビュー：追加
+  flex-direction: column; // 動画レビュー：追加
   padding: rem(16);
 
   @include mq(md) {
@@ -35,6 +40,7 @@
 
 .campaign-card__category {
   display: inline-block;
+  width: fit-content; // 動画レビュー：追加
   font-size: rem(12);
   font-weight: $normal;
   color: $greenaccent;
@@ -47,6 +53,7 @@
 }
 
 .campaign-card__title {
+  flex-grow: 1; // 動画レビュー：追加
   border-bottom: rem(1) solid $greenaccent;
   margin-top: rem(4);
   padding-bottom: rem(8);
