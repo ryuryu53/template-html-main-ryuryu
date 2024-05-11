@@ -1,24 +1,29 @@
 @use "global" as *;
 
 .voice-cards {
+  display: grid;  // 動画レビュー：ここもgridを使う
+  gap: rem(40);
+
   @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;  // FB：追加 ⇒ 3個以上になったらカラム落ちさせて横2個のレイアウトを維持
-    justify-content: space-between;
-    gap: rem(40);
+    // display: flex; grid使用のためコメントアウト
+    // flex-wrap: wrap;  // FB：追加 ⇒ 3個以上になったらカラム落ちさせて横2個のレイアウトを維持
+    // justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(50) rem(40);
   }
 }
 
-.voice-cards__item {
-  @include mq(md) {
-    width: 48.14%;  // FB：追加 ⇒ テキストが増えると崩れるのでカードの幅を指定（flexアイテムに幅指定するのを忘れない！）
-  }
-}
+// grid使用のためコメントアウト
+// .voice-cards__item {
+//   @include mq(md) {
+//     width: 48.14%;  // FB：追加 ⇒ テキストが増えると崩れるのでカードの幅を指定（flexアイテムに幅指定するのを忘れない！）
+//   }
+// }
 
-.voice-cards__item+.voice-cards__item {
-  margin-top: rem(40);
+// .voice-cards__item+.voice-cards__item {
+//   margin-top: rem(40);
 
-  @include mq(md) {
-    margin-top: 0;
-  }
-}
+//   @include mq(md) {
+//     margin-top: 0;
+//   }
+// }
