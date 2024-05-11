@@ -53,7 +53,7 @@
 .voice__btn {
   text-align: center;
   margin-top: rem(40);
-  padding-right: rem(4);
+  // padding-right: rem(4);  動画レビュー：完全に中央に寄せてOK → 削除
 
   @include mq(md) {
     margin-top: rem(80);
