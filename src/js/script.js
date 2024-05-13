@@ -4,9 +4,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(".js-hamburger, .js-sp-nav").click(function () {
     if ($(".js-hamburger").hasClass('is-active')) {
       $(".js-hamburger").removeClass("is-active");
+      $('body, html').css('overflow', 'auto');
+      $('.js-header').removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
     } else {
       $(".js-hamburger").addClass("is-active");
+      $('body, html').css('overflow', 'hidden');  // 動画レビュー：ドロワーを開いたときは後ろがスクロールしないようにする
+      $('.js-header').addClass('is-active');  // 動画レビュー：ロゴとメニューの文字が被らないように背景色を指定
       $(".js-sp-nav").fadeIn(300);
     }
   });
@@ -17,7 +21,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if (window.matchMedia("(min-width: 768px)").matches) {
 
       // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
-      $('.js-hamburger').removeClass('is-active');
+      // 動画レビュー：ロゴとメニューの文字が被らないようにした背景色を元に戻す
+      $('.js-hamburger, .js-header').removeClass('is-active');
 
       // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
       $('.js-sp-nav').fadeOut(300);

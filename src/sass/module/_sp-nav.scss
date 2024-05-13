@@ -3,13 +3,19 @@
 .sp-nav {
   display: none;
   position: absolute;
-  top: 0;
+  top: rem(80); // 動画レビュー：追加
   left: 0;
   right: 0;
   width: 100%;
   height: 100vh;
   background-color: $greenaccent;
-  overflow-y: auto; // FB：追加
+  // overflow-y: auto; // FB：追加 ⇒ 動画レビュー：.sp-nav__inner へ移動
+}
+
+// 動画レビュー：画面幅が600px以上になってもスクロールバーが右端にあるようにするため追加
+.sp-nav__inner {
+  height: calc(100vh - rem(80));
+  overflow-y: auto;
 }
 
 .sp-nav__container {
@@ -17,9 +23,9 @@
   // align-items: center; FB：スマホを横にしたときメニューの上部が見切れてしまう
   width: 100%;
   max-width: rem(600);
-  height: inherit;
+  height: calc(100vh - rem(80));  // 動画レビュー：inherit から修正
   margin: auto;
-  padding: rem(85) rem(15) 0; // FB：rem(85) 追加
+  padding: rem(5) rem(15) 0; // FB：rem(85) 追加 ⇒ 動画レビュー：85 → 5 に修正
 }
 
 .sp-nav__left-content {

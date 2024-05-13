@@ -14,6 +14,10 @@
   }
 }
 
+.header.is-active {
+  background-color: $greenaccent; // 動画レビュー：追加
+}
+
 .header__inner {
   display: flex;
   align-items: center;
