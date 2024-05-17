@@ -42,7 +42,7 @@
 
   @include mq(md) {
     left: rem(-4);
-    padding-top: rem(3);
+    padding-top: rem(7);  // align-items: center;だけではズレが大きいのでpaddingで調整
   }
 }
 
@@ -53,9 +53,14 @@
   overflow: hidden;
 
   @include mq(md) {
-    aspect-ratio: 133 / 50;
+    aspect-ratio: 141 / 58; // 133/50 → 141/58 に修正：カンプは133×50だがその通り指定すると、デベロッパーツールで組み込みサイズ141×58(レンダリングは133×50)と表示され、VSCodeのsvgファイルには「width="141" height="58"」とある
     width: rem(141);
   }
+}
+
+.header__logo-link img {  // この指定忘れてた！
+  height: 100%;
+  object-fit: cover;
 }
 
 .header__drawer {
