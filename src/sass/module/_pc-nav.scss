@@ -54,7 +54,7 @@
   opacity: 1;
 }
 
-.pc-nav__link:hover:after {
+.pc-nav__link:hover::after {
   transform: scale(1, 1); // X方向にスケール拡大
 }
 
