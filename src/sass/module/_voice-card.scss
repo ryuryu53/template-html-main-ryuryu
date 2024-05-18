@@ -39,7 +39,8 @@
   @include mq(md) {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    // justify-content: space-between;  CSS_ZOOM：flexアイテムのmargin-left: auto;で対応する。
+    // 「年代(性別)」が無くなった場合、カテゴリーが左に寄ってしまうから
   }
 }
 
@@ -60,6 +61,7 @@
 
   @include mq(md) {
     top: 0;
+    margin-left: auto;  // CSS_ZOOM：追加 ⇒ justify-content: space-between;でなくこちらで対応
     padding: rem(7) rem(15);
   }
 }
