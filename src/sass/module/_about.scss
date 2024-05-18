@@ -29,7 +29,10 @@
 
 .about__img-box {
   position: relative;
-  right: rem(1);
+  // CSS_ZOOM：この位置調整不要。ピクパーのためにinnerの外へ数pxずらすのはやらなくてよい。
+  // 本来の位置とは違うところに見た目があることになってしまう。innerの中に納まっているべき。
+  // ピクパー調整には柔軟性を持たせる
+  // right: rem(1);
   margin-top: rem(28);
   padding-top: rem(26);
 
@@ -51,6 +54,7 @@
     left: rem(1);
     aspect-ratio: 400 / 606;
     width: 37.04%;
+    z-index: 5; // CSS_ZOOM：z-indexをプラスにするためにここに追加
   }
 }
 
@@ -63,7 +67,7 @@
   @include mq(md) {
     position: relative;
     left: rem(1);
-    z-index: -5;
+    // z-index: -5; CSS_ZOOM：z-indexはプラスにする ↑↓ ⇒ 要素の検証しやすくなる
     aspect-ratio: 880 / 581;
     width: 81.48%;
   }
@@ -86,6 +90,7 @@
     max-width: rem(840);
     width: 100%;
     margin-top: 0;
+    z-index: 10; // CSS_ZOOM：z-indexをプラスにするためにここに追加
   }
 }
 
@@ -125,10 +130,10 @@
 .about__btn {
   text-align: center;
   margin-top: rem(50);
-  padding-right: rem(17);
+  // padding-right: rem(17);  CSS_ZOOM後の質問：rem(17)と値は大きいが中央寄せにする。実務では確認取ればOK
 
   @include mq(md) {
     margin-top: rem(40);
-    padding-right: rem(4);
+    // padding-right: rem(4); CSS_ZOOM：中央寄せにする
   }
 }

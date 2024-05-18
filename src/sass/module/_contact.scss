@@ -146,9 +146,9 @@
 .contact__btn {
   text-align: center;
   margin-top: rem(38);
-  padding-right: rem(3);
+  // padding-right: rem(3); CSS_ZOOM：中央寄せにする
 
   @include mq(md) {
-    padding-right: rem(14);
+    padding-right: rem(14); // ここは.contact__inquiryにpadding-left: rem(29);があるので残しておく
   }
 }
