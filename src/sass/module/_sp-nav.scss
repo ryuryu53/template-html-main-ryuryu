@@ -12,10 +12,10 @@
   // overflow-y: auto; // FB：追加 ⇒ 動画レビュー：.sp-nav__inner へ移動
 }
 
-// 動画レビュー：画面幅が600px以上になってもスクロールバーが右端にあるようにするため追加
 .sp-nav__inner {
   height: calc(100vh - rem(80));
   overflow-y: auto;
+  padding-bottom: rem(32);
 }
 
 .sp-nav__container {
@@ -23,7 +23,7 @@
   // align-items: center; FB：スマホを横にしたときメニューの上部が見切れてしまう
   width: 100%;
   max-width: rem(600);
-  height: calc(100vh - rem(80));  // 動画レビュー：inherit から修正
+  // height: calc(100vh - rem(80));  // 動画レビュー：inherit から修正 ⇒ .sp-nav__innerへ移動
   margin: auto;
   padding: rem(5) rem(15) 0; // FB：rem(85) 追加 ⇒ 動画レビュー：85 → 5 に修正
 }
