@@ -69,11 +69,11 @@
   transform: skew(48deg);
 }
 
-.button__text--arrow-up-sp::after {
-  top: 28%;
-  width: rem(41);
+// .button__text--arrow-up-sp::after {  コード_FB：削除
+//   top: 28%;
+//   width: rem(41);
 
-  @include mq(md) {
-    top: 30%;
-  }
-}
+//   @include mq(md) {
+//     top: 30%;
+//   }
+// }
