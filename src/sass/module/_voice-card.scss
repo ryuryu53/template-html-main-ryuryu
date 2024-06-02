@@ -84,7 +84,7 @@
   }
 }
 
-.voice-card__img {
+.voice-card__img {  // このクラス名をpictureへ移すと表示崩れを起こすのでこのまま
   aspect-ratio: 151 / 117;
   width: 48.24%;
   overflow: hidden;

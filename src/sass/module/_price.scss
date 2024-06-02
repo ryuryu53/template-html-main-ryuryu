@@ -47,7 +47,7 @@
   }
 }
 
-.price__img {
+.price__img {  // Voice同様このクラス名をpictureへは移さず
   aspect-ratio: 345 / 227;
   width: 100%;
   overflow: hidden;

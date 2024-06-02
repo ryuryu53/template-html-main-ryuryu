@@ -22,6 +22,7 @@
 }
 
 .information__img {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにした
   aspect-ratio: 345 / 227;
   width: 100%;
   overflow: hidden;

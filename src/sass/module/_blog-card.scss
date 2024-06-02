@@ -13,6 +13,7 @@
 }
 
 .blog-card__img {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにした
   aspect-ratio: 301 / 201;
   overflow: hidden;
 }

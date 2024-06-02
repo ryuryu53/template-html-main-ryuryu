@@ -12,6 +12,7 @@
 }
 
 .campaign-card__img {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにしたが、なくても問題ない!?
   aspect-ratio: 280 / 188;
   width: rem(280);
   overflow: hidden;

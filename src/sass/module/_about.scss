@@ -59,6 +59,7 @@
 }
 
 .about__img-right {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにした。ここはSwiperと違い必要！
   aspect-ratio: 281 / 186;
   width: 81.45%;
   overflow: hidden;
