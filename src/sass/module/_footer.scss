@@ -55,13 +55,12 @@
 .footer__copyright {
   position: relative;
   right: rem(1);
-  display: block;
   text-align: center;
-  margin-top: rem(15);
+  margin: rem(15) rem(-1) 0;
 
   @include mq(md) {
     right: 0;
-    margin-top: rem(54);
+    margin: rem(56) 0 0;
   }
 }
 

@@ -6,22 +6,26 @@
 }
 
 .text--medium {
+  @extend .text;
   font-weight: $medium;
 }
 
 .text--white-pc {
+  @extend .text;
   @include mq(md) {
     color: $white;
   }
 }
 
 .text--black-pc {
+  @extend .text;
   @include mq(md) {
     color: $black;
   }
 }
 
 .text--black-sp {
+  @extend .text;
   color: $black;
 
   @include mq(md) {
@@ -30,10 +34,12 @@
 }
 
 .text--bold {
+  @extend .text;
   font-weight: $bold;
 }
 
 .text--small-sp {
+  @extend .text;
   font-size: rem(14);
 
   @include mq(md) {

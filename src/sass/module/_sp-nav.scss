@@ -44,76 +44,75 @@
   color: $white;
 }
 
-.sp-nav__left-link-1,
-.sp-nav__left-link-2,
-.sp-nav__left-link-3,
-.sp-nav__left-link-4,
-.sp-nav__right-link-1,
-.sp-nav__right-link-2,
-.sp-nav__right-link-3,
-.sp-nav__right-link-4,
-.sp-nav__right-link-5,
-.sp-nav__right-link-6 {
+.sp-nav__left-link,
+.sp-nav__right-link {
+  position: relative;
   display: block;
   font-weight: $bold;
-  text-indent: rem(-18);
-}
-
-.sp-nav__left-link-1 {
-  padding: rem(16) 0 rem(15) rem(22);
-}
-
-.sp-nav__left-link-2 {
-  padding: rem(17) 0 rem(17) rem(22);
-}
-
-.sp-nav__left-link-3 {
+  // text-indent: rem(-18); コード_FB：マイナス系のものはあまり使わない方がよい ⇒ absoluteで対応
   padding: rem(17) 0 rem(15) rem(22);
 }
 
-.sp-nav__left-link-4 {
-  padding: rem(17) 0 rem(15) rem(22);
-}
+// .sp-nav__left-link-1 { // コード_FB：ほとんど数値変わらないのでpadding統一してOK。連番は使わない
+//   padding: rem(16) 0 rem(15) rem(22);
+// }
 
-.sp-nav__right-link-1 {
-  padding: rem(16) 0 rem(17) rem(22);
-}
+// .sp-nav__left-link-2 {
+//   padding: rem(17) 0 rem(17) rem(22);
+// }
 
-.sp-nav__right-link-2 {
-  padding: rem(17) 0 rem(15) rem(22);
-}
+// .sp-nav__left-link-3 {
+//   padding: rem(17) 0 rem(15) rem(22);
+// }
 
-.sp-nav__right-link-3 {
-  padding: rem(17) 0 rem(17) rem(22);
-}
+// .sp-nav__left-link-4 {
+//   padding: rem(17) 0 rem(15) rem(22);
+// }
 
-.sp-nav__right-link-4 {
+// .sp-nav__right-link-1 {
+//   padding: rem(16) 0 rem(17) rem(22);
+// }
+
+// .sp-nav__right-link-2 {
+//   padding: rem(17) 0 rem(15) rem(22);
+// }
+
+// .sp-nav__right-link-3 {
+//   padding: rem(17) 0 rem(17) rem(22);
+// }
+
+// .sp-nav__right-link-4 {
+//   line-height: 1.1;
+//   padding: rem(18) 0 rem(18) rem(22);
+// }
+
+// .sp-nav__right-link-5 {
+//   padding: rem(19) 0 rem(17) rem(22);
+// }
+
+// .sp-nav__right-link-6 {
+//   padding: rem(17) 0 rem(15) rem(22);
+// }
+
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(2) .sp-nav__right-link {
   line-height: 1.1;
-  padding: rem(18) 0 rem(18) rem(22);
+  padding-top: rem(24);
 }
 
-.sp-nav__right-link-5 {
-  padding: rem(19) 0 rem(17) rem(22);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__right-link {
+  padding-top: rem(22);
 }
 
-.sp-nav__right-link-6 {
-  padding: rem(17) 0 rem(15) rem(22);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__right-link {
+  padding-top: rem(19);
 }
 
-.sp-nav__left-link-1::before,
-.sp-nav__left-link-2::before,
-.sp-nav__left-link-3::before,
-.sp-nav__left-link-4::before,
-.sp-nav__right-link-1::before,
-.sp-nav__right-link-2::before,
-.sp-nav__right-link-3::before,
-.sp-nav__right-link-4::before,
-.sp-nav__right-link-5::before,
-.sp-nav__right-link-6::before {
+.sp-nav__left-link::before,
+.sp-nav__right-link::before {
   content: "";
-  position: relative;
-  top: rem(2);
-  left: rem(-4);
+  position: absolute; // コード_FB：アイコンの位置調整はabsoluteで行う
+  top: rem(19);
+  left: 0;
   display: inline-block;
   width: rem(18);
   height: rem(18);
@@ -121,6 +120,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(2) .sp-nav__right-link::before {
+  top: rem(23);
+}
+
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__right-link::before {
+  top: rem(25);
+}
+
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__right-link::before {
+  top: rem(22);
 }
 
 .sp-nav__left-detail-item,
@@ -133,17 +144,9 @@
   display: block;
 }
 
-.sp-nav__left-link-1+.sp-nav__left-detail-items .sp-nav__left-detail-link {
-  padding-left: rem(22);
-}
-
-.sp-nav__left-link-3+.sp-nav__left-detail-items .sp-nav__left-detail-link,
+.sp-nav__left-detail-link,
 .sp-nav__right-detail-link {
   padding-left: rem(22);
-}
-
-.sp-nav__left-detail-link:first-child {
-  padding-left: rem(24);
 }
 
 .sp-nav__left-detail-item:first-child .sp-nav__left-detail-link,

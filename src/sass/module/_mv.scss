@@ -55,9 +55,12 @@
   font-size: rem(20);
   font-weight: $normal;
   color: $white;
-  text-indent: -0.15em;
+  // text-indent: -0.15em;
+  position: relative;
+  right: rem(1);
 
   @include mq(md) {
-    text-indent: -0.25em;
+    // text-indent: -0.25em;
+    right: rem(2);
   }
 }
