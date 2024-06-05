@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.filter-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(16) rem(21);
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filter-list__item {
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.571;
+  color: $greenaccent;
+  text-align: center;
+  padding: rem(6);
+  border: rem(1) solid currentColor;
+}
+
+.filter-list__item.is-active {
+  color: $white;
+  background-color: $greenaccent;
+}

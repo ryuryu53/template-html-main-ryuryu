@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.breadcrumbs {
+  margin-top: rem(8);
+}
+
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+}
+
+.breadcrumbs li {
+  position: relative;
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $green;
+  text-transform: uppercase;
+}
+
+// .breadcrumbs li:not(:last-child)::after {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   right: rem(-12);
+//   width: rem(4);
+//   height: rem(8);
+//   background-image: url(../images/common/breadcrumb-vector.svg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: contain;
+//   transform: translateY(-50%);
+// }

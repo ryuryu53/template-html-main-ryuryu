@@ -46,3 +46,11 @@
     font-size: rem(16);
   }
 }
+
+.text--medium-large {
+  @extend .text;
+  font-weight: $medium;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}

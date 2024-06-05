@@ -12,14 +12,20 @@
 }
 
 .campaign-card__img {
-  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにしたが、なくても問題ない!?
+  // display: block; コード_FB：クラス名をpictureタグへ移したためblockにしたが、なくても問題ない!? → flexアイテムなのでブロック扱い
   aspect-ratio: 280 / 188;
-  width: rem(280);
+  // width: rem(280);
   overflow: hidden;
 
   @include mq(md) {
-    width: rem(333);
+    // width: rem(333);
     aspect-ratio: 333 / 223;
+  }
+}
+
+.campaign-card__img--sub-page {
+  @include mq(md) {
+    aspect-ratio: 520 / 347;
   }
 }
 
@@ -36,6 +42,12 @@
 
   @include mq(md) {
     padding: rem(24) rem(16) rem(32);
+  }
+}
+
+.campaign-card__body--sub-page {
+  @include mq(md) {
+    padding-bottom: 0;
   }
 }
 
@@ -59,6 +71,12 @@
   margin-top: rem(4);
   padding-bottom: rem(8);
 }
+
+// .campaign-card__title--sub-page {
+//   @include mq(md) {
+//     height: 100%;
+//   }
+// }
 
 .campaign-card__text {
   text-align: center;
@@ -131,4 +149,45 @@
   @include mq(md) {
     padding-right: rem(2);
   }
+}
+
+.campaign-card__information {
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+  margin-top: rem(24);
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.campaign-card__information-text {
+  flex-grow: 1;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $green;
+}
+
+.campaign-card__information-period {
+  font-family: $third-font-family;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $greenaccent;
+  text-align: center;
+  margin-top: rem(32);
+}
+
+.campaign-card__information-inquiry {
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $greenaccent;
+  text-align: center;
+  margin-top: rem(7);
+}
+
+
+.campaign-card__btn {
+  text-align: center;
+  padding-bottom: rem(5);
+  margin-top: rem(16);
 }
