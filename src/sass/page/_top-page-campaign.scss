@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .top-page-campaign {
-  margin-top: rem(52);
+  margin-top: rem(51);
   @include mq(md) {
-    margin-top: rem(150);
+    margin-top: rem(149);
   }
 }

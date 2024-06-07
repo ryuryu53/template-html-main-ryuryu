@@ -4,8 +4,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: rem(16) rem(21);
+  background-color: $white;
   @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(32);
+    width: 100%;
+    max-width: rem(744);
   }
 }
 
@@ -15,11 +19,14 @@
   line-height: 1.571;
   color: $greenaccent;
   text-align: center;
-  padding: rem(6);
+  text-transform: uppercase;
+  padding-top: rem(6);
+  padding-bottom: rem(4);
   border: rem(1) solid currentColor;
 }
 
 .filter-list__item.is-active {
   color: $white;
+  border-color: transparent;
   background-color: $greenaccent;
 }

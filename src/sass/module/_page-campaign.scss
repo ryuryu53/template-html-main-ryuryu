@@ -1,7 +1,31 @@
 @use "global" as *;
 
 .page-campaign {
+  position: relative;
+}
 
+.page-campaign::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-campaign__list {
+  position: relative;
 }
 
 .page-campaign__items {

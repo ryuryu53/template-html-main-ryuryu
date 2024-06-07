@@ -47,7 +47,7 @@
 
 .campaign-card__body--sub-page {
   @include mq(md) {
-    padding-bottom: 0;
+    padding: rem(24) rem(24) 0;
   }
 }
 
@@ -72,11 +72,11 @@
   padding-bottom: rem(8);
 }
 
-// .campaign-card__title--sub-page {
-//   @include mq(md) {
-//     height: 100%;
-//   }
-// }
+.campaign-card__title--sub-page {
+  @include mq(md) {
+    padding-bottom: rem(3);
+  }
+}
 
 .campaign-card__text {
   text-align: center;
@@ -85,6 +85,19 @@
   @include mq(md) {
     margin-top: rem(15);
     padding-right: rem(15);
+  }
+}
+
+.campaign-card__text--sub-page {
+  @include mq(md) {
+    margin-top: rem(23);
+  }
+}
+
+.campaign-card:nth-child(3) .campaign-card__text--sub-page,
+.campaign-card:nth-child(7) .campaign-card__text--sub-page {
+  @include mq(md) {
+    padding-right: 0;
   }
 }
 
@@ -137,10 +150,23 @@
   }
 }
 
+.campaign-card__price-after--sub-page {
+  @include mq(md) {
+    margin-left: rem(41);
+  }
+}
+
 .campaign-card:nth-child(3) .campaign-card__price,
 .campaign-card:nth-child(7) .campaign-card__price {
   @include mq(md) {
     padding-right: rem(24);
+  }
+}
+
+.campaign-card:nth-child(3) .campaign-card__price--sub-page,
+.campaign-card:nth-child(7) .campaign-card__price--sub-page {
+  @include mq(md) {
+    padding-right: rem(3);
   }
 }
 
@@ -151,11 +177,18 @@
   }
 }
 
+.campaign-card:nth-child(3) .campaign-card__price-before--sub-page,
+.campaign-card:nth-child(7) .campaign-card__price-before--sub-page {
+  @include mq(md) {
+    padding-right: 0;
+  }
+}
+
 .campaign-card__information {
   display: flex;
   flex-direction: column;
-  // height: 100%;
-  margin-top: rem(24);
+  height: 100%;
+  margin-top: rem(16);
   @media (max-width: 767px) {
     display: none;
   }
@@ -173,8 +206,10 @@
   font-size: rem(16);
   font-weight: $bold;
   color: $greenaccent;
+  letter-spacing: 0.02em;
   text-align: center;
-  margin-top: rem(32);
+  margin-top: rem(29);
+  padding-right: rem(15);
 }
 
 .campaign-card__information-inquiry {
@@ -182,12 +217,15 @@
   font-weight: $normal;
   color: $greenaccent;
   text-align: center;
-  margin-top: rem(7);
+  margin-top: rem(3);
 }
-
 
 .campaign-card__btn {
   text-align: center;
   padding-bottom: rem(5);
   margin-top: rem(16);
+}
+
+.campaign-card__btn--sub-page {
+  margin-top: rem(14);
 }

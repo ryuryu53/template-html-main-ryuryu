@@ -17,11 +17,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  letter-spacing: -0.001em;
   text-align: center;
-  transform: translate(-50%, -52%);
+  transform: translate(-50%, -50%);
 
   @include mq(md) {
-    transform: translate(-49.7%, -50.8%);
+    top: 59.2%;
   }
 }
 
