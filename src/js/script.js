@@ -147,6 +147,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  // タブによる絞り込み
   // 変数に要素をセット
   var $filter = $('.js-filter-list [data-filter]'),
       $item = $('.js-filter-item [data-item]');
@@ -175,5 +176,51 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
       });
     }
+  });
+
+  // モーダル
+  const open = $('.js-modal-open'),
+    modal = $('.js-modal');
+
+    // スクロールバーの幅を計算する関数
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+
+  //Gallery画像をクリックしたらモーダルを表示する
+  open.on('click', function () {
+    let imgsrc = $(this).find('img').attr('src');
+    $('.modal__img').children().attr('src', imgsrc);
+    modal.addClass('is-open');
+
+    // スクロールバーの幅を取得
+    const scrollbarWidth = getScrollbarWidth();
+
+    // 背景を固定してスクロールさせない
+    let scrollTop = $(window).scrollTop();  // ここで変数宣言しないと背景が固定されない
+
+    $('body').css({
+      position: 'fixed',
+      top: -scrollTop,
+      left: 0,
+      // right: 0,
+      width: `calc(100% - ${scrollbarWidth}px)` // スクロールバーの幅を考慮する
+    });
+  });
+
+  //モーダルをクリックしたらモーダルを閉じる
+  modal.on("click", function () {
+    modal.removeClass("is-open");
+
+    // 背景の固定を解除する
+    $('body').css({
+      position: '',
+      top: '',
+      left: '',
+      // right: '',
+      width: ''
+    });
+
+    $(window).scrollTop(scrollTop);
   });
 });

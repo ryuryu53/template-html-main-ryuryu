@@ -1,23 +1,9 @@
 @use "global" as *;
 
-.sub-mv {
-  position: relative;
-  height: rem(460);
-  background-image: url(../images/common/sub-mv-campaign.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  @include mq(md) {
-    background-image: url(../images/common/sub-mv-campaign-pc.webp);
-    height: rem(548);
-  }
-}
-
 .sub-mv__header {
   position: absolute;
   top: 50%;
   left: 50%;
-  letter-spacing: -0.001em;
   text-align: center;
   transform: translate(-50%, -50%);
 
@@ -34,5 +20,11 @@
 
   @include mq(md) {
     font-size: rem(80);
+  }
+}
+
+.sub-mv__title--space-pc {
+  @include mq(md) {
+    letter-spacing: 0.006em;
   }
 }

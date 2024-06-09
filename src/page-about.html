@@ -53,13 +53,13 @@
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-campaign.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Campaign</span>
                 <span class="pc-nav__jatext">キャンペーン</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="./page-about.html" class="pc-nav__link">
+              <a href="#" class="pc-nav__link">
                 <span class="pc-nav__engtext">About&nbsp;us</span>
                 <span class="pc-nav__jatext">私たちについて</span>
               </a>
@@ -108,7 +108,7 @@
               <div class="sp-nav__left-content">
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="#" class="sp-nav__left-link">キャンペーン</a>
+                    <a href="./page-campaign.html" class="sp-nav__left-link">キャンペーン</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス取得</a>
@@ -122,7 +122,7 @@
                     </ul>
                   </li>
                   <li class="sp-nav__left-item">
-                    <a href="./page-about.html" class="sp-nav__left-link">私たちについて</a>
+                    <a href="#" class="sp-nav__left-link">私たちについて</a>
                   </li>
                 </ul>
                 <ul class="sp-nav__left-items">
@@ -188,9 +188,9 @@
 
     <main>
       <!-- 下層ページのメインビュー -->
-      <section class="campaign-mv sub-mv">
+      <section class="about-mv sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Campaign</h1>
+          <h1 class="sub-mv__title sub-mv__title--space-pc">About&nbsp;us</h1>
         </div>
       </section>
 
@@ -201,131 +201,92 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>キャンペーン</span></li>
+            <li><span>私たちについて</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- キャンペーン -->
-      <section class="top-page-campaign page-campaign">
-        <div class="page-campaign__inner inner">
-          <ul class="page-campaign__list filter-list js-filter-list">
-            <li data-filter="all" class="filter-list__item is-active"><span>All</span></li>
-            <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
-            <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
-          </ul>
-          <ul class="page-campaign__items campaign-cards js-filter-item">
-            <li data-item="cat1" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div href="#" class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_1.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ライセンス講習</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ライセンス取得</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;56&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;46&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li data-item="cat2" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div href="#" class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_2.jpg" alt="2隻の白いボートが浮かぶエメラルドグリーン浜辺">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切体験ダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;24&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;18&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li data-item="cat3" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div href="#" class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_3.jpg" alt="海の中を漂う光るクラゲ">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ナイトダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;10&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;8&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li data-item="cat4" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div href="#" class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_4.jpg" alt="ダイビングを楽しむ4人の人たちが水面で合図を交わしている様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ファンダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切ファンダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;20&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;16&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+      <!-- 私たちについて -->
+      <section class="top-page-about page-about">
+        <div class="page-about__inner inner">
+          <div class="page-about__img-box">
+            <picture class="page-about__img-left u-desktop">
+              <source srcset="./assets/images/common/about_1.webp" type="image/webp">
+              <img src="./assets/images/common/about_1.jpg" alt="赤い屋根瓦の上でトラのような置物がこちらを向いている様子">
+            </picture>
+            <picture class="page-about__img-right">
+              <source srcset="./assets/images/common/about_2.webp" type="image/webp">
+              <img src="./assets/images/common/about_2.jpg" alt="黒い頭に黄色いお腹の二匹の魚が泳いでいる様子">
+            </picture>
+          </div>
+          <div class="page-about__text-body">
+            <h3 class="page-about__subtitle">Dive&nbsp;into<br>the&nbsp;Ocean</h3>
+            <div class="page-about__text-block">
+              <p class="page-about__text text--white-pc">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div class="wp-pagenavi">
-        <a class="previouspostslink" rel="prev" href="#"></a>
-        <span class="current">1</span>
-        <a class="page smaller" href="#">2</a>
-        <a class="page smaller" href="#">3</a>
-        <a class="page larger" href="#">4</a>
-        <a class="page larger u-desktop" href="#">5</a>
-        <a class="page larger u-desktop" href="#">6</a>
-        <a class="nextpostslink" rel="next" href="#"></a>
-      </div>
+      <!-- ギャラリー -->
+      <section class="top-gallery gallery">
+        <div class="gallery__inner inner">
+          <div class="gallery__title section-header">
+            <p class="section-header__engtitle"> Gallery</p>
+            <h2 class="section-header__jatitle">フォト</h2>
+          </div>
+          <div class="gallery__items-wrap gallery-photo">
+            <div class="gallery-photo__top-items">
+              <div class="gallery-photo__top-item-1">
+                <picture class="gallery-photo__img-large js-modal-open">
+                  <source srcset="./assets/images/common/price-pc.webp" type="image/webp">
+                  <img src="./assets/images/common/price-pc.jpg" alt="サンゴの周りを多くの赤い小さな熱帯魚が泳いでいる様子">
+                </picture>
+              </div>
+              <div class="gallery-photo__top-item-2">
+                <picture class="gallery-photo__img-small js-modal-open">
+                  <source srcset="./assets/images/common/gallery_2.webp" type="image/webp">
+                  <img src="./assets/images/common/gallery_2.jpg" alt="晴れた日の海岸近くの海とそこに浮かぶ白い船">
+                </picture>
+              </div>
+              <div class="gallery-photo__top-item-3">
+                <picture class="gallery-photo__img-small js-modal-open">
+                  <source srcset="./assets/images/common/gallery_3.webp" type="image/webp">
+                  <img src="./assets/images/common/gallery_3.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery-photo__bottom-items">
+              <div class="gallery-photo__bottom-item-1">
+                <picture class="gallery-photo__img-small js-modal-open">
+                  <source srcset="./assets/images/common/gallery_4.webp" type="image/webp">
+                  <img src="./assets/images/common/gallery_4.jpg" alt="黄色い1匹の熱帯魚が泳いでいる様子">
+                </picture>
+              </div>
+              <div class="gallery-photo__bottom-item-2">
+                <picture class="gallery-photo__img-small js-modal-open">
+                  <source srcset="./assets/images/common/gallery_5.webp" type="image/webp">
+                  <img src="./assets/images/common/gallery_5.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
+                </picture>
+              </div>
+              <div class="gallery-photo__bottom-item-3">
+                <picture class="gallery-photo__img-large js-modal-open">
+                  <source srcset="./assets/images/common/gallery_6.webp" type="image/webp">
+                  <img src="./assets/images/common/gallery_6.webp" alt="2匹のオレンジ色の熱帯魚とその背後で無数の熱帯魚が泳いでいる様子">
+                </picture>
+              </div>
+            </div>
+          </div>
+          </div>
+        <!-- モーダル -->
+        <div class="gallery__modal modal js-modal">
+          <div class="modal__img">
+            <img src="" alt="モーダル画像">
+          </div>
+        </div>
+      </section>
 
       <!-- Contact -->
       <section class="top-page-contact contact">

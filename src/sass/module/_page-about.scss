@@ -1,0 +1,141 @@
+@use "global" as *;
+
+.page-about {
+  position: relative;
+}
+
+.page-about::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-about::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: calc(50% - min(48%, rem(644)));
+    bottom: rem(-186);
+    width: rem(309); // カンプは301×138でその通り指定してもレンダリングサイズが309×146となりピクパチェックで一致しない → 309×146で指定した
+    height: rem(146);
+    background-image: url(../images/common/contact-goldfish-pc.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.page-about__inner {
+  position: relative;
+}
+
+.page-about__img-box {
+  position: relative;
+
+  @include mq(md) {
+    padding-top: rem(80);
+  }
+}
+
+.page-about__img-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 128 /194;
+  width: 37.1%;
+  overflow: hidden;
+
+  @include mq(md) {
+    left: rem(1);
+    aspect-ratio: 400 / 606;
+    width: 37.04%;
+    z-index: 5; // CSS_ZOOM：z-indexをプラスにするためにここに追加
+  }
+}
+
+.page-about__img-right {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにした。ここはSwiperと違い必要！
+  aspect-ratio: 345 / 228;
+  width: 100%;
+  overflow: hidden;
+
+  @include mq(md) {
+    position: relative;
+    left: rem(1);
+    // z-index: -5; CSS_ZOOM：z-indexはプラスにする ↑↓ ⇒ 要素の検証しやすくなる
+    aspect-ratio: 880 / 581;
+    width: 81.48%;
+    margin-left: auto;
+  }
+}
+
+.page-about__img-left img,
+.page-about__img-right img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-about__text-body {
+  display: contents;
+
+  @include mq(md) {
+    position: absolute;
+    top: rem(200);
+    right: 5.84%;
+    display: flex;
+    max-width: rem(840);
+    width: 100%;
+    z-index: 10; // CSS_ZOOM：z-indexをプラスにするためにここに追加
+  }
+}
+
+.page-about__subtitle {
+  position: absolute;
+  top: rem(24);
+  left: rem(39);
+  font-family: $second-font-family;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: 1;
+  color: $white;
+
+  @include mq(md) {
+    position: static;
+    width: 52.38%;
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}
+
+.page-about__text-block {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    width: 47.62%;
+    margin-top: 0;
+    padding-top: rem(26);
+  }
+}
+
+.page-about__text {
+  position: relative;
+  right: rem(1);
+
+  @include mq(md) {
+    right: 0;
+  }
+}
