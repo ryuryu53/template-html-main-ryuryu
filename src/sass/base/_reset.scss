@@ -29,7 +29,7 @@ dd {
 }
 
 /* Set core root defaults */
-html {
+.html1 { // CSSでのスムーススクロールはトップページだけにする。モーダルのあるページにこのCSSがあるとモーダルを閉じたとき背景がスムーススクロールされてしまうから。
   scroll-behavior: smooth;
   scroll-padding-top: rem(90);  // 追加
 }

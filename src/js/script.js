@@ -181,8 +181,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // モーダル
   const open = $('.js-modal-open'),
     modal = $('.js-modal');
+  let scrollTop;
 
-    // スクロールバーの幅を計算する関数
+  //   スクロールバーの幅を計算する関数
   function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth;
   }
@@ -197,7 +198,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     const scrollbarWidth = getScrollbarWidth();
 
     // 背景を固定してスクロールさせない
-    let scrollTop = $(window).scrollTop();  // ここで変数宣言しないと背景が固定されない
+    scrollTop = $(window).scrollTop();
 
     $('body').css({
       position: 'fixed',
