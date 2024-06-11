@@ -188,9 +188,9 @@
 
     <main>
       <!-- 下層ページのメインビュー -->
-      <section class="campaign-mv sub-mv">
+      <section class="information-mv sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Campaign</h1>
+          <h1 class="sub-mv__title">Information</h1>
         </div>
       </section>
 
@@ -201,131 +201,53 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>キャンペーン</span></li>
+            <li><span>ダイビング情報</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- キャンペーン -->
-      <section class="top-page-campaign page-campaign">
-        <div class="page-campaign__inner inner">
-          <ul class="page-campaign__list filter-list js-filter-list">
-            <li data-filter="all" class="filter-list__item is-active"><span>All</span></li>
+      <!-- ダイビング情報 -->
+      <section class="top-page-information page-information">
+        <div class="page-information__inner inner">
+          <ul class="page-information__list filter-list js-filter-list">
             <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
             <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
             <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
           </ul>
-          <ul class="page-campaign__items campaign-cards js-filter-item">
-            <li data-item="cat1" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_1.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ライセンス講習</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ライセンス取得</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;56&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;46&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
+          <ul class="page-information__items information-cards js-filter-item">
+            <li data-item="cat1" class="information-cards__item information-cards__item--sub-page information-card">
+              <div class="information-card__body information-card__body--sub-page">
+                <h2 class="information-card__title information-card__title--sub-page">ライセンス取得</h2>
+                <p class="information-card__text information-card__text--sub-page">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします&#65281;スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう&#65281;</p>
               </div>
+              <picture class="information-card__img information-card__img--sub-page">
+                <source srcset="./assets/images/common/info-license.webp" type="image/webp">
+                <img src="./assets/images/common/info-license.jpg" alt="5人の人がエメラルドグリーンの海でスキューバダイビングを楽しんでいる様子">
+              </picture>
             </li>
-            <li data-item="cat2" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_2.jpg" alt="2隻の白いボートが浮かぶエメラルドグリーン浜辺">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切体験ダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;24&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;18&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
+            <li data-item="cat2" class="information-cards__item information-cards__item--sub-page information-card">
+              <div class="information-card__body information-card__body--sub-page">
+                <h2 class="information-card__title information-card__title--sub-page">貸切体験ダイビング</h2>
+                <p class="information-card__text information-card__text--sub-page">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
               </div>
+              <picture class="information-card__img information-card__img--sub-page">
+                <source srcset="./assets/images/common/info-fundiving.webp" type="image/webp">
+                <img src="./assets/images/common/info-fundiving.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
+              </picture>
             </li>
-            <li data-item="cat3" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_3.jpg" alt="海の中を漂う光るクラゲ">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ナイトダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;10&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;8&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
+            <li data-item="cat3" class="information-cards__item information-cards__item--sub-page information-card">
+              <div class="information-card__body information-card__body--sub-page">
+                <h2 class="information-card__title information-card__title--sub-page">ナイトダイビング</h2>
+                <p class="information-card__text information-card__text--sub-page">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
               </div>
-            </li>
-            <li data-item="cat4" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_4.jpg" alt="ダイビングを楽しむ4人の人たちが水面で合図を交わしている様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ファンダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切ファンダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;20&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;16&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <picture class="information-card__img information-card__img--sub-page">
+                <source srcset="./assets/images/common/info-diving.webp" type="image/webp">
+                <img src="./assets/images/common/info-diving.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
+              </picture>
             </li>
           </ul>
         </div>
       </section>
-
-      <div class="wp-pagenavi">
-        <a class="previouspostslink" rel="prev" href="#"></a>
-        <span class="current">1</span>
-        <a class="page smaller" href="#">2</a>
-        <a class="page smaller" href="#">3</a>
-        <a class="page larger" href="#">4</a>
-        <a class="page larger u-desktop" href="#">5</a>
-        <a class="page larger u-desktop" href="#">6</a>
-        <a class="nextpostslink" rel="next" href="#"></a>
-      </div>
 
       <!-- Contact -->
       <section class="top-page-contact contact">

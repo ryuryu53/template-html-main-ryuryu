@@ -178,6 +178,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  // 最初に表示されるタブの設定
+  $('.information-cards__item:first-child').css(
+    'display',
+    'block'
+  );
+  $('.filter-list__item:first-child').addClass('is-active');
+
   // モーダル
   const open = $('.js-modal-open'),
     modal = $('.js-modal');

@@ -9,8 +9,8 @@
   display: grid;
   gap: rem(8);
   @include mq(md) {
-    grid-template-columns:rem(492) rem(580);
-    grid-template-rows: repeat(2, rem(369));
+    grid-template-columns:492fr 580fr;
+    grid-template-rows: repeat(2, 369fr);
   }
 }
 
@@ -18,8 +18,8 @@
   display: grid;
   gap: rem(8);
   @include mq(md) {
-    grid-template-columns: rem(580) rem(492);
-    grid-template-rows: repeat(2, rem(369));
+    grid-template-columns: 580fr 492fr;
+    grid-template-rows: repeat(2, 369fr);
   }
 }
 
