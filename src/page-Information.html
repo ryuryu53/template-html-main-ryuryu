@@ -53,7 +53,7 @@
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-campaign.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Campaign</span>
                 <span class="pc-nav__jatext">キャンペーン</span>
               </a>
@@ -65,7 +65,7 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#information" class="pc-nav__link">
+              <a href="#" class="pc-nav__link">
                 <span class="pc-nav__engtext">Information</span>
                 <span class="pc-nav__jatext">ダイビング情報</span>
               </a>
@@ -108,7 +108,7 @@
               <div class="sp-nav__left-content">
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="#" class="sp-nav__left-link">キャンペーン</a>
+                    <a href="./page-campaign.html" class="sp-nav__left-link">キャンペーン</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス取得</a>
@@ -127,7 +127,7 @@
                 </ul>
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="#information" class="sp-nav__left-link">ダイビング情報</a>
+                    <a href="#" class="sp-nav__left-link">ダイビング情報</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス講習</a>
@@ -190,7 +190,7 @@
       <!-- 下層ページのメインビュー -->
       <section class="information-mv sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Information</h1>
+          <h1 class="sub-mv__title sub-mv__title--space">Information</h1>
         </div>
       </section>
 
@@ -209,41 +209,47 @@
       <!-- ダイビング情報 -->
       <section class="top-page-information page-information">
         <div class="page-information__inner inner">
-          <ul class="page-information__list filter-list js-filter-list">
-            <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
-            <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
+          <ul class="page-information__list filter-list filter-list--page-info js-filter-list">
+            <li data-filter="cat1" class="filter-list__item filter-list__item--page-info"><span>ライセンス<br class="u-mobile">講習</span></li>
+            <li data-filter="cat2" class="filter-list__item filter-list__item--page-info"><span>ファン<br class="u-mobile">ダイビング</span></li>
+            <li data-filter="cat3" class="filter-list__item filter-list__item--page-info"><span>体験<br class="u-mobile">ダイビング</span></li>
           </ul>
           <ul class="page-information__items information-cards js-filter-item">
-            <li data-item="cat1" class="information-cards__item information-cards__item--sub-page information-card">
-              <div class="information-card__body information-card__body--sub-page">
-                <h2 class="information-card__title information-card__title--sub-page">ライセンス取得</h2>
-                <p class="information-card__text information-card__text--sub-page">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします&#65281;スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう&#65281;</p>
+            <li data-item="cat1" class="information-cards__item information-card">
+              <div class="information-card__content">
+                <div class="information-card__body">
+                  <h2 class="information-card__title">ライセンス講習</h2>
+                  <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします&#65281;スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう&#65281;</p>
+                </div>
+                <picture class="information-card__img">
+                  <source srcset="./assets/images/common/info-license.webp" type="image/webp">
+                  <img src="./assets/images/common/info-license.jpg" alt="5人の人がエメラルドグリーンの海でスキューバダイビングを楽しんでいる様子">
+                </picture>
               </div>
-              <picture class="information-card__img information-card__img--sub-page">
-                <source srcset="./assets/images/common/info-license.webp" type="image/webp">
-                <img src="./assets/images/common/info-license.jpg" alt="5人の人がエメラルドグリーンの海でスキューバダイビングを楽しんでいる様子">
-              </picture>
             </li>
-            <li data-item="cat2" class="information-cards__item information-cards__item--sub-page information-card">
-              <div class="information-card__body information-card__body--sub-page">
-                <h2 class="information-card__title information-card__title--sub-page">貸切体験ダイビング</h2>
-                <p class="information-card__text information-card__text--sub-page">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+            <li data-item="cat2" class="information-cards__item information-card">
+              <div class="information-card__content">
+                <div class="information-card__body">
+                  <h2 class="information-card__title">ファンダイビング</h2>
+                  <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+                </div>
+                <picture class="information-card__img">
+                  <source srcset="./assets/images/common/info-fundiving.webp" type="image/webp">
+                  <img src="./assets/images/common/info-fundiving.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
+                </picture>
               </div>
-              <picture class="information-card__img information-card__img--sub-page">
-                <source srcset="./assets/images/common/info-fundiving.webp" type="image/webp">
-                <img src="./assets/images/common/info-fundiving.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
-              </picture>
             </li>
-            <li data-item="cat3" class="information-cards__item information-cards__item--sub-page information-card">
-              <div class="information-card__body information-card__body--sub-page">
-                <h2 class="information-card__title information-card__title--sub-page">ナイトダイビング</h2>
-                <p class="information-card__text information-card__text--sub-page">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+            <li data-item="cat3" class="information-cards__item information-card">
+              <div class="information-card__content">
+                <div class="information-card__body">
+                  <h2 class="information-card__title">体験ダイビング</h2>
+                  <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+                </div>
+                <picture class="information-card__img">
+                  <source srcset="./assets/images/common/info-diving.webp" type="image/webp">
+                  <img src="./assets/images/common/info-diving.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
+                </picture>
               </div>
-              <picture class="information-card__img information-card__img--sub-page">
-                <source srcset="./assets/images/common/info-diving.webp" type="image/webp">
-                <img src="./assets/images/common/info-diving.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
-              </picture>
             </li>
           </ul>
         </div>

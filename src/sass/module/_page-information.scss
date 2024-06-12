@@ -11,7 +11,7 @@
   background-position: center;
   background-size: contain;
   position: absolute;
-  top: rem(-24);
+  top: rem(-93);
   left: rem(15);
   width: rem(120);
   height: rem(55);
@@ -24,21 +24,9 @@
   }
 }
 
-.page-information::after {
+.page-information__items {
+  margin-top: rem(16);
   @include mq(md) {
-    content: "";
-    position: absolute;
-    right: calc(50% - min(48%, rem(644)));
-    bottom: rem(-186);
-    width: rem(309); // カンプは301×138でその通り指定してもレンダリングサイズが309×146となりピクパチェックで一致しない → 309×146で指定した
-    height: rem(146);
-    background-image: url(../images/common/contact-goldfish-pc.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    margin-top: rem(24);
   }
-}
-
-.page-information__inner {
-  position: relative;
 }

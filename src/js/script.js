@@ -147,6 +147,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  // ボックスシャドウを更新する関数
+  function updateBoxShadow() {
+    let browserW = window.innerWidth;
+    if (browserW >= 768) {
+      $('.filter-list__item--page-info').each(function() {
+        if (!$(this).hasClass('is-active')) {
+          $(this).css('box-shadow', 'none');
+        } else {
+          $(this).css('box-shadow', '0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25)'); // 元のスタイルを指定
+        }
+      });
+    }
+  }
+
   // タブによる絞り込み
   // 変数に要素をセット
   var $filter = $('.js-filter-list [data-filter]'),
@@ -176,6 +190,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
       });
     }
+
+    updateBoxShadow();
   });
 
   // 最初に表示されるタブの設定
@@ -183,7 +199,29 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     'display',
     'block'
   );
-  $('.filter-list__item:first-child').addClass('is-active');
+  $('.filter-list__item--page-info:first-child').addClass('is-active');
+
+  // let browserW = window.outerWidth;
+  // if (browserW >= 768) {
+  //   let nothold = $('.filter-list__item--page-info').not('.is-active');
+
+  //   nothold.css({
+  //     'box-shadow': 'none',
+  //   });
+  // }
+
+  // 初期状態のボックスシャドウを更新
+  updateBoxShadow();
+
+  // ウィンドウがリサイズされたときにボックスシャドウを更新
+  $(window).resize(function() {
+    updateBoxShadow();
+  });
+
+  // クリックイベントでis-activeクラスをつけたり外したりする時の処理
+  // $('.filter-list__item--page-info').click(function() {
+  //   updateBoxShadow();
+  // });
 
   // モーダル
   const open = $('.js-modal-open'),

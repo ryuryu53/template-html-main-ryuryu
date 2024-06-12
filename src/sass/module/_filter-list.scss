@@ -13,6 +13,15 @@
   }
 }
 
+.filter-list.filter-list--page-info {
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(20);
+  @include mq(md) {
+    gap: rem(90);
+    max-width: 100%;
+  }
+}
+
 .filter-list__item {
   font-size: rem(14);
   font-weight: $normal;
@@ -23,10 +32,72 @@
   padding-top: rem(6);
   padding-bottom: rem(4);
   border: rem(1) solid currentColor;
+  cursor: pointer;
+}
+
+.filter-list__item--page-info {
+  background-color: $green2;
+  border: none;
+  line-height: 1.44;
+  padding: rem(10) 0;
+  box-shadow: rem(2) rem(2) rem(4) rgba($color: $black, $alpha: 25%);
+  @include mq(md) {
+    position: relative;
+    font-size: rem(24);
+    padding: rem(29) rem(30) rem(26) rem(102);
+  }
+}
+
+.filter-list__item--page-info:nth-child(2) {
+  @include mq(md) {
+    padding-right: rem(18);
+    padding-left: rem(90);
+  }
+}
+
+.filter-list__item--page-info::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: rem(13);
+    left: rem(30);
+    width: rem(64);
+    height: rem(64);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.filter-list__item--page-info:first-child::before {
+  @include mq(md) {
+    background-image: url(../images/common/whale-icon.svg);
+  }
+}
+
+.filter-list__item--page-info:nth-child(2)::before {
+  @include mq(md) {
+    left: rem(18);
+    width: rem(63);
+    height: rem(63);
+    background-image: url(../images/common/fish-icon_1.svg);
+  }
+}
+
+.filter-list__item--page-info:nth-child(3)::before {
+  @include mq(md) {
+    background-image: url(../images/common/fish-icon_2.svg);
+  }
 }
 
 .filter-list__item.is-active {
   color: $white;
   border-color: transparent;
   background-color: $greenaccent;
+}
+
+.filter-list__item--page-info.is-active::before {
+  @include mq(md) {
+    background-image: url(../images/common/whale-icon-white.svg);
+  }
 }
