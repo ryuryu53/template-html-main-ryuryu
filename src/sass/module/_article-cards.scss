@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.article-cards__item + .article-cards__item {
+  margin-top: rem(24);
+}

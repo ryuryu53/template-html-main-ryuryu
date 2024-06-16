@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.review-card__img {
+  aspect-ratio: 294 / 218;
+  overflow: hidden;
+}
+
+.review-card__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-card__body {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(11);
+  }
+}
+
+.review-card__age {
+  font-size: rem(12);
+  font-weight: $normal;
+}
+
+.review-card__title {
+  margin-top: rem(8);
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1.45;
+}

@@ -25,3 +25,12 @@
     grid-template-rows: subgrid;
   }
 }
+
+.campaign-cards__item--blog-page {
+  max-width: 100%;
+  width: 100%;
+}
+
+.campaign-cards__item--blog-page + .campaign-cards__item--blog-page {
+  margin-top: rem(40);
+}

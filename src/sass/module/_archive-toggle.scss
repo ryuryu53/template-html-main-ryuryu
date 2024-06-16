@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.archive-toggle__year-title,
+.archive-toggle__month-title {
+  position: relative;
+  font-size: rem(24);
+  font-weight: $normal;
+  color: $greenaccent;
+  padding-left: rem(32);
+  cursor: pointer;
+}
+
+.archive-toggle__year-title::before,
+.archive-toggle__month-title::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: rem(11) solid transparent;
+  border-bottom: rem(11) solid transparent;
+  border-left: rem(18) solid $greenaccent;
+  border-right: 0;
+  transition: 0.3s transform;
+}
+
+.archive-toggle__year-title::before,
+.archive-toggle__month-title::before {
+  top: 21%;
+  left: rem(6);
+}
+
+.archive-toggle__year-title.is-open::before,
+.archive-toggle__month-title.is-open::before {
+  top: 28%;
+  left: rem(3);
+  transform: rotate(90deg);
+}
+
+.archive-toggle__items {
+  display: none;
+  padding-top: rem(3);  // アコーディオンにmarginは使わず
+  padding-left: rem(24);
+}
+
+.archive-toggle__item + .archive-toggle__item {
+  padding-top: rem(3);  // アコーディオンにmarginは使わず
+}
+
+.archive-toggle__month-items {
+  display: none;
+}

@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.article-card {
+  display: flex;
+  gap: rem(16);
+  padding: rem(16);
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
+  background-color: $white;
+}
+
+.article-card__img {
+  aspect-ratio: 121 / 90;
+  overflow: hidden;
+  width: 46.18%;
+}
+
+.article-card__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card__image {
+  transition: transform 0.3s;
+}
+
+.article-card__image:hover {
+  transform: scale(1.36);
+}
+
+.article-card__body {
+  width: 47.71%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(3);
+}
+
+.article-card__date {
+  font-family: $second-font-family;
+  font-weight: $normal;
+  font-size: rem(12);
+}
+
+.article-card__title {
+  font-weight: $medium;
+  font-size: rem(16);
+}

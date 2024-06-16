@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.review-block__item {
+  margin-top: rem(23);
+  @include mq(md) {
+  margin-top: rem(24);
+  }
+}
+
+.review-block__btn {
+  text-align: center;
+  margin-top: rem(44);
+}

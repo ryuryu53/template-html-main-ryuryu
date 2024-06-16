@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.blog-mv {
+  position: relative;
+  height: rem(460);
+  background-image: url(../images/common/blog-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include mq(md) {
+    background-image: url(../images/common/blog-mv-pc.webp);
+    height: rem(548);
+  }
+}

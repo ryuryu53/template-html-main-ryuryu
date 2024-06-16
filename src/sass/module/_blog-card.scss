@@ -23,6 +23,14 @@
   object-fit: cover;
 }
 
+.blog-card__image {
+  transition: transform 0.3s;
+}
+
+.blog-card__image:hover {
+  transform: scale(1.36);
+}
+
 .blog-card__body {
   margin-top: rem(17);
 }

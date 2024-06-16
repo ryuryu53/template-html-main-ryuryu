@@ -269,4 +269,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     $(window).scrollTop(scrollTop);
   });
+
+  // トグル
+  $(".js-archive-toggle__title").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
 });

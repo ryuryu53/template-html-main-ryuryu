@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.two-column {
+  position: relative;
+}
+
+.two-column::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.two-column__inner {
+  @include mq(md) {
+    position: relative;
+    display: flex;
+    gap: rem(80);
+  }
+}
+
+.two-column__inner.inner {
+  @media (max-width: 767px) {
+    padding-right: rem(21);
+    padding-left: rem(21);
+  }
+}
+
+.two-column__article {
+  @include mq(md) {
+    max-width: 65.37%;
+    width: 100%;
+  }
+}
+
+.two-column__wp-pagenavi {
+  margin-top: rem(80);
+  @media (max-width: 767px) {
+    margin-right: rem(-6);
+    margin-left: rem(-6);
+  }
+}
+
+.two-column__aside {
+  margin-top: rem(80);
+  @include mq(md) {
+    max-width: 27.22%;
+    width: 100%;
+    margin-top: 0;
+  }
+}
