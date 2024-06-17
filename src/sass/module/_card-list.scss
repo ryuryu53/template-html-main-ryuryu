@@ -9,3 +9,9 @@
     gap: rem(80) rem(40);
   }
 }
+
+.card-list.card-list--single-page {
+  @include mq(md) {
+    grid-template-columns: 1fr;
+  }
+}

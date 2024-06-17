@@ -271,6 +271,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // トグル
+  $(".js-archive-toggle:first-child .js-archive-toggle__items").css(
+    "display",
+    "block"
+  );
+  $(".js-archive-toggle:first-child > .js-archive-toggle__title").addClass("is-open");
   $(".js-archive-toggle__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);

@@ -7,6 +7,13 @@
   }
 }
 
+.column-aside__container--single-page {
+  @media (max-width: 767px) {
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
+}
+
 .column-aside__title {
   position: relative;
   font-size: rem(24);

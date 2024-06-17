@@ -12,3 +12,9 @@
     height: rem(548);
   }
 }
+
+.blog-mv--single-page {
+  @include mq(md) {
+    background-image: url(../images/common/blog-detail-mv-pc.webp);
+  }
+}
