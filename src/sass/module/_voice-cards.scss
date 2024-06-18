@@ -9,7 +9,7 @@
     // flex-wrap: wrap;  // FB：追加 ⇒ 3個以上になったらカラム落ちさせて横2個のレイアウトを維持
     // justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
-    gap: rem(50) rem(40);
+    gap: rem(80) rem(40);
   }
 }
 

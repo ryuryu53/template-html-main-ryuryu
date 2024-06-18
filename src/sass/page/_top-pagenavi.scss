@@ -3,3 +3,10 @@
 .top-pagenavi {
   margin-top: rem(78);
 }
+
+.top-pagenavi.top-pagenavi--voice-page {
+  margin-top: rem(79);
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}
