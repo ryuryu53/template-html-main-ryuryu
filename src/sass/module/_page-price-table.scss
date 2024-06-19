@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.page-price-table {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(700);
+  }
+}
+
+.page-price-table__content {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.page-price-table__content + .page-price-table__content {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.page-price-table__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  background-color: $greenaccent;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $white;
+  padding: rem(8);
+  @include mq(md) {
+    flex-direction: column-reverse;
+    width: 28.6%;
+  }
+}
+
+.page-price-table__title::before {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/whale-icon-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq(md) {
+    position: relative;
+    left: rem(2);
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.page-price-table__items {
+  @include mq(md) {
+    width: calc(100% - 28.49002849002849%);
+  }
+}
+
+.page-price-table__item {
+  display: flex;
+  border: rem(1) solid $greenaccent;
+  border-top: none;
+  @include mq(md) {
+    border-left: none;
+  }
+}
+
+.page-price-table__item:first-child {
+  @include mq(md) {
+    border-top: rem(1) solid $greenaccent;
+  }
+}
+
+.page-price-table__item dt {
+  width: 69.5%;
+  font-size: rem(16);
+  font-weight: $normal;
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+    width: 67.5%;
+    padding-left: rem(15);
+  }
+}
+
+.page-price-table__item dd {
+  width: 30.5%;
+  border-left: rem(1) solid $greenaccent;
+  text-align: right;
+  padding-top: rem(18);
+  padding-right: rem(15);
+  @include mq(md) {
+    width: 32.5%;
+    padding-top: rem(17);
+  }
+}
+
+.page-price-table__item:first-child dt {
+  padding-top: rem(7);
+  padding-bottom: rem(7);
+  @include mq(md) {
+    padding-top: rem(17);
+    padding-bottom: rem(17);
+  }
+}
+
+.page-price-table__item:nth-child(n+2) dt {
+  padding-top: rem(6);
+  padding-bottom: rem(4);
+  @include mq(md) {
+    padding-top: rem(17);
+    padding-bottom: rem(17);
+  }
+}
+
+.page-price-table__content:first-child .page-price-table__item:nth-child(3) dt {
+  padding-top: rem(18);
+  padding-bottom: rem(16);
+  @include mq(md) {
+    padding-top: rem(17);
+    padding-bottom: rem(17);
+  }
+}

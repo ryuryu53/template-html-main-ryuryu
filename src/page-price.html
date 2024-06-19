@@ -77,13 +77,13 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-voice.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Voice</span>
                 <span class="pc-nav__jatext">お客様の声</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="./page-price.html" class="pc-nav__link">
+              <a href="#" class="pc-nav__link">
                 <span class="pc-nav__engtext">Price</span>
                 <span class="pc-nav__jatext">料金一覧</span>
               </a>
@@ -148,10 +148,10 @@
               <div class="sp-nav__right-content">
                 <ul class="sp-nav__right-items">
                   <li class="sp-nav__right-item">
-                    <a href="#" class="sp-nav__right-link">お客様の声</a>
+                    <a href="./page-voice.html" class="sp-nav__right-link">お客様の声</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="./page-price.html" class="sp-nav__right-link">料金一覧</a>
+                    <a href="#" class="sp-nav__right-link">料金一覧</a>
                     <ul class="sp-nav__right-detail-items">
                       <li class="sp-nav__right-detail-item">
                         <a href="#" class="sp-nav__right-detail-link">ライセンス講習</a>
@@ -188,9 +188,9 @@
 
     <main>
       <!-- 下層ページのメインビュー -->
-      <section class="voice-mv sub-mv">
+      <section class="price-mv sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Voice</h1>
+          <h1 class="sub-mv__title sub-mv__title--space2">Price</h1>
         </div>
       </section>
 
@@ -201,157 +201,94 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>お客様の声</span></li>
+            <li><span>料金一覧</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- お客様の声 -->
-      <section class="top-page-campaign page-campaign">
-        <div class="page-campaign__inner inner">
-          <ul class="page-campaign__list filter-list js-filter-list">
-            <li data-filter="all" class="filter-list__item is-active"><span>All</span></li>
-            <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
-            <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
-          </ul>
-          <div class="page-campaign__items voice-cards js-filter-item">
-            <article data-item="cat1" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">20代(女性)</span>
-                      <p class="voice-card__category">ライセンス講習</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_1.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶった笑顔の女性">
-                    </picture>
-                  </div>
+      <!-- 料金一覧 -->
+      <section class="top-page-price page-price">
+        <div class="page-price__inner inner">
+          <div class="page-price__table page-price-table">
+            <div class="page-price-table__content">
+              <h2 class="page-price-table__title">ライセンス講習</h2>
+              <dl class="page-price-table__items">
+                <div class="page-price-table__item">
+                  <dt>オープンウォーター<br class="u-mobile">ダイバーコース</dt>
+                  <dd>&yen;50&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
-            <article data-item="cat2" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">20代(男性)</span>
-                      <p class="voice-card__category">ファンダイビング</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_2.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_2.jpg" alt="青い服を着たグッドポーズの男性">
-                    </picture>
-                  </div>
+                <div class="page-price-table__item">
+                  <dt>アドバンスド<br class="u-mobile">オープンウォーターコース</dt>
+                  <dd>&yen;60&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
-            <article data-item="cat3" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">30代(女性)</span>
-                      <p class="voice-card__category">体験ダイビング</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_3.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_3.jpg" alt="金色のネックレスをつけた女性と眼鏡をかけた女性が笑顔で並んでいる様子">
-                    </picture>
-                  </div>
+                <div class="page-price-table__item">
+                  <dt>レスキュー＋EFRコース</dt>
+                  <dd>&yen;70&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
-            <article data-item="cat3" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">20代(女性)</span>
-                      <p class="voice-card__category">体験ダイビング</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_4.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_4.jpg" alt="風でなびく髪を両手で抑えている薄紫の服を着た女性">
-                    </picture>
-                  </div>
+              </dl>
+            </div>
+            <div class="page-price-table__content">
+              <h2 class="page-price-table__title">体験ダイビング</h2>
+              <dl class="page-price-table__items">
+                <div class="page-price-table__item">
+                  <dt>ビーチ体験ダイビング<br class="u-mobile">(半日)</dt>
+                  <dd>&yen;7&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
-            <article data-item="cat2" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">30代(カップル)</span>
-                      <p class="voice-card__category">ファンダイビング</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_5.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_5.jpg" alt="腕を組みながらソファに座って微笑んでいる若いカップル">
-                    </picture>
-                  </div>
+                <div class="page-price-table__item">
+                  <dt>ビーチ体験ダイビング<br class="u-mobile">(1日)</dt>
+                  <dd>&yen;14&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
-            <article data-item="cat1" class="voice-cards__item voice-card">
-              <div href="#" class="voice-card__link">
-                <div class="voice-card__head">
-                  <div class="voice-card__meta">
-                    <div class="voice-card__label">
-                      <span class="voice-card__age">20代(女性)</span>
-                      <p class="voice-card__category">ライセンス講習</p>
-                    </div>
-                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="voice-card__img colorbox js-colorbox">
-                    <picture>
-                      <source srcset="./assets/images/common/voice_6.webp" type="image/webp">
-                      <img src="./assets/images/common/voice_6.jpg" alt="横縞の服を着た笑顔の女性">
-                    </picture>
-                  </div>
+                <div class="page-price-table__item">
+                  <dt>ボート体験ダイビング<br class="u-mobile">(半日)</dt>
+                  <dd>&yen;10&#44;000</dd>
                 </div>
-                <p class="voice-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </article>
+                <div class="page-price-table__item">
+                  <dt>ボート体験ダイビング<br class="u-mobile">(1日)</dt>
+                  <dd>&yen;18&#44;000</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="page-price-table__content">
+              <h2 class="page-price-table__title">ファンダイビング</h2>
+              <dl class="page-price-table__items">
+                <div class="page-price-table__item">
+                  <dt>ビーチダイビング<br class="u-mobile">(2ダイブ)</dt>
+                  <dd>&yen;14&#44;000</dd>
+                </div>
+                <div class="page-price-table__item">
+                  <dt>ボートダイビング<br class="u-mobile">(2ダイブ)</dt>
+                  <dd>&yen;18&#44;000</dd>
+                </div>
+                <div class="page-price-table__item">
+                  <dt>スペシャルダイビング<br class="u-mobile">(2ダイブ)</dt>
+                  <dd>&yen;24&#44;000</dd>
+                </div>
+                <div class="page-price-table__item">
+                  <dt>ナイトダイビング<br class="u-mobile">(1ダイブ)</dt>
+                  <dd>&yen;10&#44;000</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="page-price-table__content">
+              <h2 class="page-price-table__title">スペシャルダイビング</h2>
+              <dl class="page-price-table__items">
+                <div class="page-price-table__item">
+                  <dt>貸切ダイビング<br class="u-mobile">(2ダイブ)</dt>
+                  <dd>&yen;24&#44;000</dd>
+                </div>
+                <div class="page-price-table__item">
+                  <dt>1日ダイビング<br class="u-mobile">(3ダイブ)</dt>
+                  <dd>&yen;32&#44;000</dd>
+                </div>
+                <div class="page-price-table__item">
+                  <dt>ナイトダイビング<br class="u-mobile">(2ダイブ)</dt>
+                  <dd>&yen;14&#44;000</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </section>
-
-      <div class="top-pagenavi top-pagenavi--voice-page">
-        <div class="wp-pagenavi">
-          <a class="previouspostslink" rel="prev" href="#"></a>
-          <span class="current">1</span>
-          <a class="page smaller" href="#">2</a>
-          <a class="page smaller" href="#">3</a>
-          <a class="page larger" href="#">4</a>
-          <a class="page larger u-desktop" href="#">5</a>
-          <a class="page larger u-desktop" href="#">6</a>
-          <a class="nextpostslink" rel="next" href="#"></a>
-        </div>
-      </div>
 
       <!-- Contact -->
       <section class="top-page-contact contact">
