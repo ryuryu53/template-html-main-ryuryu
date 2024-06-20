@@ -271,12 +271,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // トグル
-  $(".js-archive-toggle:first-child .js-archive-toggle__items").css(
+  $(".js-archive-toggle:first-child .js-archive-toggle__items, .js-accordion__item:first-child .js-accordion__content").css(
     "display",
     "block"
   );
-  $(".js-archive-toggle:first-child > .js-archive-toggle__title").addClass("is-open");
-  $(".js-archive-toggle__title").on("click", function () {
+  $(".js-archive-toggle:first-child > .js-archive-toggle__title, .js-accordion__item:first-child .js-accordion__title").addClass("is-open");
+  $(".js-archive-toggle__title, .js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });

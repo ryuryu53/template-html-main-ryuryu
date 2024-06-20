@@ -1,0 +1,85 @@
+@use "global" as *;
+
+
+.accordion__item + .accordion__item {
+  margin-top: rem(40);
+}
+
+.accordion__title {
+  position: relative;
+  padding: rem(16) rem(44) rem(15) rem(16);
+  cursor: pointer;
+  background-color: $greenaccent;
+  @include mq(md) {
+    padding: rem(26) rem(72) rem(24) rem(40);
+  }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  content: "";
+  background-color: $white;
+  transition: transform 0.3s, opacity 0.3s;
+
+  @include mq("md") {
+    top: 50%;
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+.accordion__title::before {
+  transform: rotate(90deg);
+}
+
+.accordion__title.is-open::before {
+  transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+  opacity: 0;
+}
+
+.accordion__title-text {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $white;
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.accordion__content {
+  display: none;
+  padding: rem(23) rem(15);
+  border: rem(1) solid $greenaccent;
+  @include mq(md) {
+    margin-top: rem(16);
+    padding: rem(39);
+  }
+}
+
+.accordion__item:nth-child(3) .accordion__content,
+.accordion__item:nth-child(7) .accordion__content {
+  padding-bottom: rem(22);
+  @include mq(md) {
+    padding-bottom: rem(39);
+  }
+}
+
+.accordion__item:nth-child(4) .accordion__content {
+  @include mq(md) {
+    padding-bottom: rem(38);
+  }
+}
+
+.accordion__text {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.44;
+}

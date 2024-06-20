@@ -53,7 +53,7 @@
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-campaign.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Campaign</span>
                 <span class="pc-nav__jatext">キャンペーン</span>
               </a>
@@ -89,7 +89,7 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="./page-faq.html" class="pc-nav__link">
+              <a href="#" class="pc-nav__link">
                 <span class="pc-nav__engtext">FAQ</span>
                 <span class="pc-nav__jatext">よくある質問</span>
               </a>
@@ -108,7 +108,7 @@
               <div class="sp-nav__left-content">
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="#" class="sp-nav__left-link">キャンペーン</a>
+                    <a href="./page-campaign.html" class="sp-nav__left-link">キャンペーン</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス取得</a>
@@ -167,7 +167,7 @@
                 </ul>
                 <ul class="sp-nav__right-items">
                   <li class="sp-nav__right-item">
-                    <a href="./page-faq.html" class="sp-nav__right-link">よくある質問</a>
+                    <a href="#" class="sp-nav__right-link">よくある質問</a>
                   </li>
                   <li class="sp-nav__right-item">
                     <a href="#privacy" class="sp-nav__right-link">プライバシー<br class="u-mobile">ポリシー</a>
@@ -188,9 +188,9 @@
 
     <main>
       <!-- 下層ページのメインビュー -->
-      <section class="campaign-mv sub-mv">
+      <section class="faq-mv sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Campaign</h1>
+          <h1 class="sub-mv__title">FAQ</h1>
         </div>
       </section>
 
@@ -201,131 +201,74 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>キャンペーン</span></li>
+            <li><span>よくある質問</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- キャンペーン -->
-      <section class="top-page-campaign page-campaign">
-        <div class="page-campaign__inner inner">
-          <ul class="page-campaign__list filter-list js-filter-list">
-            <li data-filter="all" class="filter-list__item is-active"><span>All</span></li>
-            <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
-            <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
-          </ul>
-          <ul class="page-campaign__items campaign-cards js-filter-item">
-            <li data-item="cat1" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_1.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ライセンス講習</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ライセンス取得</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;56&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;46&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
+      <!-- よくある質問 -->
+      <div class="top-page-faq page-faq">
+        <div class="page-faq__inner inner">
+          <div class="faq__accordion accordion js-accordion">
+            <div class="accordion__container">
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
                 </div>
               </div>
-            </li>
-            <li data-item="cat2" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_2.jpg" alt="2隻の白いボートが浮かぶエメラルドグリーン浜辺">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切体験ダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;24&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;18&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
                 </div>
               </div>
-            </li>
-            <li data-item="cat3" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_3.jpg" alt="海の中を漂う光るクラゲ">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">体験ダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">ナイトダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;10&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;8&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
                 </div>
               </div>
-            </li>
-            <li data-item="cat4" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
-              <div class="campaign-card__link">
-                <picture class="campaign-card__img campaign-card__img--sub-page">
-                  <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">
-                  <img src="./assets/images/common/campaign_4.jpg" alt="ダイビングを楽しむ4人の人たちが水面で合図を交わしている様子">
-                </picture>
-                <div class="campaign-card__body campaign-card__body--sub-page">
-                  <p class="campaign-card__category">ファンダイビング</p>
-                  <h3 class="campaign-card__title campaign-card__title--sub-page text--medium-large">貸切ファンダイビング</h3>
-                  <p class="campaign-card__text campaign-card__text--sub-page text--small-sp">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__price campaign-card__price--sub-page">
-                    <span class="campaign-card__price-before campaign-card__price-before--sub-page">&yen;20&#44;000</span><span class="campaign-card__price-after campaign-card__price-after--sub-page">&yen;16&#44;000</span>
-                  </div>
-                  <div class="campaign-card__information">
-                    <p class="campaign-card__information-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                    <p class="campaign-card__information-period">2023/6/1-9/30</p>
-                    <p class="campaign-card__information-inquiry">ご予約・お問い合わせはコチラ</p>
-                    <div class="campaign-card__btn campaign-card__btn--sub-page u-desktop">
-                      <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
-                    </div>
-                  </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div class="top-pagenavi">
-        <div class="wp-pagenavi">
-          <a class="previouspostslink" rel="prev" href="#"></a>
-          <span class="current">1</span>
-          <a class="page smaller" href="#">2</a>
-          <a class="page smaller" href="#">3</a>
-          <a class="page larger" href="#">4</a>
-          <a class="page larger u-desktop" href="#">5</a>
-          <a class="page larger u-desktop" href="#">6</a>
-          <a class="nextpostslink" rel="next" href="#"></a>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+                </div>
+              </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+                </div>
+              </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">ここに質問が入ります。</p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
