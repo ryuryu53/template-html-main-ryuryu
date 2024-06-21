@@ -281,3 +281,53 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).next().slideToggle(300);
   });
 });
+
+// フォームの入力チェック
+$('#form__contact').on('submit', function (e) {
+  var user_name = $('#form__name').val(); /* お名前 */
+  var email = $('#form__email').val(); /* メールアドレス */
+  var tel = $('#form__tel').val(); /* 電話番号 */
+  var inquiry_checked = $('input[name="inquiry"]:checked').length > 0; /* inquiryのチェックボックス */
+  // var campaign_select = $('#form__campaign').val(); /* キャンペーン */
+  var textarea_value = $('#form__textarea').val(); /* お問合せ内容 */
+  var agree_checked = $('input[name="agree"]:checked').length > 0; /* agreeのチェックボックス */
+
+  var error_text = ''; /* エラーの説明が入る変数 */
+
+  if (user_name.trim() === '') {
+    error_text = '※必須項目が入力されていません。入力してください。';
+  } else if (email.trim() === '') {
+    error_text = '※必須項目が入力されていません。入力してください。';
+  } else if (tel.trim() === '') {
+    error_text = '※必須項目が入力されていません。入力してください。';
+  } else if (!inquiry_checked) {
+    error_text = '※必須項目がチェックされていません。チェックしてください。';
+  }/* else if (campaign_select === '') {
+    error_text = '※必須項目が選択されていません。選択してください。';
+  } */ else if (textarea_value.trim() === '') {
+    error_text = '※必須項目が入力されていません。入力してください。';
+  } else if (!agree_checked) {
+    error_text = '※必須項目がチェックされていません。チェックしてください。';
+  }
+
+    // console.log(inquiry_checked);
+
+  // エラーがあった場合はページ遷移を止め、エラー内容を表示する
+  if (error_text !== '') {
+
+    // ページ遷移を止める
+    e.preventDefault();
+
+    // エラー内容を表示する
+    $('#form__error').text(error_text);
+
+  // エラーがない場合はエラー内容をクリアする
+  } else {
+
+    // 今回はサーバーにデータを送らないのでページ遷移を止める
+    e.preventDefault();
+
+    // エラー内容をクリアする
+    $('#form__error').text('');
+  }
+});
