@@ -11,3 +11,17 @@
     padding-bottom: rem(80);
   }
 }
+
+.top-footer--contact-page {
+  margin-top: rem(148);
+  @include mq(md) {
+    margin-top: rem(177);
+  }
+}
+
+.top-footer--thanks-page {
+  margin-top: rem(143);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}

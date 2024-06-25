@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-contact.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Contact</span>
                 <span class="pc-nav__jatext">お問合せ</span>
               </a>
@@ -176,7 +176,7 @@
                     <a href="#terms" class="sp-nav__right-link">利用規約</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="#" class="sp-nav__right-link">お問い合わせ</a>
+                    <a href="./page-contact.html" class="sp-nav__right-link">お問い合わせ</a>
                   </li>
                 </ul>
               </div>
@@ -201,70 +201,21 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>お問い合わせ</span></li>
+            <li>
+              <a href="./page-contact.html"><span>お問い合わせ</span></a>
+            </li>
+            <li><span>送信完了</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- お問い合わせ -->
+      <!-- 送信完了 -->
        <div class="top-page-contact2 page-contact">
         <div class="page-contact__inner inner">
-          <div class="page-contact__content form">
-            <!-- <p class="form__error" id="form__error"></p> -->
-            <form action="" method="post" class="form__contact" id="form__contact">
-              <dl class="form__item">
-                <dt>お名前<span>必須</span></dt>
-                <dd>
-                  <input type="text" name="user_name" value="" class="form__name" id="form__name" placeholder="沖縄&emsp;太郎" />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>メールアドレス<span>必須</span></dt>
-                <dd>
-                  <input type="email" name="mail_address" value="" class="form__email" id="form__email" placeholder="aaa000@ggmail.com" />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>電話番号<span>必須</span></dt>
-                <dd>
-                  <input type="tel" name="tel_number" value="" class="form__tel" id="form__tel" placeholder="000-0000-0000" />
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt class="">お問合せ項目<span>必須</span></dt>
-                <dd class="">
-                  <label><input type="checkbox" name="inquiry" value="ダイビング講習について" /><span>ダイビング講習について</span></label>
-                  <label><input type="checkbox" name="inquiry" value="ファンダイビングについて" /><span>ファンダイビングについて</span></label>
-                  <label><input type="checkbox" name="inquiry" value="体験ダイビングについて" /><span>体験ダイビングについて</span></label>
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>キャンペーン</dt>
-                <dd class="">
-                  <select name="campaign" class="form__campaign" id="form__campaign">
-                    <option value="" hidden>キャンペーン内容を選択</option>
-                    <option value="ライセンス講習">ライセンス講習</option>
-                    <option value="ファンダイビング">ファンダイビング</option>
-                    <option value="体験ダイビング">体験ダイビング</option>
-                  </select>
-                </dd>
-              </dl>
-              <dl class="form__item">
-                <dt>お問合せ内容<span>必須</span></dt>
-                <dd>
-                  <textarea name="contents" class="form__textarea" id="form__textarea"></textarea>
-                </dd>
-              </dl>
-              <div class="form__agree">
-                <label><input type="checkbox" name="agree" value="1" id="form__checkbox"><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
-              </div>
-              <div class="form__btn">
-                <div class="form__btn-submit">
-                  <input type="submit" value="Send" />
-                  <div class="form__btn-arrow"></div>
-                </div>
-              </div>
-            </form>
+          <div class="page-contact__content">
+            <p class="page-contact__thanks-title">お問い合わせ内容を送信完了しました。</p>
+            <p class="page-contact__thanks-text">このたびは、お問い合わせ頂き<br class="u-mobile">誠にありがとうございます。</p>
+            <p class="page-contact__thanks-text">お送り頂きました内容を確認の上、<br class="u-mobile">3営業日以内に折り返しご連絡させて頂きます。<br>また、ご記入頂いたメールアドレスへ、<br class="u-mobile">自動返信の確認メールをお送りしております。</p>
           </div>
         </div>
        </div>
@@ -276,7 +227,7 @@
     </main>
 
     <!-- フッター -->
-    <footer class="top-footer top-footer--contact-page footer js-footer">
+    <footer class="top-footer top-footer--thanks-page footer js-footer">
       <div class="footer__inner inner">
         <div class="footer__img">
           <div class="footer__logo">
@@ -375,6 +326,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- <script>
+      // ローカルストレージからエラーメッセージを取得して表示
+      var errorText = localStorage.getItem('error_text');
+      if (errorText) {
+        document.getElementById('form__error').innerText = errorText;
+        localStorage.removeItem('error_text'); // 表示後にクリア
+      }
+    </script> -->
   </body>
 
 </html>

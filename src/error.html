@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__link">
+              <a href="./page-contact.html" class="pc-nav__link">
                 <span class="pc-nav__engtext">Contact</span>
                 <span class="pc-nav__jatext">お問合せ</span>
               </a>
@@ -176,7 +176,7 @@
                     <a href="#terms" class="sp-nav__right-link">利用規約</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="#" class="sp-nav__right-link">お問い合わせ</a>
+                    <a href="./page-contact.html" class="sp-nav__right-link">お問い合わせ</a>
                   </li>
                 </ul>
               </div>
@@ -201,16 +201,21 @@
             <li>
               <a href="./"><span>top</span></a>
             </li>
-            <li><span>お問い合わせ</span></li>
+            <li>
+              <a href="./page-contact.html"><span>お問い合わせ</span></a>
+            </li>
+            <li><span>お問い合わせエラー</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- お問い合わせ -->
+      <!-- お問い合わせエラー -->
        <div class="top-page-contact2 page-contact">
         <div class="page-contact__inner inner">
           <div class="page-contact__content form">
-            <!-- <p class="form__error" id="form__error"></p> -->
+            <div class="form__error-wrap">
+              <p class="form__error" id="form__error"></p>
+            </div>
             <form action="" method="post" class="form__contact" id="form__contact">
               <dl class="form__item">
                 <dt>お名前<span>必須</span></dt>
@@ -375,6 +380,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- <script>
+      // ローカルストレージからエラーメッセージを取得して表示
+      var errorText = localStorage.getItem('error_text');
+      if (errorText) {
+        document.getElementById('form__error').innerText = errorText;
+        localStorage.removeItem('error_text'); // 表示後にクリア
+      }
+    </script> -->
   </body>
 
 </html>

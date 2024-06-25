@@ -60,14 +60,15 @@ textarea {
 	background-image: none;
 	font-family: inherit;
 	/*↓カスタム */
-  margin-top: rem(10);
+  // margin-top: rem(16);
 	font-size: $fz;
-	padding: $padding-und $padding-lnr;
+	font-weight: $normal;
+	padding: rem(6) rem(16) rem(8);
 	width: 100%;
-  max-width: rem(300);
+  // max-width: rem(300);
 	background: $back-cr;
-	border: 1px solid $border-cr-default;
-	border-radius: $border-r;
+	border: 1px solid $greenaccent;
+	// border-radius: $border-r;
 	/*↓↓↓↓不要ならコメントアウト or 削除 */
 	// &:hover {  //ホバーしたときの色
 	// 	border: 1px solid $border-cr;
@@ -78,7 +79,7 @@ textarea {
 	}
 }
 [type="tel"] {
-  max-width: rem(200);
+  // max-width: rem(200);
   width: 100%;
 }
 button,
@@ -92,7 +93,7 @@ button,
 	border: rem(1) solid $greenaccent;
 	border-radius: 0;
 	/*↓カスタム */
-	padding: rem(15) rem(60) rem(15) 0;
+	padding: rem(15) rem(57) rem(15) 0;
 	color: $font-cr-btn;
 	font-size: $fz-btn;
 	font-weight: $normal;
@@ -162,9 +163,10 @@ button,
 	+ span {
 		display: inline-block;
 		position: relative;
-		padding: 0 0 0 calc($check-size + $check-space);
-		margin: 0 $check-space-betweenRadio 0 0;
-		font-size: $check-fz;
+		padding: 0 0 0 calc(rem(17) + $check-space);	// $check-size:20 $check-space:5
+		// margin: 0 $check-space-betweenRadio 0 0;
+		font-size: rem(16);
+		font-weight: $normal;
 		line-height: 1;
 		cursor: pointer;
 		transition: 0.3s ease;
@@ -176,9 +178,9 @@ button,
 			left: 0;
 			transform: translateY(-50%);
 			background: $check-bg-cr;
-			border: 1px solid $check-border-cr;
-			width: $check-size;
-			height: $check-size;
+			border: 1px solid $greenaccent;
+			width: rem(14);
+			height: rem(14);
 			display: block;
 		}
 
@@ -197,13 +199,13 @@ button,
 			display: block;
 			opacity: 1;
 			/*チェックマークじゃない場合は以下を変更する*/
-			transform: translateY(-50%) rotate(-45deg);
-			width: calc($check-size * 0.9);
-			height: calc($check-size * 0.5);
+			transform: translateY(-45%) rotate(-35deg); // -50% → -45% -45deg → -35deg
+			width: calc(rem(14) * 0.7);	// 0.9 → 0.7
+			height: calc(rem(14) * 0.35);	// 0.5 → 0.35
 			margin-top: -0.1em;
 			margin-left: 0.1em;
-			border-left: $check-weight solid $check-bg-cr-inner;
-			border-bottom: $check-weight solid $check-bg-cr-inner;
+			border-left: rem(2) solid $red;	// $check-weight:4
+			border-bottom: rem(2) solid $red;
 
 		}
 	}
@@ -220,16 +222,16 @@ select {
 	/*↓カスタム */
   margin-top: rem(10);
 	font-size: $fz;
-	padding: $padding-und $padding-lnr;
+	padding: rem(10) rem(7);
 	background-color: $back-cr;
-  border: 1px solid $border-cr-default;
-  border-radius: $border-r;
+  border: 1px solid $greenaccent;
+  // border-radius: $border-r;
 	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
-	appearance: auto;
+	// appearance: auto;
 	/*↓デフォルトではないアイコンを使う場合は入力する*/
-	// background-image: url();
-	// background-position: right 12px center;
-	// background-repeat: no-repeat;
+	background-image: url(../images/common/triangle.svg);
+	background-position: right rem(7) top 38%;
+	background-repeat: no-repeat;
 	&:focus {
 		border: 1px solid $border-cr;
 	}
@@ -256,22 +258,199 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 textarea {
-	height: $textarea-height;
+	height: rem(200);
   width: 100%;
   max-width: rem(600);
 }
 
+::placeholder {
+	color: $green2;
+	font-size: rem(16);
+	font-weight: $normal;
+}
+
+.form__contact {
+	position: relative;
+}
+
+.form__error-wrap {
+	padding-top: rem(1);
+	padding-left: rem(11);
+	@include mq(md) {
+		padding-top: rem(13);
+    padding-bottom: rem(1);
+	}
+}
+
 .form__error {
-	height: rem(20);
+	max-width: rem(224);
+	width: 100%;
 	font-size: rem(14);
 	font-weight: $normal;
+	line-height: 1.45;
 	color: $red;
+	text-indent: -1em;
+	margin:0 auto rem(38);
+	padding-left: rem(8);
+	@include mq(md) {
+		max-width: 100%;
+		padding-left: 0;
+		text-align: center;
+		text-indent: 0;
+	}
+}
+
+.form__item {
+	font-size: rem(16);
+	font-weight: $bold;
+	border-bottom: rem(1) dashed $greenaccent;
+	padding-bottom: rem(24);
+	@include mq(md) {
+		display: flex;
+		padding-bottom: rem(40);
+	}
+}
+
+.form__item + .form__item {
+	margin-top: rem(22);
+	@include mq(md) {
+		margin-top: rem(39);
+	}
+}
+
+.form__item:nth-child(6) {
+	padding-bottom: rem(19);	// textareaの下に謎の余白5pxが入る
+	@include mq(md) {
+		padding-bottom: rem(35);
+	}
+}
+
+.form__item dt {
+	display: flex;
+	align-items: center;
+	@include mq(md) {
+		align-items: flex-start;
+		width: calc(100% - 68.57142857142857%);
+	}
+}
+
+.form__item dt span {
+	display: inline-block;
+	background-color: $red;
+	font-size: rem(12);
+	font-weight: $normal;
+	color: $white;
+	letter-spacing: 0.4em;
 	text-align: center;
+	margin-top: rem(1);
+	margin-left: rem(8);
+	padding: rem(2) rem(11) rem(1) rem(16);
+}
+
+.form__item dd {
+	margin-top: rem(16);
+	@include mq(md) {
+		width: 68.57142857142857%;
+		margin-top: 0;
+	}
+}
+
+.form__item:nth-child(3) dd {
+	margin-top: rem(17);
+	@include mq(md) {
+		margin-top: 0;
+	}
+}
+
+.form__item:nth-child(4) dd {
+	margin-top: rem(15);
+	@include mq(md) {
+		margin-top: 0;
+		padding-top: rem(2);
+	}
+}
+
+.form__item:nth-child(4) dd label + label {
+	margin-top: rem(3);
+}
+
+.form__campaign {
+	font-size: rem(12);
+	font-weight: $normal;
+	color: $black;
+	@include mq(md) {
+		background-position: right 0.4375rem top 55%;
+		margin-top: rem(-3);
+		padding-top: rem(6);
+		padding-bottom: rem(3);
+	}
+}
+
+.form__agree {
+	max-width: rem(284);
+	width: 100%;
+	margin: auto;
+	margin-top: rem(39);
+	@include mq(md) {
+		max-width: rem(374);
+		margin-top: rem(78);
+	}
+}
+
+.form__agree [type="checkbox"] + span {
+	font-size: rem(14);
+	font-weight: $normal;
+	line-height: 1.571428571428571;
+	color: $black;
+	margin-right: 0;
+	padding-left: calc(rem(26) + $check-space);	// $check-space:5
+	@include mq(md) {
+		padding-left: rem(38);
+		color: $green;
+	}
+}
+
+.form__agree [type="checkbox"] + span::before {
+	top: 25%;
+	width: rem(22);
+	height: rem(22);
+	@include mq(md) {
+		top: 45%;
+	}
+}
+
+.form__agree [type="checkbox"] + span::after {
+	top: 25%;
+	transform: translateY(-75%) rotate(-35deg); // -50% → -75% -45deg → -35deg
+	width: calc(rem(22) * 0.7);	// 0.9 → 0.7
+	height: calc(rem(22) * 0.35);	// 0.5 → 0.35
+	margin-left: 0.25em;	// 0.1em → 0.25em
+	@include mq(md) {
+		top: 50%;
+	}
+}
+
+.form__error-style {
+	border-color: $red;
+	background-color: rgba($color: $red, $alpha: 20%);
+}
+
+.form__error-style + span::before {
+	border-color: $red;
+	background-color: rgba($color: $red, $alpha: 20%);
+}
+
+.form__error-style::placeholder {
+	color: $white;
 }
 
 // 送信ボタン
 .form__btn {
 	text-align: center;
+	margin-top: rem(24);
+	@include mq(md) {
+		margin-top: rem(39);
+	}
 }
 
 .form__btn-submit {
@@ -319,7 +498,7 @@ textarea {
 .form__btn-arrow {
 	position: absolute;
   top: 40%;
-  right: rem(60);
+  right: rem(59);
   width: rem(40);
   height: rem(7);
   border-right: rem(1) solid currentColor;

@@ -270,7 +270,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(window).scrollTop(scrollTop);
   });
 
-  // トグル
+  // トグル、アコーディーン
   $(".js-archive-toggle:first-child .js-archive-toggle__items, .js-accordion__item:first-child .js-accordion__content").css(
     "display",
     "block"
@@ -280,54 +280,155 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-});
+
 
 // フォームの入力チェック
-$('#form__contact').on('submit', function (e) {
-  var user_name = $('#form__name').val(); /* お名前 */
-  var email = $('#form__email').val(); /* メールアドレス */
-  var tel = $('#form__tel').val(); /* 電話番号 */
-  var inquiry_checked = $('input[name="inquiry"]:checked').length > 0; /* inquiryのチェックボックス */
-  // var campaign_select = $('#form__campaign').val(); /* キャンペーン */
-  var textarea_value = $('#form__textarea').val(); /* お問合せ内容 */
-  var agree_checked = $('input[name="agree"]:checked').length > 0; /* agreeのチェックボックス */
+// $('#form__contact').on('submit', function (e) {
+//   var user_name = $('#form__name').val(); /* お名前 */
+//   var email = $('#form__email').val(); /* メールアドレス */
+//   var tel = $('#form__tel').val(); /* 電話番号 */
+//   var inquiry_checked = $('input[name="inquiry"]:checked').length > 0; /* inquiryのチェックボックス */
+//   // var campaign_select = $('#form__campaign').val(); /* キャンペーン */
+//   var textarea_value = $('#form__textarea').val(); /* お問合せ内容 */
+//   var agree_checked = $('input[name="agree"]:checked').length > 0; /* agreeのチェックボックス */
 
-  var error_text = ''; /* エラーの説明が入る変数 */
+//   var error_text = ''; /* エラーの説明が入る変数 */
 
-  if (user_name.trim() === '') {
-    error_text = '※必須項目が入力されていません。入力してください。';
-  } else if (email.trim() === '') {
-    error_text = '※必須項目が入力されていません。入力してください。';
-  } else if (tel.trim() === '') {
-    error_text = '※必須項目が入力されていません。入力してください。';
-  } else if (!inquiry_checked) {
-    error_text = '※必須項目がチェックされていません。チェックしてください。';
-  }/* else if (campaign_select === '') {
-    error_text = '※必須項目が選択されていません。選択してください。';
-  } */ else if (textarea_value.trim() === '') {
-    error_text = '※必須項目が入力されていません。入力してください。';
-  } else if (!agree_checked) {
-    error_text = '※必須項目がチェックされていません。チェックしてください。';
+//   if (user_name.trim() === '') {
+//     error_text = '※必須項目が入力されていません。入力してください。';
+//   } else if (email.trim() === '') {
+//     error_text = '※必須項目が入力されていません。入力してください。';
+//   } else if (tel.trim() === '') {
+//     error_text = '※必須項目が入力されていません。入力してください。';
+//   } else if (!inquiry_checked) {
+//     error_text = '※必須項目がチェックされていません。チェックしてください。';
+//   }/* else if (campaign_select === '') {
+//     error_text = '※必須項目が選択されていません。選択してください。';
+//   } */ else if (textarea_value.trim() === '') {
+//     error_text = '※必須項目が入力されていません。入力してください。';
+//   } else if (!agree_checked) {
+//     error_text = '※必須項目がチェックされていません。チェックしてください。';
+//   }
+
+//     // console.log(inquiry_checked);
+
+//   // エラーがあった場合はページ遷移を止め、エラー内容を表示する
+//   if (error_text !== '') {
+
+//     // ページ遷移を止める
+//     e.preventDefault();
+
+//     // エラー内容を表示する
+//     $('#form__error').text(error_text);
+
+//   // エラーがない場合はエラー内容をクリアする
+//   } else {
+
+//     // 今回はサーバーにデータを送らないのでページ遷移を止める
+//     e.preventDefault();
+
+//     // エラー内容をクリアする
+//     $('#form__error').text('');
+//   }
+// });
+
+  // フォームの入力チェック
+  if (window.location.pathname.endsWith('page-contact.html')) {
+    $('#form__contact').on('submit', function(e) {
+      var user_name = $('#form__name').val(); /* お名前 */
+      var email = $('#form__email').val(); /* メールアドレス */
+      var tel = $('#form__tel').val(); /* 電話番号 */
+      var inquiry_checked = $('input[name="inquiry"]:checked').length > 0; /* inquiryのチェックボックス */
+      var textarea_value = $('#form__textarea').val(); /* お問合せ内容 */
+      var agree_checked = $('input[name="agree"]:checked').length > 0; /* agreeのチェックボックス */
+
+      var error_text = ''; /* エラーの説明が入る変数 */
+
+      // すべてのエラースタイルをリセット
+      $('#form__name, #form__email, #form__tel, #form__textarea, #form__checkbox').removeClass('form__error-style');
+
+      if (user_name.trim() === '') {
+        error_text = '※必須項目が入力されていません。入力してください。';
+        $('#form__name').addClass('form__error-style');
+      } else if (email.trim() === '') {
+        error_text = '※必須項目が入力されていません。入力してください。';
+        $('#form__email').addClass('form__error-style');
+      } else if (tel.trim() === '') {
+        error_text = '※必須項目が入力されていません。入力してください。';
+        $('#form__tel').addClass('form__error-style');
+      } else if (!inquiry_checked) {
+        error_text = '※必須項目がチェックされていません。チェックしてください。';
+      } else if (textarea_value.trim() === '') {
+        error_text = '※必須項目が入力されていません。入力してください。';
+        $('#form__textarea').addClass('form__error-style');
+      } else if (!agree_checked) {
+        error_text = '※必須項目がチェックされていません。チェックしてください。';
+        $('#form__checkbox').addClass('form__error-style');
+      }
+
+      if (error_text !== '') {
+        e.preventDefault(); // フォームの送信を止める
+        localStorage.setItem('error_text', error_text);
+        localStorage.setItem('form_data', JSON.stringify({
+          user_name: user_name,
+          email: email,
+          tel: tel,
+          inquiry_checked: $('input[name="inquiry"]:checked').map(function() { return this.value; }).get(),
+          textarea_value: textarea_value,
+          agree_checked: agree_checked
+        }));
+        window.location.href = 'error.html';
+      } else {
+
+        // 今回はサーバーにデータを送らないのでページ遷移を止める
+        e.preventDefault();
+        window.location.href = 'thanks.html';
+    
+        // エラー内容をクリアする
+        // $('#form__error').text('');
+      }
+    });
   }
 
-    // console.log(inquiry_checked);
+  // エラーページの処理
+  if (window.location.pathname.endsWith('error.html')) {
+    var error_text = localStorage.getItem('error_text');
+    if (error_text) {
+      $('#form__error').text(error_text); // エラー内容を表示する
+      localStorage.removeItem('error_text'); // 表示後にクリア
+    }
 
-  // エラーがあった場合はページ遷移を止め、エラー内容を表示する
-  if (error_text !== '') {
+    var form_data = JSON.parse(localStorage.getItem('form_data'));
+    if (form_data) {
+      $('#form__name').val(form_data.user_name);
+      $('#form__email').val(form_data.email);
+      $('#form__tel').val(form_data.tel);
 
-    // ページ遷移を止める
-    e.preventDefault();
+      form_data.inquiry_checked.forEach(function(value) {
+        $('input[name="inquiry"][value="' + value + '"]').prop('checked', true);
+      });
 
-    // エラー内容を表示する
-    $('#form__error').text(error_text);
+      $('input[name="agree"]').prop('checked', form_data.agree_checked);
+      $('#form__textarea').val(form_data.textarea_value);
 
-  // エラーがない場合はエラー内容をクリアする
-  } else {
+      // すべてのエラースタイルをリセット
+      $('#form__name, #form__email, #form__tel, #form__textarea, #form__checkbox').removeClass('form__error-style');
 
-    // 今回はサーバーにデータを送らないのでページ遷移を止める
-    e.preventDefault();
+      if (form_data.user_name.trim() === '') {
+        $('#form__name').addClass('form__error-style');
+      } else if (form_data.email.trim() === '') {
+        $('#form__email').addClass('form__error-style');
+      } else if (form_data.tel.trim() === '') {
+        $('#form__tel').addClass('form__error-style');
+      } else if (form_data.inquiry_checked.length === 0) {
+        // 必要に応じて処理を追加
+      } else if (form_data.textarea_value.trim() === '') {
+        $('#form__textarea').addClass('form__error-style');
+      } else if (!form_data.agree_checked) {
+        $('#form__checkbox').addClass('form__error-style');
+      }
 
-    // エラー内容をクリアする
-    $('#form__error').text('');
+      localStorage.removeItem('form_data'); // 表示後にクリア
+    }
   }
 });

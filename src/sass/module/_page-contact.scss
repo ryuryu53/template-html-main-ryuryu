@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.page-contact {
+  position: relative;
+}
+
+.page-contact::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-23);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-57);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-contact__inner.inner {
+  max-width: rem(750);
+}
+
+.page-contact__thanks-title {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.3;
+  text-align: center;
+  @include mq(md) {
+    padding-top: rem(12);
+  }
+}
+
+.page-contact__thanks-text {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.page-contact__thanks-text:nth-child(2) {
+  margin-top: rem(38);
+}
