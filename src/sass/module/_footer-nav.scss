@@ -25,6 +25,10 @@
   }
 }
 
+.footer-nav__right-content--width {
+  width: 43.5%;
+}
+
 .footer-nav__left-items:first-child {
   @include mq(md) {
     width: 50%;
@@ -47,6 +51,11 @@
 .footer-nav__right-item {
   font-size: rem(16);
   color: $white;
+}
+
+.footer-nav__left-item--green,
+.footer-nav__right-item--green {
+  color: $green;
 }
 
 .footer-nav__left-link,
@@ -152,6 +161,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.footer-nav__left-link--icon-green::before,
+.footer-nav__right-link--icon-green::before {
+  background-image: url(../images/common/starfish-green-real.svg);
 }
 
 .footer-nav__right-items:nth-child(2) .footer-nav__right-item:nth-child(2) .footer-nav__right-link::before {

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.top-page-site-map {
+  margin-top: rem(34);  // 51-17
+
+  @include mq(md) {
+    margin-top: rem(132); // 149-17
+  }
+}

@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.page-site-map {
+  position: relative;
+}
+
+.page-site-map::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-7);  // -24+17
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-70);  // PC版カンプには魚なし：-70+17とすると文字と被る部分が増えるので、そのまま-70にした
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
