@@ -15,6 +15,12 @@
   }
 }
 
+.footer-nav__left-content--width {
+  @include mq(md) {
+    width: 54.2%;
+  }
+}
+
 .footer-nav__right-content {
   width: 46.7%;
 
@@ -27,6 +33,9 @@
 
 .footer-nav__right-content--width {
   width: 43.5%;
+  @include mq(md) {
+    width: 44.1%;
+  }
 }
 
 .footer-nav__left-items:first-child {
@@ -36,8 +45,16 @@
 }
 
 .footer-nav__left-items:nth-child(2) {
+  margin-top: rem(2);
   @include mq(md) {
     width: 47%;
+    margin-top: 0;
+  }
+}
+
+.footer-nav__left-items--width {
+  @include mq(md) {
+    width: 46.8%;
   }
 }
 
@@ -47,10 +64,20 @@
   }
 }
 
+.footer-nav__right-items--width {
+  @include mq(md) {
+    width: 38.2%;
+  }
+}
+
 .footer-nav__left-item,
 .footer-nav__right-item {
   font-size: rem(16);
   color: $white;
+}
+
+.footer-nav__right-items:first-child .footer-nav__right-item:nth-child(2) {
+  margin-top: rem(2);
 }
 
 .footer-nav__left-item--green,
@@ -152,7 +179,7 @@
 .footer-nav__right-link::before {
   content: "";
   position: absolute; // コード_FB：アイコンの位置調整はabsoluteで行う
-  top: rem(19);
+  top: rem(20);
   left: 0;
   display: inline-block;
   width: rem(18);

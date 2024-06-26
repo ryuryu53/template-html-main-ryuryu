@@ -45,7 +45,7 @@
 }
 
 .footer__nav {
-  margin-top: rem(21);
+  margin-top: rem(20);
 
   @include mq(md) {
     margin-top: rem(4);
@@ -60,7 +60,7 @@
 
   @include mq(md) {
     right: 0;
-    margin: rem(56) 0 0;
+    margin: rem(54) 0 0;
   }
 }
 
