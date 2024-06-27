@@ -74,3 +74,17 @@
     font-size: rem(32);
   }
 }
+
+.section-header__404-title {
+  font-family: $third-font-family;
+  font-size: rem(80);
+  font-weight: $normal;
+  line-height: 1;
+  color: $white;
+  letter-spacing: 0.5em;
+  text-indent: 0.47em;
+  @include mq(md) {
+    font-size: rem(160);
+    text-indent: 0.49em;
+  }
+}

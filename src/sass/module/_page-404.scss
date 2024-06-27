@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.page-404__wrapper {
+  background-color: $greenaccent;
+  padding-top: rem(80);
+  padding-bottom: rem(44);
+  @include mq(md) {
+    padding-top: rem(90);
+    padding-bottom: rem(152);
+  }
+}
+
+.page-404 {
+  position: relative;
+}
+
+.page-404::before {
+  content: "";
+  background-image: url(../images/common/whale-icon-large.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-88);
+  left: rem(15);
+  width: rem(345);
+  height: rem(345);
+  @include mq(md) {
+    top: rem(-163);
+    left: calc(50% - min(48%, rem(540)));
+    width: rem(698);
+    height: rem(698);
+  }
+}
+
+.page-404__text {
+  font-family: $third-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $white;
+  text-align: center;
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.page-404__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

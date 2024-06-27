@@ -29,6 +29,7 @@
 }
 
 .page-privacy__title.section-header {
+  position: relative;
   text-align: left;
 }
 
@@ -53,6 +54,10 @@
   margin-top: rem(32);
 }
 
+.page-privacy__middle-item--terms-page {
+  margin-left: rem(-6);
+}
+
 .page-privacy__middle-item span {
   display: block;
   text-indent: -1.15em;
@@ -60,8 +65,13 @@
 }
 
 .page-privacy__use-text {
-  margin-top: rem(32);
   line-break: anywhere;
+  margin-top: rem(32);
+}
+
+.page-privacy__use-text--terms-page {
+  line-break: strict;
+  margin-top: 0;
 }
 
 .page-privacy__provision-text {

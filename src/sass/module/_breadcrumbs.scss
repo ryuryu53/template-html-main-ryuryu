@@ -18,6 +18,10 @@
   text-transform: uppercase;
 }
 
+.breadcrumbs__inner--white span {
+  color: $white;
+}
+
 // .breadcrumbs li:not(:last-child)::after {
 //   content: "";
 //   position: absolute;

@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
+.button--reverse {
+  background-color: $white;
+  color: $greenaccent;
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -27,6 +32,10 @@
   height: calc(rem(1) * 2 + rem(15) * 2 + rem(14) * (22 / 14));
   background-color: transparent;
   border: rem(1) solid $greenaccent;
+}
+
+.button--reverse::before {
+  border-color: $white;
 }
 
 .button::after {
@@ -43,9 +52,17 @@
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
+.button--reverse::after {
+  background-color: $greenaccent;
+}
+
 .button:hover {
   color: $greenaccent;
   opacity: 1;
+}
+
+.button--reverse:hover {
+  color: $white;
 }
 
 .button:hover::after {
@@ -55,6 +72,10 @@
 .button__text {
   position: relative;
   left: rem(-24);
+}
+
+.button__text--reverse {
+  left: rem(-28);
 }
 
 .button__text::after {
@@ -67,6 +88,10 @@
   border-right: rem(1) solid currentColor;
   border-bottom: rem(1) solid currentColor;
   transform: skew(48deg);
+}
+
+.button__text--reverse::after {
+  right: rem(-54);
 }
 
 // .button__text--arrow-up-sp::after {  コード_FB：削除
