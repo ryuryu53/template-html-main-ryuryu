@@ -16,3 +16,9 @@
 .site-map-mv__title-text {
   margin-left: rem(2);
 }
+
+.site-map-mv--shadow-pc {
+  @include mq(md) {
+    box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);
+  }
+}

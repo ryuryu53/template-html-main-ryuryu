@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.top-page-privacy {
+  margin-top: rem(51);  // 51-17-3
+
+  @include mq(md) {
+    margin-top: rem(149); // 149-17-3
+  }
+}

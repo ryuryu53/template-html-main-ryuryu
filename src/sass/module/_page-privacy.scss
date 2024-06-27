@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.page-privacy {
+  position: relative;
+}
+
+.page-privacy::before {
+  content: "";
+  background-image: url(../images/common/goldfish-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-24);  // -24+17+3
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    background-image: url(../images/common/goldfish-pc.svg);
+    top: rem(-70);  // PC版カンプには魚なし：-70+17とすると文字と被る部分が増えるので、そのまま-70にした
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-privacy__inner.inner {
+  max-width: rem(850);
+}
+
+.page-privacy__title.section-header {
+  text-align: left;
+}
+
+.page-privacy__text-block {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 2;
+  margin-top: rem(39);
+}
+
+.page-privacy__head-list {
+  margin-top: rem(32);
+  padding-left: rem(6);
+}
+
+.page-privacy__head-item {
+  text-indent: -1.15em;
+  padding-left: 1.15em;
+}
+
+.page-privacy__middle-content {
+  margin-top: rem(32);
+}
+
+.page-privacy__middle-item span {
+  display: block;
+  text-indent: -1.15em;
+  padding-left: calc(1.15em + rem(6));
+}
+
+.page-privacy__use-text {
+  margin-top: rem(32);
+  line-break: anywhere;
+}
+
+.page-privacy__provision-text {
+  margin-top: rem(32);
+}
+
+.page-parivacy__last-list {
+  padding-left: rem(6);
+}
+
+.page-parivacy__last-item {
+  text-indent: -1.15em;
+  line-break: strict;
+  padding-left: 1.15em;
+}
+
+.page-parivacy__last-text {
+  margin-top: rem(32);
+}

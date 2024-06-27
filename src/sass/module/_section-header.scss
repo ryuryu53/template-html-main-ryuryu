@@ -67,3 +67,10 @@
     color: $white;
   }
 }
+
+.section-header__title {
+  font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
