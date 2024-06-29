@@ -246,7 +246,7 @@ select {
 	// background-position: right 12px center;
 	// background-repeat: no-repeat;
 	&:focus {
-		border-color: 1px solid $border-cr;
+		border: 1px solid $border-cr;	// border-color → borderに修正
 	}
 }
 
