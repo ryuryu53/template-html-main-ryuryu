@@ -108,7 +108,7 @@
               <div class="sp-nav__left-content">
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="#" class="sp-nav__left-link">キャンペーン</a>
+                    <a href="./page-campaign.html" class="sp-nav__link">キャンペーン</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス取得</a>
@@ -122,12 +122,12 @@
                     </ul>
                   </li>
                   <li class="sp-nav__left-item">
-                    <a href="./page-about.html" class="sp-nav__left-link">私たちについて</a>
+                    <a href="./page-about.html" class="sp-nav__link">私たちについて</a>
                   </li>
                 </ul>
                 <ul class="sp-nav__left-items">
                   <li class="sp-nav__left-item">
-                    <a href="./page-information.html" class="sp-nav__left-link">ダイビング情報</a>
+                    <a href="./page-information.html" class="sp-nav__link">ダイビング情報</a>
                     <ul class="sp-nav__left-detail-items">
                       <li class="sp-nav__left-detail-item">
                         <a href="#" class="sp-nav__left-detail-link">ライセンス講習</a>
@@ -141,17 +141,17 @@
                     </ul>
                   </li>
                   <li class="sp-nav__left-item">
-                    <a href="./home.html" class="sp-nav__left-link">ブログ</a>
+                    <a href="./home.html" class="sp-nav__link">ブログ</a>
                   </li>
                 </ul>
               </div>
               <div class="sp-nav__right-content">
                 <ul class="sp-nav__right-items">
                   <li class="sp-nav__right-item">
-                    <a href="./page-voice.html" class="sp-nav__right-link">お客様の声</a>
+                    <a href="./page-voice.html" class="sp-nav__link">お客様の声</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="./page-price.html" class="sp-nav__right-link">料金一覧</a>
+                    <a href="./page-price.html" class="sp-nav__link">料金一覧</a>
                     <ul class="sp-nav__right-detail-items">
                       <li class="sp-nav__right-detail-item">
                         <a href="#" class="sp-nav__right-detail-link">ライセンス講習</a>
@@ -167,16 +167,16 @@
                 </ul>
                 <ul class="sp-nav__right-items">
                   <li class="sp-nav__right-item">
-                    <a href="./page-faq.html" class="sp-nav__right-link">よくある質問</a>
+                    <a href="./page-faq.html" class="sp-nav__link">よくある質問</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="./page-privacy.html" class="sp-nav__right-link">プライバシー<br class="u-mobile">ポリシー</a>
+                    <a href="./page-privacy.html" class="sp-nav__link">プライバシー<br class="u-mobile">ポリシー</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="./page-terms.html" class="sp-nav__right-link">利用規約</a>
+                    <a href="./page-terms.html" class="sp-nav__link">利用規約</a>
                   </li>
                   <li class="sp-nav__right-item">
-                    <a href="./page-contact.html" class="sp-nav__right-link">お問い合わせ</a>
+                    <a href="./page-contact.html" class="sp-nav__link">お問い合わせ</a>
                   </li>
                 </ul>
               </div>
@@ -209,14 +209,14 @@
       <!-- キャンペーン -->
       <section class="top-page-campaign page-campaign">
         <div class="page-campaign__inner inner">
-          <ul class="page-campaign__list filter-list js-filter-list">
-            <li data-filter="all" class="filter-list__item is-active"><span>All</span></li>
-            <li data-filter="cat1" class="filter-list__item"><span>ライセンス講習</span></li>
-            <li data-filter="cat2" class="filter-list__item"><span>ファンダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item"><span>体験ダイビング</span></li>
-          </ul>
-          <ul class="page-campaign__items campaign-cards js-filter-item">
-            <li data-item="cat1" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
+          <div class="page-campaign__category campaign-category">
+            <a href="#" class="campaign-category__link is-active">All</a>
+            <a href="#" class="campaign-category__link">ライセンス講習</a>
+            <a href="#" class="campaign-category__link">ファンダイビング</a>
+            <a href="#" class="campaign-category__link">体験ダイビング</a>
+          </div>
+          <ul class="page-campaign__items campaign-cards">
+            <li class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
               <div class="campaign-card__link">
                 <picture class="campaign-card__img campaign-card__img--sub-page">
                   <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
@@ -240,7 +240,7 @@
                 </div>
               </div>
             </li>
-            <li data-item="cat3" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
+            <li class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
               <div class="campaign-card__link">
                 <picture class="campaign-card__img campaign-card__img--sub-page">
                   <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
@@ -264,7 +264,7 @@
                 </div>
               </div>
             </li>
-            <li data-item="cat3" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
+            <li class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
               <div class="campaign-card__link">
                 <picture class="campaign-card__img campaign-card__img--sub-page">
                   <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
@@ -288,7 +288,7 @@
                 </div>
               </div>
             </li>
-            <li data-item="cat2" class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
+            <li class="campaign-cards__item campaign-cards__item--sub-page campaign-card">
               <div class="campaign-card__link">
                 <picture class="campaign-card__img campaign-card__img--sub-page">
                   <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">

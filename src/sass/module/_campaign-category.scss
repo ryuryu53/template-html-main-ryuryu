@@ -1,0 +1,41 @@
+@use "global" as *;
+
+// 最終_FB：追加
+.campaign-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16) rem(21);
+  background-color: $white;
+  @include mq(md) {
+    gap: rem(32);
+    width: 100%;
+  }
+}
+
+.campaign-category__link {
+  max-width: rem(162);
+  width: 100%;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.571;
+  color: $greenaccent;
+  text-align: center;
+  text-transform: uppercase;
+  padding: rem(6) rem(4) rem(4);
+  border: rem(1) solid currentColor;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.campaign-category__link.is-active {
+  color: $white;
+  border-color: transparent;
+  background-color: $greenaccent;
+}
+
+.campaign-category__link:hover {
+  color: $white;
+  border-color: transparent;
+  background-color: $greenaccent;
+  opacity: 1;
+}

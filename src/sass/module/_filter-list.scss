@@ -55,6 +55,11 @@
   }
 }
 
+.filter-list__item:hover {
+  color: $white;
+  background-color: $greenaccent;
+}
+
 .filter-list__item--page-info::before {
   @include mq(md) {
     content: "";
@@ -87,6 +92,12 @@
 .filter-list__item--page-info:nth-child(3)::before {
   @include mq(md) {
     background-image: url(../images/common/fish-icon_2.svg);
+  }
+}
+
+.filter-list__item--page-info:hover:before {
+  @include mq(md) {
+    background-image: url(../images/common/whale-icon-white.svg);
   }
 }
 

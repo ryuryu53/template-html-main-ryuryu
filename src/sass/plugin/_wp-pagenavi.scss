@@ -9,7 +9,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: rem(38);
+  min-width: rem(38); // 最終_FB：width → min-width
   height: rem(38);
   font-family: $third-font-family;
   font-size: rem(16);
@@ -19,6 +19,7 @@
 	border: solid rem(1) currentColor;
   transition: 0.3s ease;
   margin: 0 rem(6);
+  padding: 0 rem(4);  // 最終_FB：追加
 }
 
 .wp-pagenavi .previouspostslink {

@@ -38,77 +38,56 @@
   padding-bottom: rem(8);
 }
 
+.sp-nav__left-items:first-child {
+  padding-bottom: rem(2);
+}
+
+.sp-nav__right-items:nth-child(2) {
+  margin-top: 8px;
+}
+
 .sp-nav__left-item,
 .sp-nav__right-item {
   font-size: rem(16);
   color: $white;
+  padding-bottom: rem(1);
 }
 
-.sp-nav__left-link,
-.sp-nav__right-link {
+.sp-nav__left-item:nth-child(2) {
+  margin-top: 8px;
+}
+
+.sp-nav__right-item:nth-child(2) {
+  margin-top: 2px;
+}
+
+// 最終_FB：.sp-nav__left-link, .sp-nav__right-link → .sp-nav__linkにまとめた
+.sp-nav__link {
   position: relative;
   display: block;
   font-weight: $bold;
   // text-indent: rem(-18); コード_FB：マイナス系のものはあまり使わない方がよい ⇒ absoluteで対応
-  padding: rem(17) 0 rem(15) rem(22);
+  padding: rem(16) 0 rem(15) rem(22);
 }
 
 // .sp-nav__left-link-1 { // コード_FB：ほとんど数値変わらないのでpadding統一してOK。連番は使わない
 //   padding: rem(16) 0 rem(15) rem(22);
 // }
 
-// .sp-nav__left-link-2 {
-//   padding: rem(17) 0 rem(17) rem(22);
-// }
-
-// .sp-nav__left-link-3 {
-//   padding: rem(17) 0 rem(15) rem(22);
-// }
-
-// .sp-nav__left-link-4 {
-//   padding: rem(17) 0 rem(15) rem(22);
-// }
-
-// .sp-nav__right-link-1 {
-//   padding: rem(16) 0 rem(17) rem(22);
-// }
-
-// .sp-nav__right-link-2 {
-//   padding: rem(17) 0 rem(15) rem(22);
-// }
-
-// .sp-nav__right-link-3 {
-//   padding: rem(17) 0 rem(17) rem(22);
-// }
-
-// .sp-nav__right-link-4 {
-//   line-height: 1.1;
-//   padding: rem(18) 0 rem(18) rem(22);
-// }
-
-// .sp-nav__right-link-5 {
-//   padding: rem(19) 0 rem(17) rem(22);
-// }
-
-// .sp-nav__right-link-6 {
-//   padding: rem(17) 0 rem(15) rem(22);
-// }
-
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(2) .sp-nav__right-link {
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(2) .sp-nav__link {
   line-height: 1.1;
-  padding-top: rem(24);
+  padding-top: rem(20);
 }
 
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__right-link {
-  padding-top: rem(22);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__link {
+  padding-top: rem(21);
 }
 
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__right-link {
-  padding-top: rem(19);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__link {
+  padding-top: rem(18);
 }
 
-.sp-nav__left-link::before,
-.sp-nav__right-link::before {
+.sp-nav__link::before {
   content: "";
   position: absolute; // コード_FB：アイコンの位置調整はabsoluteで行う
   top: rem(19);
@@ -122,16 +101,12 @@
   background-size: contain;
 }
 
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(2) .sp-nav__right-link::before {
-  top: rem(23);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__link::before {
+  top: rem(24);
 }
 
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(3) .sp-nav__right-link::before {
-  top: rem(25);
-}
-
-.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__right-link::before {
-  top: rem(22);
+.sp-nav__right-items:nth-child(2) .sp-nav__right-item:nth-child(4) .sp-nav__link::before {
+  top: rem(21);
 }
 
 .sp-nav__left-detail-item,
@@ -142,10 +117,7 @@
 .sp-nav__left-detail-link,
 .sp-nav__right-detail-link {
   display: block;
-}
-
-.sp-nav__left-detail-link,
-.sp-nav__right-detail-link {
+  padding-bottom: rem(9);
   padding-left: rem(22);
 }
 
@@ -154,20 +126,7 @@
   padding-top: rem(3);
 }
 
-.sp-nav__left-detail-item:not(:first-child) .sp-nav__left-detail-link {
-  padding-top: rem(9);
-}
-
+.sp-nav__left-detail-item:not(:first-child) .sp-nav__left-detail-link,
 .sp-nav__right-detail-item:not(:first-child) .sp-nav__right-detail-link {
   padding-top: rem(9);
-}
-
-.sp-nav__left-detail-item:not(:last-child) .sp-nav__left-detail-link,
-.sp-nav__right-detail-item:not(:last-child) .sp-nav__right-detail-link {
-  padding-bottom: rem(9);
-}
-
-.sp-nav__left-detail-item:last-child .sp-nav__left-detail-link,
-.sp-nav__right-detail-item:last-child .sp-nav__right-detail-link {
-  padding-bottom: rem(17);
 }
