@@ -2,7 +2,10 @@
 
 .information-card {
   border: rem(1) solid $greenaccent;
-  padding: rem(23) rem(24) rem(23);
+  padding: rem(23) rem(24) rem(24);
+  @include mq(md) {
+    padding-bottom: rem(23);
+  }
 }
 
 .information-card__content {

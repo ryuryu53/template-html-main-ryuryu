@@ -151,7 +151,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   function updateBoxShadow() {
     let browserW = window.innerWidth;
     if (browserW >= 768) {
-      $('.filter-list__item--page-info').each(function() {
+      $('.tab__item').each(function() {
         if (!$(this).hasClass('is-active')) {
           $(this).css('box-shadow', 'none');
         } else {
@@ -163,43 +163,54 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // タブによる絞り込み
   // 変数に要素をセット
-  var $filter = $('.js-filter-list [data-filter]'),
-      $item = $('.js-filter-item [data-item]');
+  // var $filter = $('.js-filter-list [data-filter]'),
+  //     $item = $('.js-filter-item [data-item]');
     
-  // カテゴリをクリックしたら
-  $filter.click(function (e) {
-    // デフォルトの動作をキャンセル
-    e.preventDefault();
-    var $this = $(this);
+  // // カテゴリをクリックしたら
+  // $filter.click(function (e) {
+  //   // デフォルトの動作をキャンセル
+  //   e.preventDefault();
+  //   var $this = $(this);
       
-    // クリックしたカテゴリにクラスを付与
-    $filter.removeClass('is-active');
-    $this.addClass('is-active');
+  //   // クリックしたカテゴリにクラスを付与
+  //   $filter.removeClass('is-active');
+  //   $this.addClass('is-active');
     
-    // クリックした要素のdata属性を取得
-    var $filterItem = $this.attr('data-filter');
+  //   // クリックした要素のdata属性を取得
+  //   var $filterItem = $this.attr('data-filter');
     
-    // データ属性が all なら全ての要素を表示
-    if ($filterItem == 'all') {
-      $item.removeClass('is-active').fadeOut().promise().done(function () {
-        $item.addClass('is-active').fadeIn();
-      });
-    // all 以外の場合は、クリックした要素のdata属性の値と同じ値のアイテムを表示
-    } else {
-      $item.removeClass('is-active').fadeOut().promise().done(function () {
-        $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
-      });
-    }
+  //   // データ属性が all なら全ての要素を表示
+  //   if ($filterItem == 'all') {
+  //     $item.removeClass('is-active').fadeOut().promise().done(function () {
+  //       $item.addClass('is-active').fadeIn();
+  //     });
+  //   // all 以外の場合は、クリックした要素のdata属性の値と同じ値のアイテムを表示
+  //   } else {
+  //     $item.removeClass('is-active').fadeOut().promise().done(function () {
+  //       $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
+  //     });
+  //   }
+
+  //   updateBoxShadow();
+  // });
+
+  // 最初に表示されるタブの設定
+  $('.information-cards__item:first-child').addClass('is-active');
+  $('.tab__item:first-child').addClass('is-active');
+
+  // タブによる切り替え
+  const tabButton = $(".js-tab-item"),
+    tabContent = $(".js-tab-content");
+  tabButton.on("click", function () {
+    let index = tabButton.index(this);
+
+    tabButton.removeClass("is-active");
+    $(this).addClass("is-active");
+    tabContent.removeClass("is-active");
+    tabContent.eq(index).addClass("is-active");
 
     updateBoxShadow();
   });
-
-  // 最初に表示されるタブの設定
-  $('.information-cards__item:first-child').css(
-    'display',
-    'block'
-  );
-  $('.filter-list__item--page-info:first-child').addClass('is-active');
 
   // let browserW = window.outerWidth;
   // if (browserW >= 768) {

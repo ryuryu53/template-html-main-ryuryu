@@ -209,49 +209,51 @@
       <!-- ダイビング情報 -->
       <section class="top-page-information page-information">
         <div class="page-information__inner inner">
-          <ul class="page-information__list filter-list filter-list--page-info js-filter-list">
-            <li data-filter="cat1" class="filter-list__item filter-list__item--page-info"><span>ライセンス<br class="u-mobile">講習</span></li>
-            <li data-filter="cat2" class="filter-list__item filter-list__item--page-info"><span>ファン<br class="u-mobile">ダイビング</span></li>
-            <li data-filter="cat3" class="filter-list__item filter-list__item--page-info"><span>体験<br class="u-mobile">ダイビング</span></li>
-          </ul>
-          <ul class="page-information__items information-cards js-filter-item">
-            <li data-item="cat1" class="information-cards__item information-card">
-              <div class="information-card__content">
-                <div class="information-card__body">
-                  <h2 class="information-card__title">ライセンス講習</h2>
-                  <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします&#65281;スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう&#65281;</p>
+          <div class="page-information__container tab">
+            <ul class="tab__list">
+              <li class="tab__item js-tab-item"><span>ライセンス<br class="u-mobile">講習</span></li>
+              <li class="tab__item js-tab-item"><span>ファン<br class="u-mobile">ダイビング</span></li>
+              <li class="tab__item js-tab-item"><span>体験<br class="u-mobile">ダイビング</span></li>
+            </ul>
+            <ul class="page-information__items information-cards">
+              <li class="information-cards__item information-card js-tab-content">
+                <div class="information-card__content">
+                  <div class="information-card__body">
+                    <h2 class="information-card__title">ライセンス講習</h2>
+                    <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします&#65281;スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう&#65281;</p>
+                  </div>
+                  <picture class="information-card__img">
+                    <source srcset="./assets/images/common/info-license.webp" type="image/webp">
+                    <img src="./assets/images/common/info-license.jpg" alt="5人の人がエメラルドグリーンの海でスキューバダイビングを楽しんでいる様子">
+                  </picture>
                 </div>
-                <picture class="information-card__img">
-                  <source srcset="./assets/images/common/info-license.webp" type="image/webp">
-                  <img src="./assets/images/common/info-license.jpg" alt="5人の人がエメラルドグリーンの海でスキューバダイビングを楽しんでいる様子">
-                </picture>
-              </div>
-            </li>
-            <li data-item="cat2" class="information-cards__item information-card">
-              <div class="information-card__content">
-                <div class="information-card__body">
-                  <h2 class="information-card__title">ファンダイビング</h2>
-                  <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+              </li>
+              <li class="information-cards__item information-card js-tab-content">
+                <div class="information-card__content">
+                  <div class="information-card__body">
+                    <h2 class="information-card__title">ファンダイビング</h2>
+                    <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+                  </div>
+                  <picture class="information-card__img">
+                    <source srcset="./assets/images/common/info-fundiving.webp" type="image/webp">
+                    <img src="./assets/images/common/info-fundiving.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
+                  </picture>
                 </div>
-                <picture class="information-card__img">
-                  <source srcset="./assets/images/common/info-fundiving.webp" type="image/webp">
-                  <img src="./assets/images/common/info-fundiving.jpg" alt="薄いピンク色の多くの熱帯魚が泳いでいる様子">
-                </picture>
-              </div>
-            </li>
-            <li data-item="cat3" class="information-cards__item information-card">
-              <div class="information-card__content">
-                <div class="information-card__body">
-                  <h2 class="information-card__title">体験ダイビング</h2>
-                  <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+              </li>
+              <li class="information-cards__item information-card js-tab-content">
+                <div class="information-card__content">
+                  <div class="information-card__body">
+                    <h2 class="information-card__title">体験ダイビング</h2>
+                    <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心&#65281;沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意&#65281;</p>
+                  </div>
+                  <picture class="information-card__img">
+                    <source srcset="./assets/images/common/info-diving.webp" type="image/webp">
+                    <img src="./assets/images/common/info-diving.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
+                  </picture>
                 </div>
-                <picture class="information-card__img">
-                  <source srcset="./assets/images/common/info-diving.webp" type="image/webp">
-                  <img src="./assets/images/common/info-diving.jpg" alt="白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子">
-                </picture>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

@@ -3,3 +3,7 @@
 .information-cards__item {
   display: none;
 }
+
+.information-cards__item.is-active {
+  display: block;
+}
