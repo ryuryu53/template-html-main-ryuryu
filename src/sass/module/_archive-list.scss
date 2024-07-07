@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.archive-list__items {
-  margin-top: rem(24);
-}
-
-.archive-list__item + .archive-list__item {
-  margin-top: rem(3);
-}

@@ -6,11 +6,6 @@
   background-color: $white;
 }
 
-.blog-card.card-list__item--single-page {
-  box-shadow: none;
-  background-color: transparent;
-}
-
 // aタグはカード全体がその領域になっているようにする。カードの縁も含む
 .blog-card__link { // FB：追加
   display: block;
@@ -48,7 +43,7 @@
   transition: transform 0.3s;
 }
 
-.blog-card__image:hover {
+.blog-card:hover .blog-card__image {
   transform: scale(1.36);
 }
 

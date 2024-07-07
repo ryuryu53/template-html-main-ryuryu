@@ -1,0 +1,109 @@
+@use "global" as *;
+
+.single-body__date {
+  position: relative;
+  top: rem(-6);
+  font-family: $second-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $green;
+}
+
+.single-body__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  border-bottom: rem(1) solid $greenaccent;
+  padding-bottom: rem(3);
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: 1.44;
+    padding-bottom: 0;
+  }
+}
+
+.single-body__img {
+  display: block; // コード_FB：クラス名をpictureタグへ移したためblockにした
+  aspect-ratio: 345 / 231;
+  overflow: hidden;
+  margin-top: rem(23);
+  @include mq(md) {
+    aspect-ratio: 700 / 468;
+    margin-top: rem(39);
+  }
+}
+
+.single-body__content {
+
+  p {
+    margin-top: rem(24);
+    @include mq(md) {
+      margin-top: rem(40);
+    }
+  }
+
+  picture {
+    display: block;
+    aspect-ratio: 345 / 231;
+    overflow: hidden;
+    margin-top: rem(24);
+    @include mq(md) {
+      aspect-ratio: 700 / 468;
+      margin-top: rem(40);
+    }
+    
+    & img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  div {
+    margin-top: rem(24);
+    @include mq(md) {
+      margin-top: rem(40);
+    }
+
+    & p {
+      font-size: rem(16);
+      font-weight: $normal;
+      @include mq(md) {
+        color: $black;
+      }
+    }
+
+    & ul {
+      margin-top: rem(24);
+      @include mq(md) {
+      margin-top: rem(40);
+      }
+
+      & li {
+        position: relative;
+        font-size: rem(16);
+        font-weight: $normal;
+        color: $black;
+        padding-left: rem(27);
+        @include mq(md) {
+          color: $green;
+        }
+
+        & + li {
+          margin-top: rem(4);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: rem(3);
+          left: 0;
+          width: rem(18);
+          height: rem(18);
+          background-image: url(../images/common/starfish-green.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

@@ -190,7 +190,7 @@
       <!-- 下層ページのメインビュー -->
       <section class="blog-mv blog-mv--single-page sub-mv">
         <div class="sub-mv__header">
-          <h1 class="sub-mv__title">Blog</h1>
+          <div class="sub-mv__title">Blog</div>
         </div>
       </section>
 
@@ -211,36 +211,37 @@
 
       <!-- ブログ詳細 -->
       <div class="top-two-column two-column">
-        <div class="two-column__inner two-column__inner--single-page inner">
-          <div class="two-column__article two-column__article--single-page column-article">
-            <div class="column-article__items card-list card-list--single-page">
-              <article class="card-list__item card-list__item--single-page blog-card">
-                <div class="blog-card__head">
-                  <time datetime="2023-11-17" class="blog-card__date blog-card__date--single-page">2023.11.17</time>
-                  <h2 class="blog-card__title blog-card__title--single-page text--medium">ライセンス取得</h2>
-                </div>
-                <picture class="blog-card__img blog-card__img--single-page">
+        <div class="two-column__inner inner">
+          <div class="two-column__article single-article">
+            <article class="single-article__item single-body">
+              <div class="single-body__meta">
+                <time datetime="2023-11-17" class="single-body__date">2023.11.17</time>
+                <h1 class="single-body__title">ライセンス取得</h1>
+              </div>
+              <picture class="single-body__img">
+                <source srcset="./assets/images/common/blog_1.webp" type="image/webp">
+                <img src="./assets/images/common/blog_1.jpg" alt="白いポツポツに覆われた赤いサンゴ">
+              </picture>
+              <!-- これ以下はWP化したときにクラス名がつけられない。クラス名をつけてCSSを当ててはいけない -->
+              <div class="single-body__content">
+                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                <picture>
                   <source srcset="./assets/images/common/blog_1.webp" type="image/webp">
                   <img src="./assets/images/common/blog_1.jpg" alt="白いポツポツに覆われた赤いサンゴ">
                 </picture>
-                <p class="blog-card__text blog-card__text--single-page text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                <picture class="blog-card__img blog-card__img--single-page">
-                  <source srcset="./assets/images/common/blog_1.webp" type="image/webp">
-                  <img src="./assets/images/common/blog_1.jpg" alt="白いポツポツに覆われた赤いサンゴ">
-                </picture>
-                <div class="blog-card__text-block">
-                  <p class="blog-card__text text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                  <ul class="blog-card__list">
-                    <li class="blog-card__item">リスト1</li>
-                    <li class="blog-card__item">リスト2</li>
-                    <li class="blog-card__item">リスト3</li>
+                <div>
+                  <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <ul>
+                    <li>リスト1</li>
+                    <li>リスト2</li>
+                    <li>リスト3</li>
                   </ul>
-                  <p class="blog-card__text blog-card__text--single-page text--black-sp">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
-              </article>
-            </div>
+              </div>
+            </article>
 
-            <div class="two-column__wp-pagenavi two-column__wp-pagenavi--single-page">
+            <div class="single-article__wp-pagenavi">
               <div class="wp-pagenavi">
                 <a class="previouspostslink" rel="prev" href="#"></a>
                 <a class="nextpostslink" rel="next" href="#"></a>
@@ -249,10 +250,10 @@
           </div>
 
           <aside class="two-column__aside column-aside">
-            <div class="column-aside__container column-aside__container--single-page">
-              <div class="column-aside__article article-list">
+            <div class="column-aside__container">
+              <div class="column-aside__article">
                 <h2 class="column-aside__title">人気記事</h2>
-                <div class="article-list__items article-cards">
+                <div class="column-aside__items article-cards">
                   <a href="#" class="article-cards__item article-card">
                     <picture class="article-card__img">
                       <source srcset="./assets/images/common/blog_4.webp" type="image/webp">
@@ -285,9 +286,9 @@
                   </a>
                 </div>
               </div>
-              <div class="column-aside__review review-block">
+              <div class="column-aside__review">
                 <h2 class="column-aside__title">口コミ</h2>
-                <div class="review-block__item review-card">
+                <div class="column-aside__item review-card">
                   <picture class="review-card__img">
                     <source srcset="./assets/images/common/blog-couple.webp" type="image/webp">
                     <img src="./assets/images/common/blog-couple.jpg" alt="腕を組みながらソファに座って微笑んでいる若いカップル">
@@ -297,13 +298,13 @@
                     <h3 class="review-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                 </div>
-                <div class="review-block__btn">
+                <div class="column-aside__btn">
                   <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
                 </div>
               </div>
-              <div class="column-aside__campaign campaign-list">
+              <div class="column-aside__campaign">
                 <h2 class="column-aside__title">キャンペーン</h2>
-                <ul class="campaign-list__items campaign-cards">
+                <ul class="column-aside__items campaign-cards">
                   <li class="campaign-cards__item campaign-card campaign-cards__item--blog-page">
                     <a href="#" class="campaign-card__link">
                       <picture class="campaign-card__img campaign-card__img--blog-page">
@@ -335,14 +336,14 @@
                     </a>
                   </li>
                 </ul>
-                <div class="campaign-list__btn">
+                <div class="column-aside__btn-2">
                   <a href="#" class="button"><span class="button__text">View&nbsp;more</span></a>
                 </div>
               </div>
-              <div class="column-aside__archive archive-list">
+              <div class="column-aside__archive">
                 <h2 class="column-aside__title">アーカイブ</h2>
-                <div class="archive-list__items">
-                  <div class="archive-list__item archive-toggle js-archive-toggle">
+                <div class="column-aside__items">
+                  <div class="column-aside__item-archive archive-toggle js-archive-toggle">
                     <h3 class="archive-toggle__year-title js-archive-toggle__title">2023</h3>
                     <ul class="archive-toggle__items js-archive-toggle__items">
                       <li class="archive-toggle__item">
@@ -371,9 +372,9 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="archive-list__item archive-toggle js-archive-toggle">
+                  <div class="column-aside__item-archive archive-toggle js-archive-toggle">
                     <h3 class="archive-toggle__year-title js-archive-toggle__title">2022</h3>
-                    <ul class="archive-toggle__items js-archive-toggle__items">
+                    <ul class="archive-toggle__items  js-archive-toggle__items">
                       <li class="archive-toggle__item">
                         <h4 class="archive-toggle__month-title js-archive-toggle__title">12月</h4>
                         <ul class="archive-toggle__month-items">

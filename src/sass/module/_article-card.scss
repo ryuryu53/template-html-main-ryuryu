@@ -23,7 +23,7 @@
   transition: transform 0.3s;
 }
 
-.article-card__image:hover {
+.article-card:hover .article-card__image {
   transform: scale(1.36);
 }
 

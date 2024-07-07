@@ -24,6 +24,7 @@
   }
 }
 
+  // // 最終_FB：ブログ一覧とブログ詳細のカラムは全く同じものでよい
 .two-column__inner {
   @include mq(md) {
     position: relative;
@@ -32,71 +33,40 @@
   }
 }
 
-.two-column__inner.inner {
-  @media (max-width: 767px) {
-    padding-right: rem(21);
-    padding-left: rem(21);
-  }
-}
+// .two-column__inner.inner {
+//   @media (max-width: 767px) {
+//     padding-right: rem(21);
+//     padding-left: rem(21);
+//   }
+// }
 
-.two-column__inner--single-page.inner {
-  @media (max-width: 767px) {
-    padding-right: rem(15);
-    padding-left: rem(15);
-  }
+// .two-column__inner--single-page.inner {
+//   @media (max-width: 767px) {
+//     padding-right: rem(15);
+//     padding-left: rem(15);
+//   }
 
-  @include mq(md) {
-    gap: rem(86);
-  }
-}
+//   @include mq(md) {
+//     gap: rem(86);
+//   }
+// }
 
 .two-column__article {
   @include mq(md) {
-    max-width: 65.37%;
-    width: 100%;
+    width: 65.37%;
   }
 }
 
-.two-column__article--single-page {
-  @include mq(md) {
-    max-width: 65.1%;
-  }
-}
-
-.two-column__wp-pagenavi {
-  margin-top: rem(80);
-  @media (max-width: 767px) {
-    margin-right: rem(-6);
-    margin-left: rem(-6);
-  }
-}
-
-.two-column__wp-pagenavi--single-page {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(80);
-  }
-}
-
-.two-column__wp-pagenavi--single-page .wp-pagenavi {
-  @include mq(md) {
-    padding-right: rem(28);
-  }
-}
-
-.two-column__wp-pagenavi.two-column__wp-pagenavi--single-page .previouspostslink {
-  margin-right: rem(41);
-}
-
-.two-column__wp-pagenavi.two-column__wp-pagenavi--single-page .nextpostslink {
-  margin-left: rem(41);
-}
+// .two-column__article--single-page {
+//   @include mq(md) {
+//     width: 65.1%;
+//   }
+// }
 
 .two-column__aside {
   margin-top: rem(80);
   @include mq(md) {
-    max-width: 27.22%;
-    width: 100%;
+    width: 27.22%;
     margin-top: 0;
   }
 }

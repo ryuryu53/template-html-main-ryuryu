@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.single-article__wp-pagenavi {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.single-article__wp-pagenavi .wp-pagenavi {
+  @include mq(md) {
+    padding-right: rem(33);
+  }
+}
+
+.single-article__wp-pagenavi .wp-pagenavi .previouspostslink {
+  margin-right: rem(41);
+}
+
+.single-article__wp-pagenavi .wp-pagenavi .nextpostslink {
+  margin-left: rem(41);
+}

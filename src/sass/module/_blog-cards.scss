@@ -9,3 +9,11 @@
     gap: rem(50) rem(40);
   }
 }
+
+// 最終_FB：ブログ一覧はトップページのblog-cardsを再利用し、blog-cards--2colで対応
+.blog-cards.blog-cards--2col {
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(80);
+  }
+}

@@ -1,16 +1,5 @@
 @use "global" as *;
 
-// .column-article__inner.inner {
-//   @media (max-width: 767px) {
-//     padding-right: rem(21);
-//     padding-left: rem(21);
-//   }
-// }
-
-.column-article__title {
-  padding-right: rem(2);
-
-  @include mq(md) {
-    padding-right: rem(1);
-  }
+.column-article__wp-pagenavi {
+  margin-top: rem(80);
 }
