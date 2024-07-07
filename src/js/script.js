@@ -234,6 +234,50 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //   updateBoxShadow();
   // });
 
+  // タブを選択する関数を定義
+  function selectTab(hash) {
+    // すべてのタブコンテンツを非表示に("is-active"クラスを削除)する
+    $('.js-tab-content').removeClass('is-active');
+
+    // すべてのタブアイテムから"is-active"クラスを削除する
+    $('.js-tab-item').removeClass('is-active');
+
+    // ハッシュに対応するタブアイテムに"is-active"クラスを追加する
+    $(hash).addClass('is-active');
+
+    // ハッシュに対応するタブコンテンツを表示("is-active"クラスを追加)する
+    var contentId = hash + '-content';
+    $(contentId).addClass('is-active');
+  }
+
+  // ページがロードされたときにURLのハッシュを取得
+  var hash = window.location.hash;
+
+  // ハッシュが存在する場合は、そのタブを選択
+  if (hash) {
+      selectTab(hash);
+      updateBoxShadow();
+  }
+
+  // フッターのリンクがクリックされたときの処理
+  $('.footer-nav__left-detail-link').on('click', function (e) {
+      // デフォルトのリンク動作をキャンセル
+      // e.preventDefault();
+
+      // クリックされたリンクのハッシュを取得
+      var targetHash = this.hash;
+
+      // 該当するタブを選択
+      selectTab(targetHash);
+
+      updateBoxShadow();
+
+      // 該当タブまでスクロール
+      // $('html, body').animate({
+      //     scrollTop: $(targetHash).offset().top
+      // }, 500);
+  });
+
   // モーダル
   const open = $('.js-modal-open'),
     modal = $('.js-modal');
