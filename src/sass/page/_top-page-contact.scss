@@ -15,7 +15,8 @@
   }
 }
 
-.top-page-contact--privacy-page {
+.top-page-contact--privacy-page,
+.top-page-contact--terms-page {
   @include mq(md) {
     margin-top: rem(139);
   }

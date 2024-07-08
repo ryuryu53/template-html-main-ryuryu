@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.top-page-privacy {
+.top-page-template {
   margin-top: rem(51);  // 51-17-3
 
   @include mq(md) {

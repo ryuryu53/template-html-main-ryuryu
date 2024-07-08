@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.page-privacy {
+.page-template {
   position: relative;
 }
 
-.page-privacy::before {
+.page-template::before {
   content: "";
   background-image: url(../images/common/goldfish-sp.svg);
   background-repeat: no-repeat;
@@ -24,70 +24,70 @@
   }
 }
 
-.page-privacy__inner.inner {
+.page-template__inner.inner {
   max-width: rem(850);
 }
 
-.page-privacy__title.section-header {
+.page-template__title.section-header {
   position: relative;
   text-align: left;
 }
 
-.page-privacy__text-block {
+.page-template__text-block {
   font-size: rem(16);
   font-weight: $normal;
   line-height: 2;
   margin-top: rem(39);
 }
 
-.page-privacy__head-list {
+.page-template__head-list {
   margin-top: rem(32);
   padding-left: rem(6);
 }
 
-.page-privacy__head-item {
+.page-template__head-item {
   text-indent: -1.15em;
   padding-left: 1.15em;
 }
 
-.page-privacy__middle-content {
+.page-template__middle-content {
   margin-top: rem(32);
 }
 
-.page-privacy__middle-item--terms-page {
+.page-template__middle-item--terms-page {
   margin-left: rem(-6);
 }
 
-.page-privacy__middle-item span {
+.page-template__middle-item span {
   display: block;
   text-indent: -1.15em;
   padding-left: calc(1.15em + rem(6));
 }
 
-.page-privacy__use-text {
+.page-template__use-text {
   line-break: anywhere;
   margin-top: rem(32);
 }
 
-.page-privacy__use-text--terms-page {
+.page-template__use-text--terms-page {
   line-break: strict;
   margin-top: 0;
 }
 
-.page-privacy__provision-text {
+.page-template__provision-text {
   margin-top: rem(32);
 }
 
-.page-parivacy__last-list {
+.page-template__last-list {
   padding-left: rem(6);
 }
 
-.page-parivacy__last-item {
+.page-template__last-item {
   text-indent: -1.15em;
   line-break: strict;
   padding-left: 1.15em;
 }
 
-.page-parivacy__last-text {
+.page-template__last-text {
   margin-top: rem(32);
 }
