@@ -10,6 +10,11 @@
     gap: rem(32);
     width: 100%;
   }
+  // カテゴリーボタンが374px以下で1列になってしまう！ → gridで対応
+  @media (max-width: 374px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .campaign-category__link {
