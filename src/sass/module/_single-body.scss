@@ -33,6 +33,17 @@
 }
 
 .single-body__content {
+  display: grid;
+  gap: rem(24);
+  margin-top: rem(24);
+  @include mq(md) {
+    gap: rem(40);
+    margin-top: rem(40);
+  }
+
+  & > * {
+    margin-top: 0 !important; // gridで管理し、これを使えばpとulを囲っていたdivをなくせる（HIROKIさんに直伝）
+  }
 
   p {
     margin-top: rem(24);
@@ -57,52 +68,50 @@
     }
   }
 
-  div {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+
+  & p {
+    font-size: rem(16);
+    font-weight: $normal;
+    @include mq(md) {
+      color: $black;
+    }
+  }
+
+  & ul {
     margin-top: rem(24);
     @include mq(md) {
-      margin-top: rem(40);
+    margin-top: rem(40);
     }
 
-    & p {
+    & li {
+      position: relative;
       font-size: rem(16);
       font-weight: $normal;
+      color: $black;
+      padding-left: rem(27);
       @include mq(md) {
-        color: $black;
-      }
-    }
-
-    & ul {
-      margin-top: rem(24);
-      @include mq(md) {
-      margin-top: rem(40);
+        color: $green;
       }
 
-      & li {
-        position: relative;
-        font-size: rem(16);
-        font-weight: $normal;
-        color: $black;
-        padding-left: rem(27);
-        @include mq(md) {
-          color: $green;
-        }
+      & + li {
+        margin-top: rem(4);
+      }
 
-        & + li {
-          margin-top: rem(4);
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: rem(3);
-          left: 0;
-          width: rem(18);
-          height: rem(18);
-          background-image: url(../images/common/starfish-green.svg);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        top: rem(3);
+        left: 0;
+        width: rem(18);
+        height: rem(18);
+        background-image: url(../images/common/starfish-green.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
       }
     }
   }

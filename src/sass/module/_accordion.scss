@@ -33,16 +33,16 @@
   }
 }
 
-.accordion__title::before {
-  transform: rotate(90deg);
+.accordion__title.is-close::before {
+  transform: rotate(-90deg);
 }
 
-.accordion__title.is-open::before {
-  transform: rotate(180deg);
-}
-
-.accordion__title.is-open::after {
+.accordion__title::after {
   opacity: 0;
+}
+
+.accordion__title.is-close::after {
+  opacity: 1;
 }
 
 .accordion__title-text {
@@ -55,7 +55,6 @@
 }
 
 .accordion__content {
-  display: none;
   padding: rem(23) rem(15);
   border: rem(1) solid $greenaccent;
   @include mq(md) {

@@ -15,16 +15,16 @@
   }
 }
 
-.campaign-cards__item--sub-page {
-  width: 100%;
-  margin: auto;
-  @include mq(md) {
-    max-width: rem(520);
-    padding-bottom: rem(40);
-    display: grid;
-    grid-template-rows: subgrid;
-  }
-}
+// .campaign-cards__item--sub-page {
+//   width: 100%;
+//   margin: auto;
+//   @include mq(md) {
+//     max-width: rem(520);
+//     padding-bottom: rem(40);
+//     display: grid;
+//     grid-template-rows: subgrid;
+//   }
+// }
 
 .campaign-cards__item--blog-page {
   max-width: 100%;

@@ -325,17 +325,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(window).scrollTop(scrollTop);
   });
 
-  // トグル、アコーディーン
-  $(".js-archive-toggle:first-child .js-archive-toggle-items, .js-accordion-content").css(
+  // トグル
+  $(".js-archive-toggle:first-child .js-archive-toggle-items").css(
     "display",
     "block"
   );
-  $(".js-archive-toggle:first-child > .js-archive-toggle-title, .js-accordion-title").addClass("is-open");
-  $(".js-archive-toggle-title, .js-accordion-title").on("click", function () {
+  $(".js-archive-toggle:first-child > .js-archive-toggle-title").addClass("is-open");
+  $(".js-archive-toggle-title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
 
+// アコーディーン
+$(".js-accordion-title").on("click", function () {
+  $(this).toggleClass("is-close");
+  $(this).next().slideToggle(300);
+});
 
 // フォームの入力チェック
 // $('#form__contact').on('submit', function (e) {

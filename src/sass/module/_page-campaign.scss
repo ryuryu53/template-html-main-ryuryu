@@ -24,15 +24,10 @@
   }
 }
 
-// .page-campaign__list {
-//   position: relative;
-// }
-
 .page-campaign__items {
   display: grid;
   gap: rem(40);
   margin-top: rem(40);
-  padding: 0;
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
     gap: rem(80) rem(40);

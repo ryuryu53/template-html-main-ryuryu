@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.campaign-list__item {
+  width: rem(280);
+  height: auto; // FB：テキストが増えてもカードの高さを揃えるため → 最終_FB(2)：.campaign-cards__itemのmax-widthが不要なため、新たにcampaign-listブロックを作成。ここでは、スワイパーのカードと違い、height: auto;は不要かも
+  margin: auto;
+  @include mq(md) {
+    display: grid;
+    grid-template-rows: subgrid;
+    width: rem(520);
+    padding-bottom: rem(39);
+  }
+}

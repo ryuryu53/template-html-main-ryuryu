@@ -2,6 +2,9 @@
 
 .top-pagenavi {
   margin-top: rem(78);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
 
 .top-pagenavi.top-pagenavi--voice-page {
