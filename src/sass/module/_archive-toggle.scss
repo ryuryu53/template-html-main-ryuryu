@@ -43,6 +43,10 @@
   padding-left: rem(24);
 }
 
+.archive-toggle:first-child .archive-toggle__items {
+  display: block;
+}
+
 .archive-toggle__item + .archive-toggle__item {
   padding-top: rem(3);  // アコーディオンにmarginは使わず
 }

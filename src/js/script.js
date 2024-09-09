@@ -326,11 +326,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // トグル
-  $(".js-archive-toggle:first-child .js-archive-toggle-items").css(
-    "display",
-    "block"
-  );
-  $(".js-archive-toggle:first-child > .js-archive-toggle-title").addClass("is-open");
+  // $(".js-archive-toggle:first-child .js-archive-toggle-items").css(
+  //   "display",
+  //   "block"
+  // );
+  // $(".js-archive-toggle:first-child > .js-archive-toggle-title").addClass("is-open");
   $(".js-archive-toggle-title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
