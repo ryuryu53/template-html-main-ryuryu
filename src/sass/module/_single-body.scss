@@ -32,6 +32,11 @@
   }
 }
 
+.single-body__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .single-body__content {
   display: grid;
   gap: rem(24);
