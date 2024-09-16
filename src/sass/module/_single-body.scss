@@ -81,8 +81,9 @@
   & p {
     font-size: rem(16);
     font-weight: $normal;
+    color: $black;
     @include mq(md) {
-      color: $black;
+      color: $green;
     }
   }
 
