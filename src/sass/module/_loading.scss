@@ -7,15 +7,14 @@
   width: 100%;
   height: 100vh;
   background-color: $white;
-  z-index: 20; /* スワイパーより上に配置 */
-  transition: opacity 1s ease-out;
+  // z-index: 20; /* スワイパーより上に配置 */
 }
 
 .loading__header {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 20;
+  // z-index: 20;
   text-align: center;
   transform: translate(-50%, -52%);
 
@@ -45,12 +44,10 @@
   font-size: rem(20);
   font-weight: $normal;
   color: $greenaccent;
-  // text-indent: -0.15em;
   position: relative;
   right: rem(1);
 
   @include mq(md) {
-    // text-indent: -0.25em;
     right: rem(2);
   }
 }

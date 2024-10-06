@@ -40,20 +40,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // ローディングアニメーション
   $(window).on("load", function () {
-    $(".js-load").animate({
-      opacity: 0 // フェードアウトをopacityで指定
-    }, {  // ↓ オプションオブジェクト
-        duration: 1000,   // フェードアウトの時間
-        easing: "swing", // イージングの設定
-        complete: function() {
-          $(this).css("display", "none"); // フェードアウトが完了したら非表示にする
+    $(".js-load").fadeOut(1000, function() { // fadeOutを使用してフェード後に非表示に
+      // フェードアウト完了後の処理
+      // 左右の画像が下からスライド
+      $('.mv__img-left').addClass('loaded'); // 左の画像をスライドイン
 
-        // 左右の画像が下からスライド
-        $('.mv__img-left').animate({ top: '0' }, 2000); // 左の画像が2秒で上にスライド
+      $('.mv__img-right').addClass('loaded');  // 右の画像をスライドイン（80px差で配置済み）
 
-        $('.mv__img-right').animate({ top: '0' }, 2000);  // 80px差で右の画像が遅れて上にスライド
-
-        setTimeout(function() {
+      setTimeout(function() {
         // タイトルを表示
         $('.mv__header').css('opacity', '1');
 
@@ -62,10 +56,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         // mv_swiper.params.autoplay = {  // この書き方だとスワイパーが止まってしまう！よって、以下の通り1行に書いた
         //   delay: 3000,
         // };
-          mv_swiper.params.autoplay.delay = 3000; // 3秒ごとにスライド(3秒後にスライドが変わっていく)
-          mv_swiper.autoplay.start(); // 自動再生を開始
-        }, 2000);
-      }
+        mv_swiper.params.autoplay.delay = 3000; // 3秒ごとにスライド(3秒後にスライドが変わっていく)
+        mv_swiper.autoplay.start(); // 自動再生を開始
+      }, 2000);
     });
   });
 
