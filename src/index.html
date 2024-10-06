@@ -187,12 +187,25 @@
     </header>
 
     <main>
+      <!-- ローディング最初の画面 -->
+      <div class="loading js-load">
+        <div class="loading__header">
+          <div class="loading__title">diving</div>
+          <div class="loading__subtitle">into&nbsp;the&nbsp;ocean</div>
+        </div>
+      </div>
+
       <!-- メインビュー -->
       <section class="mv">
         <div class="mv__inner">
           <div class="swiper mv__slider js-mv-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
+                <!-- ローディングアニメーション用 -->
+                <div class="mv__images">
+                  <div class="mv__img-left"></div>
+                  <div class="mv__img-right"></div>
+                </div>
                 <picture class="mv__img">
                   <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_1.webp" type="image/webp" width="1440" height="768">
                   <source media="(max-width: 767px)" srcset="./assets/images/common/mv_1.webp" type="image/webp" width="375" height="667">

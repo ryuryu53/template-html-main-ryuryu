@@ -29,15 +29,44 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  // mvスワイパー
+  // スワイパーの自動再生を一時停止
   const mv_swiper = new Swiper('.js-mv-swiper', {
     loop: true,
     effect: 'fade',
     speed: 3000, // スライド（フェイド）が変わるスピード
     allowTouchMove: false, // 3秒(delay: 3000)たつ前にマウスでカチャカチャなぞることによって次のスライドへ移るのをさせないようにする（これがないとクリックで自分でスライドできてしまう）
-    autoplay: {
-      delay: 3000 // 3秒後にスライドが変わっていく
-    },
+    autoplay: false // 最初は自動再生をしない
+  });
+
+  // ローディングアニメーション
+  $(window).on("load", function () {
+    $(".js-load").animate({
+      opacity: 0 // フェードアウトをopacityで指定
+    }, {  // ↓ オプションオブジェクト
+        duration: 1000,   // フェードアウトの時間
+        easing: "swing", // イージングの設定
+        complete: function() {
+          $(this).css("display", "none"); // フェードアウトが完了したら非表示にする
+
+        // 左右の画像が下からスライド
+        $('.mv__img-left').animate({ top: '0' }, 2000); // 左の画像が2秒で上にスライド
+
+        $('.mv__img-right').animate({ top: '0' }, 2000);  // 80px差で右の画像が遅れて上にスライド
+
+        setTimeout(function() {
+        // タイトルを表示
+        $('.mv__header').css('opacity', '1');
+
+        // 2秒後にスワイパーの自動再生を開始
+        // autoplayオプションを追加・設定して開始
+        // mv_swiper.params.autoplay = {  // この書き方だとスワイパーが止まってしまう！よって、以下の通り1行に書いた
+        //   delay: 3000,
+        // };
+          mv_swiper.params.autoplay.delay = 3000; // 3秒ごとにスライド(3秒後にスライドが変わっていく)
+          mv_swiper.autoplay.start(); // 自動再生を開始
+        }, 2000);
+      }
+    });
   });
 
   // campaignスワイパー
@@ -161,39 +190,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   }
 
-  // タブによる絞り込み
-  // 変数に要素をセット
-  // var $filter = $('.js-filter-list [data-filter]'),
-  //     $item = $('.js-filter-item [data-item]');
-    
-  // // カテゴリをクリックしたら
-  // $filter.click(function (e) {
-  //   // デフォルトの動作をキャンセル
-  //   e.preventDefault();
-  //   var $this = $(this);
-      
-  //   // クリックしたカテゴリにクラスを付与
-  //   $filter.removeClass('is-active');
-  //   $this.addClass('is-active');
-    
-  //   // クリックした要素のdata属性を取得
-  //   var $filterItem = $this.attr('data-filter');
-    
-  //   // データ属性が all なら全ての要素を表示
-  //   if ($filterItem == 'all') {
-  //     $item.removeClass('is-active').fadeOut().promise().done(function () {
-  //       $item.addClass('is-active').fadeIn();
-  //     });
-  //   // all 以外の場合は、クリックした要素のdata属性の値と同じ値のアイテムを表示
-  //   } else {
-  //     $item.removeClass('is-active').fadeOut().promise().done(function () {
-  //       $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
-  //     });
-  //   }
-
-  //   updateBoxShadow();
-  // });
-
   // 最初に表示されるタブの設定
   $('.information-cards__item:first-child').addClass('is-active');
   $('.tab__item:first-child').addClass('is-active');
@@ -212,15 +208,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     updateBoxShadow();
   });
 
-  // let browserW = window.outerWidth;
-  // if (browserW >= 768) {
-  //   let nothold = $('.filter-list__item--page-info').not('.is-active');
-
-  //   nothold.css({
-  //     'box-shadow': 'none',
-  //   });
-  // }
-
   // 初期状態のボックスシャドウを更新
   updateBoxShadow();
 
@@ -228,11 +215,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(window).resize(function() {
     updateBoxShadow();
   });
-
-  // クリックイベントでis-activeクラスをつけたり外したりする時の処理
-  // $('.filter-list__item--page-info').click(function() {
-  //   updateBoxShadow();
-  // });
 
   // タブを選択する関数を定義
   function selectTab(hash) {
@@ -336,61 +318,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).next().slideToggle(300);
   });
 
-// アコーディーン
-$(".js-accordion-title").on("click", function () {
-  $(this).toggleClass("is-close");
-  $(this).next().slideToggle(300);
-});
-
-// フォームの入力チェック
-// $('#form__contact').on('submit', function (e) {
-//   var user_name = $('#form__name').val(); /* お名前 */
-//   var email = $('#form__email').val(); /* メールアドレス */
-//   var tel = $('#form__tel').val(); /* 電話番号 */
-//   var inquiry_checked = $('input[name="inquiry"]:checked').length > 0; /* inquiryのチェックボックス */
-//   // var campaign_select = $('#form__campaign').val(); /* キャンペーン */
-//   var textarea_value = $('#form__textarea').val(); /* お問合せ内容 */
-//   var agree_checked = $('input[name="agree"]:checked').length > 0; /* agreeのチェックボックス */
-
-//   var error_text = ''; /* エラーの説明が入る変数 */
-
-//   if (user_name.trim() === '') {
-//     error_text = '※必須項目が入力されていません。入力してください。';
-//   } else if (email.trim() === '') {
-//     error_text = '※必須項目が入力されていません。入力してください。';
-//   } else if (tel.trim() === '') {
-//     error_text = '※必須項目が入力されていません。入力してください。';
-//   } else if (!inquiry_checked) {
-//     error_text = '※必須項目がチェックされていません。チェックしてください。';
-//   }/* else if (campaign_select === '') {
-//     error_text = '※必須項目が選択されていません。選択してください。';
-//   } */ else if (textarea_value.trim() === '') {
-//     error_text = '※必須項目が入力されていません。入力してください。';
-//   } else if (!agree_checked) {
-//     error_text = '※必須項目がチェックされていません。チェックしてください。';
-//   }
-
-//     // console.log(inquiry_checked);
-
-//   // エラーがあった場合はページ遷移を止め、エラー内容を表示する
-//   if (error_text !== '') {
-
-//     // ページ遷移を止める
-//     e.preventDefault();
-
-//     // エラー内容を表示する
-//     $('#form__error').text(error_text);
-
-//   // エラーがない場合はエラー内容をクリアする
-//   } else {
-
-//     // 今回はサーバーにデータを送らないのでページ遷移を止める
-//     e.preventDefault();
-
-//     // エラー内容をクリアする
-//     $('#form__error').text('');
-//   }
-// });
+  // アコーディーン
+  $(".js-accordion-title").on("click", function () {
+    $(this).toggleClass("is-close");
+    $(this).next().slideToggle(300);
+  });
 
   // フォームの入力チェック
   if (window.location.pathname.endsWith('page-contact.html')) {
@@ -443,7 +375,7 @@ $(".js-accordion-title").on("click", function () {
         // 今回はサーバーにデータを送らないのでページ遷移を止める
         e.preventDefault();
         window.location.href = 'thanks.html';
-    
+
         // エラー内容をクリアする
         // $('#form__error').text('');
       }

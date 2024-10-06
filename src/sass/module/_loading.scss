@@ -1,0 +1,57 @@
+@use "global" as *;
+
+// ローディングとスワイパーを重ねる ローディング画面を完全にフェードアウトさせるのではなく、スワイパーと同時に表示して、ローディング画面が徐々に消えていく中でスワイパーが動作するようにする。
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 20; /* スワイパーより上に配置 */
+  transition: opacity 1s ease-out;
+}
+
+.loading__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  text-align: center;
+  transform: translate(-50%, -52%);
+
+  @include mq(md) {
+    transform: translate(-49.7%, -50.8%);
+  }
+}
+
+.loading__title {
+  font-family: $third-font-family;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: 1.3;
+  color: $greenaccent;
+  letter-spacing: 0.53em;
+  text-indent: 0.5em;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    font-size: rem(80);
+    text-indent: 0.48em;
+  }
+}
+
+.loading__subtitle {
+  font-family: $second-font-family;
+  font-size: rem(20);
+  font-weight: $normal;
+  color: $greenaccent;
+  // text-indent: -0.15em;
+  position: relative;
+  right: rem(1);
+
+  @include mq(md) {
+    // text-indent: -0.25em;
+    right: rem(2);
+  }
+}
