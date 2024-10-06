@@ -1,13 +1,12 @@
 @use "global" as *;
 
-// ローディングとスワイパーを重ねる ローディング画面を完全にフェードアウトさせるのではなく、スワイパーと同時に表示して、ローディング画面が徐々に消えていく中でスワイパーが動作するようにする。
 .loading {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: $white;
   z-index: 20; /* スワイパーより上に配置 */
   transition: opacity 1s ease-out;
 }
