@@ -41,6 +41,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ローディングアニメーション
   $(window).on("load", function () {
     $(".js-load").fadeOut(1000, function() { // fadeOutを使用してフェード後に非表示に
+      $(this).addClass('loaded'); // フェードアウト後に非表示
       // フェードアウト完了後の処理
       // 左右の画像が下からスライド
       $('.mv__img-left').addClass('loaded'); // 左の画像をスライドイン
