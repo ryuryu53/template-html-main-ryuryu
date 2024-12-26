@@ -4,24 +4,24 @@ var mv_swiper;
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
   //ドロワーメニュー
-  $(".js-hamburger, .js-sp-nav").click(function () {
-    if ($(".js-hamburger").hasClass('is-active')) {
-      $(".js-hamburger").removeClass("is-active");
+  $('.js-hamburger, .js-sp-nav').click(function () {
+    if ($('.js-hamburger').hasClass('is-active')) {
+      $('.js-hamburger').removeClass('is-active');
       $('body, html').css('overflow', 'auto');
-      $('.js-header').removeClass("is-active");
-      $(".js-sp-nav").fadeOut(300);
+      $('.js-header').removeClass('is-active');
+      $('.js-sp-nav').fadeOut(300);
     } else {
-      $(".js-hamburger").addClass("is-active");
+      $('.js-hamburger').addClass('is-active');
       $('body, html').css('overflow', 'hidden');  // 動画レビュー：ドロワーを開いたときは後ろがスクロールしないようにする
       $('.js-header').addClass('is-active');  // 動画レビュー：ロゴとメニューの文字が被らないように背景色を指定
-      $(".js-sp-nav").fadeIn(300);
+      $('.js-sp-nav').fadeIn(300);
     }
   });
 
   // 画面幅のサイズが変わったら
   $(window).on('resize', function () {
     // FB：追加 ∵iOSでは縦スクロールすると画面幅が変わったと認識してresizeイベントが作動してしまう
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia('(min-width: 768px)').matches) {
 
       // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
       // 動画レビュー：ロゴとメニューの文字が被らないようにした背景色を元に戻す
