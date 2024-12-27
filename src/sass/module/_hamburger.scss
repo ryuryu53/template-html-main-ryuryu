@@ -1,9 +1,7 @@
 @use "global" as *;
 
 .hamburger {
-  position: absolute;
-  top: rem(23);
-  right: rem(14);
+  position: relative;
   z-index: 100;
   width: rem(33);
   height: rem(32);
