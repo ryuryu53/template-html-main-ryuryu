@@ -22,6 +22,11 @@
   }
 }
 
+.footer__logo-link img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .footer__sns {
   display: flex;
   gap: rem(16);
@@ -42,6 +47,11 @@
   @include mq(md) {
     width: rem(32);
   }
+}
+
+.footer__sns-link img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .footer__nav {
