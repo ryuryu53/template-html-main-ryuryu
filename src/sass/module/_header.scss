@@ -14,6 +14,10 @@
   }
 }
 
+.header.is-color {
+  background-color: $gray;
+}
+
 .header.is-active {
   background-color: $greenaccent; // 動画レビュー：追加
 }

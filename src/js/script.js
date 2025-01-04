@@ -3,6 +3,21 @@
 var mv_swiper;
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+  // ヘッダークラス名付与
+  let header = $('.js-header');
+  let headerheight = $('.js-header').height();
+  let height = $('.js-mv-height').height();
+  console.log('ヘッダーの高さ：' + headerheight);
+  console.log('メインビューの高さ：' + height);
+  console.log(height - headerheight);
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > (height - headerheight)) {
+      header.addClass('is-color');
+    } else {
+      header.removeClass('is-color');
+    }
+  });
+
   //ドロワーメニュー
   $('.js-hamburger, .js-sp-nav').click(function () {
     if ($('.js-hamburger').hasClass('is-active')) {
