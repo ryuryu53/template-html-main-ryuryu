@@ -419,13 +419,13 @@ jQuery(window).on("load", function () {
     jQuery(this).addClass('loaded'); // フェードアウト後に非表示
     // フェードアウト完了後の処理
     // 左右の画像が下からスライド
-    jQuery('.mv__img-left').addClass('loaded'); // 左の画像をスライドイン
+    jQuery('.js-mv-img-left').addClass('loaded'); // 左の画像をスライドイン
 
-    jQuery('.mv__img-right').addClass('loaded'); // 右の画像をスライドイン（80px差で配置済み）
+    jQuery('.js-mv-img-right').addClass('loaded'); // 右の画像をスライドイン（80px差で配置済み）
 
     setTimeout(function () {
       // タイトルを表示
-      jQuery('.mv__header').css('opacity', '1');
+      jQuery('.js-mv-header, .js-header').css('opacity', '1');
 
       // 2秒後にスワイパーの自動再生を開始
       // autoplayオプションを追加・設定して開始
