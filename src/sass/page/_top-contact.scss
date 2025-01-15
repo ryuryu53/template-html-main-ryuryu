@@ -7,3 +7,25 @@
     margin-top: rem(140);
   }
 }
+
+.top-contact--sub-page {
+  margin-top: rem(106);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
+
+.top-contact--site-map-page {
+  margin-top: rem(88);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+.top-contact--privacy-page,
+.top-contact--terms-page {
+  @include mq(md) {
+    margin-top: rem(139);
+  }
+}
