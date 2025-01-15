@@ -259,8 +259,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 textarea {
 	height: rem(200);
-  width: 100%;
   max-width: rem(600);
+	vertical-align: bottom;	// これがないとtextareaの下に余白5pxが入る
 }
 
 ::placeholder {
@@ -315,13 +315,6 @@ textarea {
 	margin-top: rem(22);
 	@include mq(md) {
 		margin-top: rem(39);
-	}
-}
-
-.form__item:nth-child(6) {
-	padding-bottom: rem(19);	// textareaの下に謎の余白5pxが入る
-	@include mq(md) {
-		padding-bottom: rem(35);
 	}
 }
 
