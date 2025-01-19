@@ -8,7 +8,6 @@
   width: 100%;
   height: rem(80);
   background-color: rgba($color: $green, $alpha: 68%);
-  opacity: 0; /* 初期状態では非表示 */
   transition: opacity 2s ease;
 
   @include mq(md) {
