@@ -425,7 +425,7 @@ jQuery(window).on("load", function () {
 
     setTimeout(function () {
       // タイトルを表示
-      jQuery('.js-mv-header, .js-top-header').css('opacity', '1');
+      jQuery('.js-mv-header, .js-header').css('opacity', '1');
 
       // 2秒後にスワイパーの自動再生を開始
       // autoplayオプションを追加・設定して開始
