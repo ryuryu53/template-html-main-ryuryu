@@ -52,12 +52,6 @@
   }
 }
 
-.footer-nav__left-items--width {
-  @include mq(md) {
-    width: 46.8%;
-  }
-}
-
 .footer-nav__right-items {
   @include mq(md) {
     width: 48.4%;
