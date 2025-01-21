@@ -17,13 +17,10 @@
 .article-card__img img {
   height: 100%;
   object-fit: cover;
-}
-
-.article-card__image {
   transition: transform 0.3s;
 }
 
-.article-card:hover .article-card__image {
+.article-card:hover .article-card__img img {
   transform: scale(1.36);
 }
 
