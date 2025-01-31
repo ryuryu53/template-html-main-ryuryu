@@ -92,8 +92,6 @@
 }
 
 .page-about__text-body {
-  display: contents;
-
   @include mq(md) {
     position: absolute;
     top: rem(200);
