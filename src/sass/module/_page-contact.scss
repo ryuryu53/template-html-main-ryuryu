@@ -17,7 +17,7 @@
   height: rem(55);
   @include mq(md) {
     background-image: url(../images/common/goldfish-pc.svg);
-    top: rem(-57);
+    top: rem(-70);
     left: calc(50% - min(48%, rem(620)));
     width: rem(301);
     height: rem(138);

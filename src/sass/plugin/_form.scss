@@ -373,9 +373,9 @@ textarea {
 	color: $black;
 	@include mq(md) {
 		background-position: right 0.4375rem top 55%;
-		margin-top: rem(-3);
+		margin-top: rem(-4);
 		padding-top: rem(6);
-		padding-bottom: rem(3);
+		padding-bottom: rem(4);
 	}
 }
 
