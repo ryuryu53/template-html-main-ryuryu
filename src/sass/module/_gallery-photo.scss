@@ -38,9 +38,7 @@
 
 .gallery-photo__item:nth-child(6n+1) .gallery-photo__img,
 .gallery-photo__item:nth-child(6n+6) .gallery-photo__img {
-  display: block;
   aspect-ratio: 345 / 523;
-  overflow: hidden;
   @include mq(md) {
     aspect-ratio: 492 / 746;
   }
