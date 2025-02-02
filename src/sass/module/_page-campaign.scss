@@ -24,12 +24,13 @@
   }
 }
 
+// グリッドは.campaign-listで管理 25.2.3
 .page-campaign__items {
-  display: grid;
-  gap: rem(40);
+  // display: grid;
+  // gap: rem(40);
   margin-top: rem(40);
-  @include mq(md) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(80) rem(40);
-  }
+  // @include mq(md) {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: rem(80) rem(40);
+  // }
 }
