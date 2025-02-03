@@ -28,7 +28,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     } else {
       $('.js-hamburger').addClass('is-active');
       $('body, html').css('overflow', 'hidden');  // 動画レビュー：ドロワーを開いたときは後ろがスクロールしないようにする
-      $('.js-header').addClass('is-active');  // 動画レビュー：ロゴとメニューの文字が被らないように背景色を指定
+      // $('.js-header').addClass('is-active');  // 動画レビュー：ロゴとメニューの文字が被らないように背景色を指定 ⇒ .sp-navのtop:rem(80)をpadding-topで指定して、最初からそこに色をつけるやり方に変更。この方がシンプル（25.2.4）
       $('.js-sp-nav').fadeIn(300);
     }
   });

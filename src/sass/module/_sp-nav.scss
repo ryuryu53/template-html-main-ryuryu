@@ -3,7 +3,9 @@
 .sp-nav {
   display: none;
   position: absolute;
-  top: rem(80); // 動画レビュー：追加
+  // top: rem(80); // 動画レビュー：追加 ⇒ padding-topで指定(↓)して、そこへ色が乗るようにする（25.2.4）
+  top: 0;
+  padding-top: rem(80);
   left: 0;
   right: 0;
   width: 100%;

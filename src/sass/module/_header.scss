@@ -8,7 +8,8 @@
   width: 100%;
   height: rem(80);
   background-color: rgba($color: $green, $alpha: 68%);
-  transition: opacity 2s ease;
+  // ↓ スクロールしてメインビューを過ぎたとき、ヘッダーの色が一瞬で変わらないようにbackground-colorについても指定
+  transition: opacity 2s ease, background-color 0.3s ease;
 
   @include mq(md) {
     height: rem(90);
@@ -19,9 +20,10 @@
   background-color: $gray;
 }
 
-.header.is-active {
-  background-color: $greenaccent; // 動画レビュー：追加
-}
+// ↓ これで色を変えるとtransitionが効いてしまう！ → .sp-navのtop:rem(80)をpadding-topで指定して、そこへ色が乗るようにする
+// .header.is-active {
+//   background-color: $greenaccent; // 動画レビュー：追加
+// }
 
 .header__inner {
   display: flex;
