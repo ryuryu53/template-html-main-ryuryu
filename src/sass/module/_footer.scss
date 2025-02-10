@@ -11,7 +11,9 @@
   }
 }
 
-.footer__logo {
+// .footer__logoで以下の指定をすると、imgとの間にインラインのaタグがあるためか、Safariで見るとfooterロゴが見切れてしまう！ ⇒ 以下のように.footer__logo-linkをblockにして同様の指定をすればOK！（にしろさんの指摘より 25.2.10）
+.footer__logo-link {
+  display: block;
   aspect-ratio: 120 / 45;
   width: rem(120);
   overflow: hidden;
