@@ -25,6 +25,7 @@
 
 .top-contact--privacy-page,
 .top-contact--terms-page {
+  margin-top: rem(106);
   @include mq(md) {
     margin-top: rem(139);
   }
