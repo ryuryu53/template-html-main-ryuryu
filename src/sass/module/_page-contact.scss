@@ -24,6 +24,12 @@
   }
 }
 
+.page-contact--error-page::before{
+  @include mq(md) {
+    top: rem(-58);
+  }
+}
+
 .page-contact__inner.inner {
   max-width: rem(750);
 }

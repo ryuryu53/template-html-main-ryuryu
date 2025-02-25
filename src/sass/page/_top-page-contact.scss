@@ -7,3 +7,9 @@
     margin-top: rem(149);
   }
 }
+
+.top-page-contact--error-page {
+  @include mq(md) {
+    margin-top: rem(137);
+  }
+}
