@@ -1,23 +1,25 @@
 @use "global" as *;
 
-.loading {
+.loading__white {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background-color: $white;
+  z-index: 9999;
 }
 
-.loading.loaded {
+.loading__white.fadeout {
   display: none;
-  // z-index: -20;
 }
 
 .loading__header {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 10;
   text-align: center;
   transform: translate(-50%, -52%);
 
@@ -53,4 +55,54 @@
   @include mq(md) {
     right: rem(2);
   }
+}
+
+/* 画面遷移アニメーション */
+.loading__images {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* .loading__imagesにappearクラスがついたら出現 */
+.loading__images.appear {
+  display: block;
+}
+
+.loading__img-left, .loading__img-right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-image: url('../images/common/mv_1.webp');
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* 横幅を2倍にして、左右で分割 */
+  background-position: center;
+  transition: transform 1.5s ease; // 1.5秒かけてtransformをアニメーション
+  @include mq(md) {
+  background-image: url('../images/common/mv-pc_1.webp');
+  }
+}
+
+.loading__img-left {
+  top: 0;
+  left: 0;
+  background-position: left center; /* 画像の左半分を表示 */
+  transform: translateY(100%); /* 初期位置を画面外下部に */
+}
+
+.loading__img-right {
+  top: 0;
+  right: 0;
+  background-position: right center; /* 画像の右半分を表示 */
+  transform: translateY(calc(100% + 80px));
+}
+
+.loading__img-left.loaded, .loading__img-right.loaded {
+  transform: translateY(0); // アニメーションで上にスライドする
 }

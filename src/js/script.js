@@ -1,6 +1,6 @@
 "use strict";
 
-var mv_swiper;
+// var mv_swiper;
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
   // ヘッダークラス名付与
@@ -47,13 +47,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  // スワイパーの自動再生を一時停止
-  mv_swiper = new Swiper('.js-mv-swiper', { // ここで「var」を削除して、グローバルに宣言したmv_swiperを使用
+  // スワイパーの自動再生を一時停止 → ローディングアニメーションを「jQuery(function ($) {}」の中に書くやり方へ変更したので、通常通りスワイパーを自動再生 25.3.16
+  const mv_swiper = new Swiper('.js-mv-swiper', { // ここで「var」を削除して、グローバルに宣言したmv_swiperを使用 → 使用せず
     loop: true,
     effect: 'fade',
     speed: 3000, // スライド（フェイド）が変わるスピード
     allowTouchMove: false, // 3秒(delay: 3000)たつ前にマウスでカチャカチャなぞることによって次のスライドへ移るのをさせないようにする（これがないとクリックで自分でスライドできてしまう）
-    autoplay: false // 最初は自動再生をしない
+    autoplay: {
+      delay: 3000, // 3秒後にスライドが変わっていく
+    },
+    // autoplay: false // 最初は自動再生をしない
   });
 
   // campaignスワイパー
@@ -410,30 +413,71 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       localStorage.removeItem('form_data'); // 表示後にクリア
     }
   }
+
+  // ローディングアニメーション
+  function runLoadingAnimation() {
+    const $loading = $(".js-loading-white");
+    const $images = $(".js-loading-images");
+    const $imgLeft = $(".js-loading-img-left");
+    const $imgRight = $(".js-loading-img-right");
+    const $title = $(".js-loading-title");
+    // トップページでのみアニメーションを実行
+    if ($loading.length === 0) {
+      return;
+    }
+    // ローディングアニメーション開始時にスクロール禁止の処理を実行
+    $("html, body").css("overflow", "hidden");
+    // ローディングアニメーションの処理を実行
+    $loading.delay(1000).queue(function (next) {  // 1秒待機
+      $title.fadeIn(1000, function () { // フェードイン（1秒） → 「50);」の下にあるnext(); を呼ぶ
+        $images.delay(1000).queue(function(next) {  // 1秒待機して$images.queue(...) を登録
+          $(this).addClass("appear"); // `.loading__images` に `appear` クラスを追加
+          setTimeout(() => {
+            $imgLeft.addClass("loaded"); // `.loading__img-left` に `loaded` クラスを追加
+            $imgRight.addClass("loaded"); // `.loading__img-right` に `loaded` クラスを追加
+            next(); // `$images.queue()` のキューを進める（setTimeout 完了後に呼ぶ）
+          }, 50); // 50ミリ秒遅らせる 👉 初期状態（transform: translateY(100%)）をブラウザに認識させてアニメーションが動くようにする 👉 transitionend イベントが発火！
+        });
+        next(); // next(); を呼んで $loading.queue() の次の処理へ進める
+      });
+    });
+
+    $(document).on("transitionend", ".js-loading-img-right", function () {
+      $loading.addClass("fadeout");
+      $images.delay(1000).fadeOut(1000);
+    });
+
+    // ローディングアニメーション終了時にスクロール許可の処理を実行
+    setTimeout(function () {
+      $("html, body").css("overflow", "auto");
+    }, 6000);
+  }
+
+  runLoadingAnimation();
 });
 
 // ローディングアニメーション
-jQuery(window).on("load", function () {
-  jQuery(".js-load").fadeOut(1000, function () {
-    // fadeOutを使用してフェード後に非表示に
-    jQuery(this).addClass('loaded'); // フェードアウト後に非表示
-    // フェードアウト完了後の処理
-    // 左右の画像が下からスライド
-    jQuery('.js-mv-img-left').addClass('loaded'); // 左の画像をスライドイン
+// jQuery(window).on("load", function () {
+//   jQuery(".js-load").fadeOut(1000, function () {
+//     // fadeOutを使用してフェード後に非表示に
+//     jQuery(this).addClass('loaded'); // フェードアウト後に非表示
+//     // フェードアウト完了後の処理
+//     // 左右の画像が下からスライド
+//     jQuery('.js-mv-img-left').addClass('loaded'); // 左の画像をスライドイン
 
-    jQuery('.js-mv-img-right').addClass('loaded'); // 右の画像をスライドイン（80px差で配置済み）
+//     jQuery('.js-mv-img-right').addClass('loaded'); // 右の画像をスライドイン（80px差で配置済み）
 
-    setTimeout(function () {
-      // タイトルを表示
-      jQuery('.js-mv-header, .js-header').css('opacity', '1');
+//     setTimeout(function () {
+//       // タイトルを表示
+//       jQuery('.js-mv-header, .js-header').css('opacity', '1');
 
-      // 2秒後にスワイパーの自動再生を開始
-      // autoplayオプションを追加・設定して開始
-      // mv_swiper.params.autoplay = {  // この書き方だとスワイパーが止まってしまう！よって、以下の通り1行に書いた
-      //   delay: 3000,
-      // };
-      mv_swiper.params.autoplay.delay = 3000; // 3秒ごとにスライド(3秒後にスライドが変わっていく)
-      mv_swiper.autoplay.start(); // 自動再生を開始
-    }, 2000);
-  });
-});
+//       // 2秒後にスワイパーの自動再生を開始
+//       // autoplayオプションを追加・設定して開始
+//       // mv_swiper.params.autoplay = {  // この書き方だとスワイパーが止まってしまう！よって、以下の通り1行に書いた
+//       //   delay: 3000,
+//       // };
+//       mv_swiper.params.autoplay.delay = 3000; // 3秒ごとにスライド(3秒後にスライドが変わっていく)
+//       mv_swiper.autoplay.start(); // 自動再生を開始
+//     }, 2000);
+//   });
+// });

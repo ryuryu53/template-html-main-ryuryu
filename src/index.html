@@ -187,11 +187,19 @@
     </header>
 
     <main>
-      <!-- ローディング最初の画面 -->
-      <div class="loading js-load">
-        <div class="loading__header">
-          <div class="loading__title">diving</div>
-          <div class="loading__subtitle">into&nbsp;the&nbsp;ocean</div>
+      <!-- ローディングアニメーション -->
+      <div class="loading">
+        <!-- 最初の白い画面 -->
+        <div class="loading__white js-loading-white">
+          <div class="loading__header js-loading-title">
+            <div class="loading__title">diving</div>
+            <div class="loading__subtitle">into&nbsp;the&nbsp;ocean</div>
+          </div>
+        </div>
+        <!-- 2つに分かれた画像 -->
+        <div class="loading__images js-loading-images">
+          <div class="loading__img-left js-loading-img-left"></div>
+          <div class="loading__img-right js-loading-img-right"></div>
         </div>
       </div>
 
@@ -202,10 +210,10 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <!-- ローディングアニメーション用 -->
-                <div class="mv__images">
+                <!-- <div class="mv__images">
                   <div class="mv__img-left js-mv-img-left"></div>
                   <div class="mv__img-right js-mv-img-right"></div>
-                </div>
+                </div> -->
                 <picture class="mv__img">
                   <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_1.webp" type="image/webp" width="1440" height="768">
                   <source media="(max-width: 767px)" srcset="./assets/images/common/mv_1.webp" type="image/webp" width="375" height="667">
