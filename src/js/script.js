@@ -23,7 +23,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if ($('.js-hamburger').hasClass('is-active')) {
       $('.js-hamburger').removeClass('is-active');
       $('body, html').css('overflow', 'auto');
-      $('.js-header').removeClass('is-active');
+      // $('.js-header').removeClass('is-active');
       $('.js-sp-nav').fadeOut(300);
     } else {
       $('.js-hamburger').addClass('is-active');
