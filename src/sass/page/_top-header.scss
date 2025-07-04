@@ -1,5 +1,15 @@
-// @use "global" as *;
+@use "global" as *;
 
-// .top-header {
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: rem(80);
 //   opacity: 0; // トップページだけ初期状態では非表示
-// }
+
+  @include mq(md) {
+    height: rem(90);
+  }
+}

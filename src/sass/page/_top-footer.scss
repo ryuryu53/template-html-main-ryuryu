@@ -2,13 +2,9 @@
 
 .top-footer {
   margin-top: rem(104);
-  padding-top: rem(48);
-  padding-bottom: rem(56);
 
   @include mq(md) {
     margin-top: rem(160);
-    padding-top: rem(80);
-    padding-bottom: rem(80);
   }
 }
 

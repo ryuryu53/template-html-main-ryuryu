@@ -39,8 +39,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if (window.matchMedia('(min-width: 768px)').matches) {
 
       // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
-      // 動画レビュー：ロゴとメニューの文字が被らないようにした背景色を元に戻す
-      $('.js-hamburger, .js-header').removeClass('is-active');
+      // 動画レビュー：ロゴとメニューの文字が被らないようにした背景色を元に戻す → 上記よりJSによるこの背景色の指定はなくしたので「.js-header」を削除（25.7.5）
+      $('.js-hamburger').removeClass('is-active');
 
       // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
       $('.js-sp-nav').fadeOut(300);

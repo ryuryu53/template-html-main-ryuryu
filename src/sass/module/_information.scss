@@ -1,7 +1,14 @@
 @use "global" as *;
 
 .information {
+  padding-top: rem(84);
+  padding-bottom: rem(84);
   background-color: $green2;
+
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(76);
+  }
 }
 
 .information__title {

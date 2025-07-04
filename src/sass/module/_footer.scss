@@ -1,7 +1,14 @@
 @use "global" as *;
 
 .footer {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
   background-color: $greenaccent;
+
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
 }
 
 .footer__img {
