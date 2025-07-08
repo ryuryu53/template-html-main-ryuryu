@@ -3,13 +3,16 @@
 // var mv_swiper;
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-  // ヘッダークラス名付与
+  /* --------------------------------------------
+   *   スクロールしてmvを過ぎたらヘッダーの背景色を変える
+   * -------------------------------------------- */
   let header = $('.js-header');
   let headerheight = $('.js-header').height();
   let height = $('.js-mv-height').height();
   console.log('ヘッダーの高さ：' + headerheight);
   console.log('メインビューの高さ：' + height);
   console.log(height - headerheight);
+  // ヘッダークラス名付与
   $(window).scroll(function () {
     if ($(this).scrollTop() > (height - headerheight)) {
       header.addClass('is-color');
@@ -18,7 +21,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  //ドロワーメニュー
+  /* --------------------------------------------
+   *   ドロワーメニュー
+   * -------------------------------------------- */
   $('.js-hamburger, .js-sp-nav').click(function () {
     if ($('.js-hamburger').hasClass('is-active')) {
       $('.js-hamburger').removeClass('is-active');
@@ -47,6 +52,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  /* --------------------------------------------
+   *   mvスワイパー
+   * -------------------------------------------- */
   // スワイパーの自動再生を一時停止 → ローディングアニメーションを「jQuery(function ($) {}」の中に書くやり方へ変更したので、通常通りスワイパーを自動再生 25.3.16
   const mv_swiper = new Swiper('.js-mv-swiper', { // ここで「var」を削除して、グローバルに宣言したmv_swiperを使用 → 使用せず
     loop: true,
@@ -59,7 +67,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // autoplay: false // 最初は自動再生をしない
   });
 
-  // campaignスワイパー
+  /* --------------------------------------------
+   *   campaignスワイパー
+   * -------------------------------------------- */
   const campaign_swiper = new Swiper('.js-campaign-swiper', {
     slidesPerView: 'auto',
     loop: true,
@@ -80,7 +90,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  // 背景色の後に画像が表示されるエフェクト
+  /* --------------------------------------------
+   *   背景色の後に画像が表示されるエフェクト
+   * -------------------------------------------- */
   //要素の取得とスピードの設定
   var box = $('.js-colorbox'),
     speed = 700;
@@ -107,7 +119,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // スクロールしながらページトップへ戻るボタン
+  /* --------------------------------------------
+   *   スクロールしながらページトップへ戻るボタン
+   * -------------------------------------------- */
   let topBtn = $('.js-to-top');
   topBtn.hide();
 
@@ -166,7 +180,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  // ボックスシャドウを更新する関数
+  /* --------------------------------------------
+   *   ボックスシャドウを更新する関数
+   * -------------------------------------------- */
   function updateBoxShadow() {
     let browserW = window.innerWidth;
     if (browserW >= 768) {
@@ -180,6 +196,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   }
 
+  /* --------------------------------------------
+   *   タブの設定
+   * -------------------------------------------- */
   // 最初に表示されるタブの設定
   $('.information-cards__item:first-child').addClass('is-active');
   $('.tab__item:first-child').addClass('is-active');
@@ -250,7 +269,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // }, 500);
   });
 
-  // モーダル
+  /* --------------------------------------------
+   *   モーダル
+   * -------------------------------------------- */
   const open = $('.js-modal-open'),
     modal = $('.js-modal');
   let scrollTop;
@@ -297,7 +318,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(window).scrollTop(scrollTop);
   });
 
-  // トグル
+  /* --------------------------------------------
+   *   トグル
+   * -------------------------------------------- */
   // $(".js-archive-toggle:first-child .js-archive-toggle-items").css(
   //   "display",
   //   "block"
@@ -308,12 +331,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).next().slideToggle(300);
   });
 
-  // アコーディーン
+  /* --------------------------------------------
+   *   アコーディーン
+   * -------------------------------------------- */
   $(".js-accordion-title").on("click", function () {
     $(this).toggleClass("is-close");
     $(this).next().slideToggle(300);
   });
 
+  /* --------------------------------------------
+   *   お問い合わせフォーム
+   * -------------------------------------------- */
   // フォームの入力チェック
   if (window.location.pathname.endsWith('page-contact.html')) {
     $('#form__contact').on('submit', function(e) {
@@ -414,7 +442,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   }
 
-  // ローディングアニメーション
+  /* --------------------------------------------
+   *   ローディングアニメーション
+   * -------------------------------------------- */
   function runLoadingAnimation() {
     const $loading = $(".js-loading-white");
     const $images = $(".js-loading-images");
