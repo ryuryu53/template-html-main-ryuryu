@@ -9,13 +9,13 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh; // vh → dvh（25.7.9）
   background-color: $greenaccent;
   // overflow-y: auto; // FB：追加 ⇒ 動画レビュー：.sp-nav__inner へ移動
 }
 
 .sp-nav__inner {
-  height: calc(100vh - rem(80));
+  height: calc(100dvh - rem(80)); // vh → dvh（25.7.9）
   overflow-y: auto;
   padding-bottom: rem(32);
 }
