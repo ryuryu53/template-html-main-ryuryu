@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.button--reverse {
+.button.button--reverse {
   background-color: $white;
   color: $greenaccent;
 }
@@ -34,7 +34,7 @@
   border: rem(1) solid $greenaccent;
 }
 
-.button--reverse::before {
+.button.button--reverse::before {
   border-color: $white;
 }
 
@@ -52,7 +52,7 @@
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
-.button--reverse::after {
+.button.button--reverse::after {
   background-color: $greenaccent;
 }
 
@@ -61,7 +61,7 @@
   opacity: 1;
 }
 
-.button--reverse:hover {
+.button.button--reverse:hover {
   color: $white;
 }
 
@@ -74,7 +74,7 @@
   left: rem(-24);
 }
 
-.button__text--reverse {
+.button__text.button__text--reverse {
   left: rem(-28);
 }
 
@@ -90,7 +90,7 @@
   transform: skew(48deg);
 }
 
-.button__text--reverse::after {
+.button__text.button__text--reverse::after {
   right: rem(-54);
 }
 
