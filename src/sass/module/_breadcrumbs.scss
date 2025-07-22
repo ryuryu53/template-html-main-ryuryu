@@ -42,3 +42,7 @@
   background-size: contain;
   transform: translateY(-50%);
 }
+
+.breadcrumbs__inner--white li:not(:last-child)::after {
+  background-image: url(../images/common/breadcrumb-vector-white.svg);
+}
