@@ -5,7 +5,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: rem(16) rem(21);
-  background-color: $white;
   @include mq(md) {
     gap: rem(16) rem(32); // 最終_FB(2)：縦方向の余白が大きい ⇒ 2rem → 1rem
     width: 100%;
@@ -29,6 +28,7 @@
   text-transform: uppercase;
   padding: rem(6) rem(4) rem(4);
   border: rem(1) solid currentColor;
+  background-color: $white;
   cursor: pointer;
   transition: 0.3s ease;
 }
