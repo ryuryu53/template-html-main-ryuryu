@@ -119,3 +119,10 @@
     background-image: url(../images/common/fish-icon_2-white.svg);
   }
 }
+
+.tab__cards { // .page-information__itemsのクラス名を変更しこちらへ移動（25.7.24）
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}

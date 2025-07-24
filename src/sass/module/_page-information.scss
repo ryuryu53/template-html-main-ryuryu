@@ -23,10 +23,3 @@
     height: rem(138);
   }
 }
-
-.page-information__items {
-  margin-top: rem(16);
-  @include mq(md) {
-    margin-top: rem(24);
-  }
-}
