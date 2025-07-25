@@ -9,17 +9,16 @@
     gap: rem(16) rem(32); // 最終_FB(2)：縦方向の余白が大きい ⇒ 2rem → 1rem
     width: 100%;
   }
-  // カテゴリーボタンが374px以下で1列になってしまう！ → gridで対応
-  @media (max-width: 374px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // // カテゴリーボタンが374px以下で1列になってしまう！ → gridで対応
+  // @media (max-width: 374px) {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 }
 
 .campaign-category__link {
   position: relative; // これがないとボタンの上に魚のロゴが来てしまう
-  max-width: rem(162);
-  width: 100%;
+  width: calc((100% - rem(21)) / 2);
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.571;
@@ -30,7 +29,11 @@
   border: rem(1) solid currentColor;
   background-color: $white;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  @include mq(md) {
+    width: rem(162);
+  }
 }
 
 .campaign-category__link.is-active {
