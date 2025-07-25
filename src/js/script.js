@@ -185,15 +185,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
    * -------------------------------------------- */
   function updateBoxShadow() {
     let browserW = window.innerWidth;
+    $('.tab__item').each(function() {
     if (browserW >= 768) {
-      $('.tab__item').each(function() {
         if (!$(this).hasClass('is-active')) {
           $(this).css('box-shadow', 'none');
         } else {
           $(this).css('box-shadow', '0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25)'); // 元のスタイルを指定
         }
-      });
-    }
+      } else {
+        // 768px未満なら全てにデフォルトのbox-shadowを適用
+        $(this).css('box-shadow', '0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25)');
+      }
+    });
   }
 
   /* --------------------------------------------

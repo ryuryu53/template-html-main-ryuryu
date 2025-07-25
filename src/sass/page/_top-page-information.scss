@@ -2,7 +2,8 @@
 
 .top-page-information {
   margin-top: rem(120);
+
   @include mq(md) {
-    margin-top: rem(150);
+    margin-top: rem(149);
   }
 }
