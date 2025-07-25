@@ -203,8 +203,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
    *   タブの設定
    * -------------------------------------------- */
   // 最初に表示されるタブの設定
-  $('.information-cards__item:first-child').addClass('is-active');
-  $('.tab__item:first-child').addClass('is-active');
+  $('.js-tab-item:first-child').addClass('is-active');
+  $('.js-tab-content:first-child').addClass('is-active');
 
   // タブによる切り替え
   const tabButton = $(".js-tab-item"),
