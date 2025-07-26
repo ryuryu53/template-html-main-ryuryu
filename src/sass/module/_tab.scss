@@ -20,12 +20,11 @@
   line-height: 1.44;
   color: $greenaccent;
   text-align: center;
-  text-transform: uppercase;
   background-color: $green2;
-  border: none;
   padding: rem(10) 0;
   box-shadow: rem(2) rem(2) rem(4) rgba($color: $black, $alpha: 25%);
   cursor: pointer;
+  transition: background-color 0.3s;
 
   @include mq(md) {
     display: flex;
@@ -101,7 +100,6 @@
 
 .tab__item.is-active {
   color: $white;
-  border-color: transparent;
   background-color: $greenaccent;
 }
 
