@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.layout-page-price {
-  margin-top: rem(51);
-
-  @include mq(md) {
-    margin-top: rem(149);
-  }
-}

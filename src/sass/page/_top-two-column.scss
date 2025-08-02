@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.layout-two-column {
-  margin-top: rem(51);
-  @include mq(md) {
-    margin-top: rem(149);
-  }
-}

@@ -18,6 +18,7 @@
 
 .layout-contact--site-map-page {
   margin-top: rem(88);
+
   @include mq(md) {
     margin-top: rem(120);
   }
@@ -26,6 +27,7 @@
 .layout-contact--privacy-page,
 .layout-contact--terms-page {
   margin-top: rem(106);
+
   @include mq(md) {
     margin-top: rem(139);
   }

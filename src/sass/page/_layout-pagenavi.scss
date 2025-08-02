@@ -2,6 +2,7 @@
 
 .layout-pagenavi {
   margin-top: rem(78);
+
   @include mq(md) {
     margin-top: rem(80);
   }
@@ -9,6 +10,7 @@
 
 .layout-pagenavi.layout-pagenavi--voice-page {
   margin-top: rem(79);
+
   @include mq(md) {
     margin-top: rem(72);
   }

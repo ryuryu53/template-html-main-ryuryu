@@ -1,5 +1,119 @@
 @use "global" as *;
 
+.sub-mv {
+  position: relative;
+}
+
+.sub-mv.sub-mv--campaign {
+  background-image: url(../images/common/campaign-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/campaign-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--about-us {
+  background-image: url(../images/common/about-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/about-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--information {
+  background-image: url(../images/common/info-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/info-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--blog {
+  background-image: url(../images/common/blog-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/blog-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--blog-single {
+  background-image: url(../images/common/blog-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/blog-detail-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--voice {
+  background-image: url(../images/common/voice-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/voice-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--price {
+  background-image: url(../images/common/price-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/price-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--faq {
+  background-image: url(../images/common/faq-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/faq-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--contact {
+  background-image: url(../images/common/contact-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/contact-mv-pc.webp);
+  }
+}
+
+.sub-mv.sub-mv--site-map {
+  background-image: url(../images/common/site-map-mv.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(md) {
+    background-image: url(../images/common/site-map-mv-pc.webp);
+  }
+}
+
 .sub-mv__header {
   position: absolute;
   top: 50%;
@@ -39,4 +153,5 @@
 
 .sub-mv__title span {
   text-transform: uppercase;
+  margin-left: rem(2);
 }

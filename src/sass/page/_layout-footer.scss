@@ -10,6 +10,7 @@
 
 .layout-footer.layout-footer--contact-page {
   margin-top: rem(148);
+
   @include mq(md) {
     margin-top: rem(164);
   }
@@ -17,6 +18,7 @@
 
 .layout-footer.layout-footer--thanks-page {
   margin-top: rem(143);
+
   @include mq(md) {
     margin-top: rem(120);
   }
