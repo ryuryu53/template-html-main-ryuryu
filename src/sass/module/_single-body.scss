@@ -14,6 +14,7 @@
   font-weight: $medium;
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: rem(3);
+
   @include mq(md) {
     font-size: rem(32);
     line-height: 1.44;
@@ -26,6 +27,7 @@
   aspect-ratio: 345 / 231;
   overflow: hidden;
   margin-top: rem(23);
+
   @include mq(md) {
     aspect-ratio: 700 / 468;
     margin-top: rem(39);
@@ -41,18 +43,24 @@
   display: grid;
   gap: rem(24);
   margin-top: rem(24);
+
   @include mq(md) {
     gap: rem(40);
     margin-top: rem(40);
   }
 
-  & > * {
+  > * {
     margin-top: 0 !important; // gridで管理し、これを使えばpとulを囲っていたdivをなくせる（HIROKIさんに直伝）
   }
 
   p {
+    font-size: rem(16);
+    font-weight: $normal;
+    color: $black;
     margin-top: rem(24);
+
     @include mq(md) {
+      color: $green;
       margin-top: rem(40);
     }
   }
@@ -62,48 +70,37 @@
     aspect-ratio: 345 / 231;
     overflow: hidden;
     margin-top: rem(24);
+
     @include mq(md) {
       aspect-ratio: 700 / 468;
       margin-top: rem(40);
     }
-    
-    & img {
+
+    img {
       height: 100%;
       object-fit: cover;
     }
   }
 
-  margin-top: rem(24);
-  @include mq(md) {
-    margin-top: rem(40);
-  }
-
-  & p {
-    font-size: rem(16);
-    font-weight: $normal;
-    color: $black;
-    @include mq(md) {
-      color: $green;
-    }
-  }
-
-  & ul {
+  ul {
     margin-top: rem(24);
+
     @include mq(md) {
     margin-top: rem(40);
     }
 
-    & li {
+    li {
       position: relative;
       font-size: rem(16);
       font-weight: $normal;
       color: $black;
       padding-left: rem(27);
+
       @include mq(md) {
         color: $green;
       }
 
-      & + li {
+      + li {
         margin-top: rem(4);
       }
 
