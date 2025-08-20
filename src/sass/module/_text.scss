@@ -12,6 +12,7 @@
 
 .text--white-pc {
   @extend .text;
+
   @include mq(md) {
     color: $white;
   }
@@ -19,6 +20,7 @@
 
 .text--black-pc {
   @extend .text;
+
   @include mq(md) {
     color: $black;
   }
@@ -50,6 +52,7 @@
 .text--medium-large {
   @extend .text;
   font-weight: $medium;
+
   @include mq(md) {
     font-size: rem(24);
   }

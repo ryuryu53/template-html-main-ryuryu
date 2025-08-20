@@ -23,7 +23,7 @@
   }
 }
 
-.campaign-card__img--sub-page {
+.campaign-card__img.campaign-card__img--sub-page {
   @include mq(md) {
     aspect-ratio: 520 / 347;
   }
@@ -49,14 +49,15 @@
   }
 }
 
-.campaign-card__body--sub-page {
+.campaign-card__body.campaign-card__body--sub-page {
   @include mq(md) {
-    padding: rem(24) rem(24) 0;
+    padding: rem(24) rem(24) rem(39);
   }
 }
 
 .campaign-card__body.campaign-card__body--blog-page {
   padding: rem(15) rem(23) rem(16);
+
   @include mq(md) {
     padding-top: rem(16);
     padding-bottom: rem(18);
@@ -64,7 +65,6 @@
 }
 
 .campaign-card__category {
-  display: inline-block;
   width: fit-content; // 動画レビュー：追加
   font-size: rem(12);
   font-weight: $normal;
@@ -84,13 +84,13 @@
   padding-bottom: rem(8);
 }
 
-.campaign-card__title--sub-page {
+.campaign-card__title.campaign-card__title--sub-page {
   @include mq(md) {
     padding-bottom: rem(3);
   }
 }
 
-.campaign-card__title--blog-page {
+.campaign-card__title.campaign-card__title--blog-page {
   margin-top: 0;
   text-align: center;
 }
@@ -105,7 +105,7 @@
   }
 }
 
-.campaign-card__text--sub-page {
+.campaign-card__text.campaign-card__text--sub-page {
   @include mq(md) {
     margin-top: rem(23);
   }
@@ -119,8 +119,7 @@
   }
 }
 
-.campaign-card:nth-child(3) .campaign-card__text--sub-page,
-.campaign-card:nth-child(7) .campaign-card__text--sub-page {
+.campaign-card:nth-child(3) .campaign-card__text--sub-page {
   @include mq(md) {
     padding-right: 0;
   }
@@ -138,16 +137,14 @@
   }
 }
 
-
-.campaign-card:nth-child(3) .campaign-card__price,
-.campaign-card:nth-child(7) .campaign-card__price {
+// スライドが「8枚なのに24枚」になる ⇒ loop:true を使うと、Swiperは無限ループを実現するためにスライドを複製･･･元の8枚+先頭側に8枚のクローン+末尾側に8枚のクローン=24枚 25.8.20
+.campaign-card:nth-child(4n + 3) .campaign-card__price {
   @include mq(md) {
     padding-right: rem(24);
   }
 }
 
-.campaign-card:nth-child(3) .campaign-card__price--sub-page,
-.campaign-card:nth-child(7) .campaign-card__price--sub-page {
+.campaign-card:nth-child(3) .campaign-card__price--sub-page {
   @include mq(md) {
     padding-right: rem(3);
   }
@@ -168,15 +165,13 @@
   }
 }
 
-.campaign-card:nth-child(3) .campaign-card__price-before,
-.campaign-card:nth-child(7) .campaign-card__price-before {
+.campaign-card:nth-child(4n + 3) .campaign-card__price-before {
   @include mq(md) {
     padding-right: rem(2);
   }
 }
 
-.campaign-card:nth-child(3) .campaign-card__price-before--sub-page,
-.campaign-card:nth-child(7) .campaign-card__price-before--sub-page {
+.campaign-card:nth-child(3) .campaign-card__price-before--sub-page {
   @include mq(md) {
     padding-right: 0;
   }
@@ -223,7 +218,7 @@
   }
 }
 
-.campaign-card__price-after--sub-page {
+.campaign-card__price-after.campaign-card__price-after--sub-page {
   @include mq(md) {
     margin-left: rem(41);
   }
@@ -237,12 +232,11 @@
 }
 
 .campaign-card__information {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-top: rem(16);
-  @media (max-width: 767px) {
-    display: none;
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: rem(16);
   }
 }
 
@@ -275,9 +269,5 @@
 .campaign-card__btn {
   text-align: center;
   padding-bottom: rem(5);
-  margin-top: rem(16);
-}
-
-.campaign-card__btn--sub-page {
   margin-top: rem(14);
 }

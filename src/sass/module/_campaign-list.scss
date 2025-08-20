@@ -4,6 +4,7 @@
 .campaign-list {
   display: grid;
   gap: rem(40);
+
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
     gap: rem(80) rem(40);
@@ -11,13 +12,13 @@
 }
 
 .campaign-list__item {
-  width: rem(280);
+  // width: rem(280); // 幅はpaddingで調整 25.8.20
   height: auto; // FB：テキストが増えてもカードの高さを揃えるため → 最終_FB(2)：.campaign-cards__itemのmax-widthが不要なため、新たにcampaign-listブロックを作成。ここでは、スワイパーのカードと違い、height: auto;は不要かも
-  margin: auto;
+  // margin: auto;
+
   @include mq(md) {
     display: grid;
     grid-template-rows: subgrid;
-    width: rem(520);
-    padding-bottom: rem(39);
+    // width: rem(520);
   }
 }
