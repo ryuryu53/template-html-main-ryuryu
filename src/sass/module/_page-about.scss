@@ -93,6 +93,8 @@
 }
 
 .page-about__text-body {
+  margin-top: rem(40);
+
   @include mq(md) {
     position: absolute;
     top: rem(200);
@@ -101,6 +103,7 @@
     max-width: rem(840);
     width: 100%;
     z-index: 10; // CSS_ZOOM：z-indexをプラスにするためにここに追加
+    margin-top: 0;
   }
 }
 
@@ -123,11 +126,8 @@
 }
 
 .page-about__text-block {
-  margin-top: rem(40);
-
   @include mq(md) {
     width: 47.62%;
-    margin-top: 0;
     padding-top: rem(26);
   }
 }
