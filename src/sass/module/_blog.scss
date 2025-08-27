@@ -41,9 +41,12 @@
 }
 
 .blog__inner.inner {
-  @media (max-width: 767px) {
-    padding-right: rem(21);
-    padding-left: rem(21);
+  padding-right: rem(21);
+  padding-left: rem(21);
+
+  @include mq(md) {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
   }
 }
 

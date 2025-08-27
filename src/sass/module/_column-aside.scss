@@ -1,9 +1,12 @@
 @use "global" as *;
 
 .column-aside__container {
-  @media (max-width: 767px) {
-    padding-right: rem(25);
-    padding-left: rem(25);
+  padding-right: rem(25);
+  padding-left: rem(25);
+
+  @include mq(md) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -50,8 +53,9 @@
 
 .column-aside__item {
   margin-top: rem(23);
+
   @include mq(md) {
-  margin-top: rem(24);
+    margin-top: rem(24);
   }
 }
 

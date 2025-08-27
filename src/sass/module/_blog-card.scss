@@ -21,6 +21,7 @@
 .blog-card__img.blog-card__img--single-page {
   aspect-ratio: 345 / 231;
   margin-top: rem(23);
+
   @include mq(md) {
     aspect-ratio: 700 / 468;
     margin-top: rem(39);
@@ -29,6 +30,7 @@
 
 .blog-card__img.blog-card__img--single-page:nth-of-type(2) {
   margin-top: rem(24);
+
   @include mq(md) {
     margin-top: rem(40);
   }
@@ -70,6 +72,7 @@
 .blog-card__title.blog-card__title--single-page {
   font-size: rem(24);
   padding-bottom: rem(3);
+
   @include mq(md) {
     font-size: rem(32);
     line-height: 1.44;
@@ -83,6 +86,7 @@
 
 .blog-card__text.blog-card__text--single-page {
   margin-top: rem(24);
+
   @include mq(md) {
     margin-top: rem(40);
   }

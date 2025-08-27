@@ -12,6 +12,7 @@
 
 .review-card__body {
   margin-top: rem(10);
+
   @include mq(md) {
     margin-top: rem(11);
   }
