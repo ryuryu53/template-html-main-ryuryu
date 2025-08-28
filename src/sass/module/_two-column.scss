@@ -15,6 +15,7 @@
   left: rem(15);
   width: rem(120);
   height: rem(55);
+
   @include mq(md) {
     background-image: url(../images/common/goldfish-pc.svg);
     top: rem(-70);
@@ -24,10 +25,11 @@
   }
 }
 
-  // // 最終_FB：ブログ一覧とブログ詳細のカラムは全く同じものでよい
+// 最終_FB：ブログ一覧とブログ詳細のカラムは全く同じものでよい
 .two-column__inner {
   @include mq(md) {
     position: relative;
+    z-index: 5;
     display: flex;
     gap: rem(80);
   }
@@ -65,6 +67,7 @@
 
 .two-column__aside {
   margin-top: rem(80);
+
   @include mq(md) {
     width: 27.22%;
     margin-top: 0;

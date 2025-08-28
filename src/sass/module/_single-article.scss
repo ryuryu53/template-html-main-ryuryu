@@ -2,6 +2,7 @@
 
 .single-article__wp-pagenavi {
   margin-top: rem(40);
+
   @include mq(md) {
     margin-top: rem(80);
   }

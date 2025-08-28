@@ -86,7 +86,7 @@
     margin-top: rem(24);
 
     @include mq(md) {
-    margin-top: rem(40);
+      margin-top: rem(40);
     }
 
     li {
@@ -94,7 +94,7 @@
       font-size: rem(16);
       font-weight: $normal;
       color: $black;
-      padding-left: rem(27);
+      padding-left: 1.6875em;  // 27/16=1.6875
 
       @include mq(md) {
         color: $green;
@@ -107,14 +107,15 @@
       &::before {
         content: "";
         position: absolute;
-        top: rem(3);
+        top: 0.5lh;  // rem(3) → lhとtransform:translateYを使ったやり方へ
         left: 0;
-        width: rem(18);
-        height: rem(18);
+        width: 1.125em; // 18/16=1.125
+        height: 1.125em;
         background-image: url(../images/common/starfish-green.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        transform: translateY(-50%);
       }
     }
   }
