@@ -16,6 +16,7 @@
 .voice-card__link { // FB：追加
   display: block;
   padding: rem(10) rem(16) rem(24);
+
   @include mq(md) {
     padding: rem(24);
   }
@@ -24,7 +25,7 @@
 .voice-card__head {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .voice-card__meta {
@@ -85,9 +86,11 @@
 }
 
 .voice-card__img {  // このクラス名をpictureへ移すと表示崩れを起こすのでこのまま
+  // ⇒ js-colorboxに対するJSの処理で<div class="color"></div>ができ、それがpicture要素の中に入る。<picture>は子要素として<source>と<img>のみを入れることがHTML仕様で定められているので、この場合はNG  25.8.31
   aspect-ratio: 151 / 117;
   width: 48.24%;
   overflow: hidden;
+  margin-left: auto;
 
   @include mq(md) {
     aspect-ratio: 180 / 140;
