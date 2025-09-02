@@ -16,6 +16,7 @@
 
 .page-price-table__content + .page-price-table__content {
   margin-top: rem(40);
+
   @include mq(md) {
     margin-top: rem(80);
   }
@@ -31,9 +32,10 @@
   font-weight: $bold;
   color: $white;
   padding: rem(8);
+
   @include mq(md) {
     flex-direction: column-reverse;
-    width: 28.6%;
+    width: 28.57142857142857%;
   }
 }
 
@@ -45,6 +47,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   @include mq(md) {
     position: relative;
     left: rem(2);
@@ -55,7 +58,7 @@
 
 .page-price-table__items {
   @include mq(md) {
-    width: calc(100% - 28.49002849002849%);
+    width: calc(100% - 28.57142857142857%);
   }
 }
 
@@ -63,6 +66,7 @@
   display: flex;
   border: rem(1) solid $greenaccent;
   border-top: none;
+
   @include mq(md) {
     border-left: none;
   }
@@ -81,6 +85,7 @@
   text-align: center;
   padding-left: rem(10);
   padding-right: rem(10);
+
   @include mq(md) {
     text-align: left;
     width: 67.5%;
@@ -92,6 +97,7 @@
 .page-price-table__item:first-child dt {
   padding-top: rem(7);
   padding-bottom: rem(7);
+
   @include mq(md) {
     padding-top: rem(17);
     padding-bottom: rem(17);
@@ -101,6 +107,7 @@
 .page-price-table__item:nth-child(n+2) dt {
   padding-top: rem(6);
   padding-bottom: rem(4);
+
   @include mq(md) {
     padding-top: rem(17);
     padding-bottom: rem(17);
@@ -110,6 +117,7 @@
 .page-price-table__content:first-child .page-price-table__item:nth-child(3) dt {
   padding-top: rem(18);
   padding-bottom: rem(16);
+
   @include mq(md) {
     padding-top: rem(17);
     padding-bottom: rem(17);
@@ -123,6 +131,8 @@
   padding-top: rem(18);
   padding-right: rem(15);
   padding-left: rem(15);
+  padding-bottom: rem(16);
+
   @include mq(md) {
     width: 32.5%;
     padding-top: rem(17);
