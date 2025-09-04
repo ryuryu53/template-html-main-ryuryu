@@ -1,19 +1,26 @@
 @use "global" as *;
 
 .hamburger {
-  position: relative;
+  position: absolute;
+  top: rem(23);
+  right: rem(14);
   z-index: 100;
   width: rem(33);
   height: rem(32);
-  cursor: pointer;
+  padding: 0;
 }
 
 .hamburger span {
   position: absolute;
+  right: 0;
   width: inherit;
   height: rem(1);
   background-color: $white;
   transition: transform 0.3s;
+}
+
+.hamburger:focus {
+  outline: rem(2) solid #391E88;
 }
 
 .hamburger span:first-child {

@@ -1,15 +1,18 @@
 @use "global" as *;
 
-
 .accordion__item + .accordion__item {
   margin-top: rem(40);
 }
 
 .accordion__title {
   position: relative;
+  width: 100%;
   padding: rem(16) rem(44) rem(15) rem(16);
+  line-height: 1.5;
+  text-align: left;
   cursor: pointer;
   background-color: $greenaccent;
+
   @include mq(md) {
     padding: rem(26) rem(72) rem(24) rem(40);
   }
@@ -45,10 +48,15 @@
   opacity: 1;
 }
 
+.accordion__title:focus {
+  outline: rem(2) solid #391E88;
+}
+
 .accordion__title-text {
   font-size: rem(16);
   font-weight: $normal;
   color: $white;
+
   @include mq(md) {
     font-size: rem(20);
   }
@@ -57,6 +65,7 @@
 .accordion__content {
   padding: rem(23) rem(15);
   border: rem(1) solid $greenaccent;
+
   @include mq(md) {
     margin-top: rem(16);
     padding: rem(39);
@@ -66,6 +75,7 @@
 .accordion__item:nth-child(3) .accordion__content,
 .accordion__item:nth-child(7) .accordion__content {
   padding-bottom: rem(22);
+
   @include mq(md) {
     padding-bottom: rem(39);
   }
