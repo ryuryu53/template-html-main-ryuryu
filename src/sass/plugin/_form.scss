@@ -104,21 +104,6 @@ button,
   line-height: 1;
 }
 
-.form__btn-submit [type="submit"] {
-	width: rem(202);
-	border: rem(1) solid $greenaccent;
-	padding: rem(15) rem(57) rem(15) 0;
-	font-weight: $normal;
-	line-height: calc(22 / 14);
-	text-align: center;
-	position: relative;
-	z-index: 10;
-}
-
-.form__btn-submit:hover [type="submit"] {	// 送信ボタン
-	color: $greenaccent;
-}
-
 [type="radio"] {
 	display: none;
 
@@ -511,6 +496,21 @@ textarea {
 
 .form__btn-submit:hover::after {
 	transform: scale(1, 1);
+}
+
+.form__btn-submit [type="submit"] {
+	width: rem(202);
+	border: rem(1) solid $greenaccent;
+	padding: rem(15) rem(57) rem(15) 0;
+	font-weight: $normal;
+	line-height: calc(22 / 14);
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+.form__btn-submit:hover [type="submit"] {	// 送信ボタン
+	color: $greenaccent;
 }
 
 .form__btn-arrow {
