@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .campaign {
-  overflow: hidden;
+  overflow-x: clip; // overflow: hidden; から修正  25.11.11
 }
 
 .campaign__inner {
@@ -36,7 +36,7 @@
 .campaign__btn-next,
 .campaign__btn-prev {
   position: absolute;
-  top: 23px; // rem(23)だと幅1015px以下で円の頭が切れてくる
+  top: rem(23); // rem(23) だと幅 1015px 以下で円の頭が切れてくる → .campaign で overflow-x: clip; にすれば OK（23px から修正）
   width: rem(80);
   height: rem(80);
   transition: opacity 0.3s;
