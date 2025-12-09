@@ -8,6 +8,7 @@
   width: rem(33);
   height: rem(32);
   padding: 0;
+  outline: revert;  // _reset.scssに outline: none; があるため、ここだけその影響を打ち消しデフォルトのフォーカスリングに戻す
 }
 
 .hamburger span {
@@ -16,12 +17,12 @@
   width: inherit;
   height: rem(1);
   background-color: $white;
-  transition: transform 0.3s;
+  transition: transform 0.3s, top 0.3s, right 0.3s, width 0.3s; // transformだけのときよりこの方が動きが自然  25.12.8
 }
 
-.hamburger:focus {
-  outline: rem(2) solid #391E88;
-}
+// .hamburger:focus {  // button要素にあるデフォルトのフォーカスを使うためコメントアウト
+//   outline: rem(2) solid #391E88;
+// }
 
 .hamburger span:first-child {
   top: 15%;

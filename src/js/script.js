@@ -47,6 +47,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // 動画レビュー：ロゴとメニューの文字が被らないようにした背景色を元に戻す → 上記よりJSによるこの背景色の指定はなくしたので「.js-header」を削除（25.7.5）
       $('.js-hamburger').removeClass('is-active');
 
+      // 背景スクロール禁止を解除  25.12.9
+      $('body, html').css('overflow', 'auto');
+
       // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
       $('.js-sp-nav').fadeOut(300);
     }
