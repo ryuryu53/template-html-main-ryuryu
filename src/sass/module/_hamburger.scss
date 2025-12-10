@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.hamburger {
+.hamburger[type="button"] { // button要素にtype="button"を追加したため.hamburgerだけではグループセレクタ（button, [type="button"], [type="submit"] _p-formにあり）の影響を受けてしまう
   position: absolute;
   top: rem(23);
   right: rem(14);
