@@ -9,11 +9,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100dvh; // AI：スマホのアドレスバーの伸縮に合わせて表示領域が自動調整され、常に画面にフィットする。この設定で、全画面モーダルが上部や下部で隠れることなく、常に最適なサイズで表示される  26.3.6
   visibility: hidden;
   background: rgba($color: $black2, $alpha: 80%);
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
+  cursor: pointer;  // AI：モーダルに閉じるボタン（×）がない実装なので、「どこをクリックしても閉じる」ことをユーザーに伝える手段として .modal 全体への cursor: pointer; は有効  26.2.26
 }
 
 .modal.is-open {
