@@ -240,7 +240,7 @@
           <div class="gallery__items-wrap">
             <div class="gallery__items gallery-photo">
               <div class="gallery-photo__item">
-                <!-- ✅ pictureは本来フォーカスできないので tabindex を付与。tabindex="0"：Tabでフォーカスできるようになる。tabindex="-1"：Tabでは移動しないけど、JSで .focus() できる  26.3.6 -->
+                <!-- pictureは本来フォーカスできないので tabindex を付与。tabindex="0"：Tabでフォーカスできるようになる。tabindex="-1"：Tabでは移動しないけど、JSで .focus() できる  26.3.6 -->
                 <picture class="gallery-photo__img js-modal-open"
                         tabindex="0"
                         role="button">
@@ -297,6 +297,7 @@
             role="dialog"
             aria-modal="true"
             aria-hidden="true"
+            aria-live="polite"
             tabindex="-1">
           <div class="modal__img">
             <img class="js-modal-img" src="" alt="モーダル画像">
